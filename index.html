@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            /* 背景を少し明るいトーンに変更 */
-            --bg-start: #1e293b; /* Slate 800 */
-            --bg-end: #0f172a;   /* Slate 900 */
-            --card-bg: rgba(255, 255, 255, 0.05);
+            --bg-start: #1e293b;
+            --bg-end: #0f172a;
             --accent: #38bdf8;
             --text-main: #f8fafc;
             --text-sub: #cbd5e1;
-            --container-width: 600px;
+            --card-w: 280px;
+            --card-h: 200px;
+            --duration: 900ms;
+            --ease: cubic-bezier(.25,.8,.25,1);
+            --radius: 380px;
         }
 
-        /* 1. 背景：明るめのグラデーションと質感 */
+        * { box-sizing: border-box; }
+
         body {
             background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
             color: var(--text-main);
@@ -26,14 +29,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
             margin: 0;
-            padding: 80px 20px;
+            padding: 40px 20px;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* ノイズテクスチャ（明るい背景に合わせて透明度を微調整） */
         body::before {
             content: "";
             position: fixed;
@@ -56,73 +59,202 @@
             animation: fadeInUp 1.2s ease-out forwards;
         }
 
-        .profile-img {
-            width: 120px; height: 120px;
-            border-radius: 50%;
-            border: 3px solid var(--accent);
-            box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
-            margin-bottom: 20px;
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .profile h1 {
+            margin: 0 0 8px 0;
+            font-size: 2.5rem;
+            font-weight: 800;
         }
 
-        #links-container {
+        .profile p {
+            margin: 0;
+            color: var(--text-sub);
+            font-size: 1.1rem;
+        }
+
+        .carousel-section {
             width: 100%;
-            max-width: var(--container-width);
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            align-items: center;
+            gap: 30px;
             z-index: 2;
+            animation: fadeInUp 1.2s ease-out 0.3s forwards;
+            opacity: 0;
+            padding-top: 80px;
         }
 
-        /* カード：明るい背景でも埋もれないように調整 */
-        .link-card {
-            background: var(--card-bg);
+        .stage {
+            width: var(--card-w);
+            height: var(--card-h);
+            position: relative;
+            perspective: 1200px;
+            filter: drop-shadow(0 30px 55px rgba(0,0,0,.55));
+            user-select: none;
+            margin-bottom: 60px;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform var(--duration) var(--ease);
+            will-change: transform;
+        }
+
+        .card {
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.15);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 24px 32px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: var(--text-main);
+            transform-style: preserve-3d;
             display: flex;
             align-items: center;
-            opacity: 0;
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
+            padding: 24px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
         }
 
-        .link-card:hover {
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: -60% -60% auto -60%;
+            height: 70%;
+            background: radial-gradient(circle at 30% 30%, rgba(56, 189, 248, .25), transparent 60%);
+            transform: rotate(12deg);
+            pointer-events: none;
+        }
+
+        .card:hover {
             border-color: var(--accent);
             background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .link-card i {
-            font-size: 2rem;
-            margin-right: 25px;
+        .card[data-state="side"] {
+            opacity: .55;
+            filter: blur(.2px) brightness(.85);
+        }
+
+        .card[data-state="back"] {
+            opacity: .25;
+            filter: blur(.4px) brightness(.7);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
             color: var(--accent);
             filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.4));
+            flex-shrink: 0;
         }
 
-        .link-title { font-weight: 800; font-size: 1.3rem; display: block; }
-        .link-desc { font-size: 0.9rem; color: var(--text-sub); margin-top: 4px; }
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
 
-        .is-visible { animation: fadeInUp 0.8s ease-out forwards; }
+        .card-title {
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            padding: 12px 16px;
+            background: rgba(56, 189, 248, .10);
+            border: 1px solid rgba(56, 189, 248, .25);
+            border-radius: 999px;
+            backdrop-filter: blur(10px);
+        }
+
+        .controls button {
+            appearance: none;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 999px;
+            color: var(--text-main);
+            background: rgba(56, 189, 248, .20);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .controls button:hover {
+            background: rgba(56, 189, 248, .35);
+        }
+
+        .controls button:active {
+            transform: translateY(1px);
+        }
+
+        .card-indicator {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .indicator-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .indicator-dot.active {
+            background: var(--accent);
+            transform: scale(1.3);
+        }
 
         @media (max-width: 480px) {
-            .link-card { padding: 20px; }
+            :root {
+                --card-w: 260px;
+                --card-h: 180px;
+                --radius: 320px;
+            }
+            .card { padding: 20px; }
+            .card-icon { font-size: 2rem; margin-right: 16px; }
+            .card-title { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="profile">
-        <!-- <img src="https://via.placeholder.com/120" alt="Profile" class="profile-img"> -->
         <h1>Yoshimura</h1>
         <p>Software Engineer</p>
     </div>
 
-    <div id="links-container"></div>
+    <div class="carousel-section">
+        <div class="stage">
+            <div class="carousel" id="carousel"></div>
+        </div>
+
+        <div class="controls">
+            <button id="prev"><i class="fas fa-chevron-left"></i> Prev</button>
+            <button id="next">Next <i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="card-indicator" id="indicator"></div>
+    </div>
 
     <script>
         const linkData = [
@@ -131,41 +263,117 @@
             { title: "GitHub Document", desc: "ドキュメント管理リポジトリ", icon: "fab fa-github", url: "https://github.com/ryo-aien/document" },
             { title: "Claude CLI Sandbox", desc: "CLIサンドボックス", icon: "fab fa-github", url: "https://github.com/ryo-aien/claude-cli-sandbox" },
             { title: "Codex Sandbox", desc: "Codexサンドボックス", icon: "fab fa-github", url: "https://github.com/ryo-aien/codex-sandbox" },
-            { title: "Recruiting Screening Assistant", desc: "AI採用スクリーニング支援", icon: "fab fa-github", url: "https://github.com/ryo-aien/recruiting-screening-assistant" }
+            { title: "Recruiting Assistant", desc: "AI採用スクリーニング支援", icon: "fab fa-github", url: "https://github.com/ryo-aien/recruiting-screening-assistant" }
         ];
 
-        const container = document.getElementById('links-container');
+        const carousel = document.getElementById("carousel");
+        const indicator = document.getElementById("indicator");
+        const n = linkData.length;
 
-        linkData.forEach((data, index) => {
+        const radius = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--radius")) || 380;
+        const step = 360 / n;
+
+        // カードを生成
+        linkData.forEach((data, i) => {
             const card = document.createElement('a');
             card.href = data.url;
-            card.className = 'link-card';
+            card.className = 'card';
             card.target = '_blank';
+            card.dataset.i = i;
             card.innerHTML = `
-                <i class="${data.icon}"></i>
-                <div class="link-text">
-                    <span class="link-title">${data.title}</span>
-                    <span class="link-desc">${data.desc}</span>
+                <i class="${data.icon} card-icon"></i>
+                <div class="card-content">
+                    <span class="card-title">${data.title}</span>
+                    <span class="card-desc">${data.desc}</span>
                 </div>
             `;
-            container.appendChild(card);
+            card.style.transform = `rotateY(${i * step}deg) translateZ(${radius}px)`;
+            carousel.appendChild(card);
 
-            setTimeout(() => card.classList.add('is-visible'), 400 + (index * 200));
-
-            // 3Dチルト効果
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width;
-                const y = (e.clientY - rect.top) / rect.height;
-                const rX = (0.5 - y) * 12;
-                const rY = (x - 0.5) * 12;
-                card.style.transform = `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg) translateY(-5px) scale(1.02)`;
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)`;
-            });
+            // インジケーター
+            const dot = document.createElement('div');
+            dot.className = 'indicator-dot';
+            dot.dataset.i = i;
+            dot.addEventListener('click', () => goTo(i));
+            indicator.appendChild(dot);
         });
+
+        const cards = Array.from(carousel.querySelectorAll(".card"));
+        const dots = Array.from(indicator.querySelectorAll(".indicator-dot"));
+
+        let active = 0;
+        let angle = 0;
+
+        function norm(i) { return (i % n + n) % n; }
+
+        function renderStates() {
+            cards.forEach((card, i) => {
+                const d = Math.min(norm(i - active), norm(active - i));
+                card.dataset.state = d === 0 ? "front" : (d === 1 ? "side" : "back");
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === active);
+            });
+        }
+
+        function apply() {
+            carousel.style.transform = `rotateY(${angle}deg)`;
+            renderStates();
+        }
+
+        function next() {
+            active = norm(active + 1);
+            angle -= step;
+            apply();
+        }
+
+        function prev() {
+            active = norm(active - 1);
+            angle += step;
+            apply();
+        }
+
+        function goTo(target) {
+            const diff = norm(target - active);
+            const diffReverse = norm(active - target);
+
+            if (diff <= diffReverse) {
+                angle -= diff * step;
+            } else {
+                angle += diffReverse * step;
+            }
+            active = target;
+            apply();
+        }
+
+        document.getElementById("next").addEventListener("click", next);
+        document.getElementById("prev").addEventListener("click", prev);
+
+        // キーボードナビゲーション
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") prev();
+            if (e.key === "ArrowRight") next();
+        });
+
+        // タッチスワイプ対応
+        let touchStartX = 0;
+        const stage = document.querySelector('.stage');
+
+        stage.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        stage.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) next();
+                else prev();
+            }
+        }, { passive: true });
+
+        // 初期表示
+        apply();
     </script>
 </body>
 </html>
