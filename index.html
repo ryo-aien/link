@@ -234,6 +234,24 @@
             .card-icon { font-size: 2rem; margin-right: 16px; }
             .card-title { font-size: 1rem; }
         }
+
+        .mail-link {
+            position: fixed;
+            bottom: calc(24px + 4rem);
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            font-size: 1.6rem;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            z-index: 100;
+        }
+
+        .mail-link:hover {
+            opacity: 1;
+            transform: translateX(-50%) scale(1.15);
+        }
     </style>
 </head>
 <body>
@@ -255,6 +273,10 @@
 
         <div class="card-indicator" id="indicator"></div>
     </div>
+
+    <a class="mail-link" href="mailto:ryo.aiengineer@gmail.com" title="ryo.aiengineer@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
 
     <script>
         const linkData = [
