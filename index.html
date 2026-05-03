@@ -88,7 +88,6 @@
             height: var(--card-h);
             position: relative;
             perspective: 1200px;
-            filter: drop-shadow(0 30px 55px rgba(0,0,0,.55));
             user-select: none;
             margin-bottom: 60px;
         }
@@ -110,7 +109,7 @@
             border: 1px solid rgba(255,255,255,.15);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            transform-style: preserve-3d;
+            box-shadow: 0 30px 55px rgba(0,0,0,.55);
             display: flex;
             align-items: center;
             padding: 24px;
@@ -144,6 +143,19 @@
         .card[data-state="back"] {
             opacity: .25;
             filter: blur(.4px) brightness(.7);
+        }
+
+        .card-link-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .stage:hover .card[data-state="front"] {
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .card-icon {
@@ -264,6 +276,7 @@
     <div class="carousel-section">
         <div class="stage">
             <div class="carousel" id="carousel"></div>
+            <a class="card-link-overlay" id="cardLinkOverlay" target="_blank" rel="noopener noreferrer"></a>
         </div>
 
         <div class="controls">
@@ -331,10 +344,13 @@
 
         function norm(i) { return (i % n + n) % n; }
 
+        const overlay = document.getElementById('cardLinkOverlay');
+
         function renderStates() {
             cards.forEach((card, i) => {
                 const d = Math.min(norm(i - active), norm(active - i));
                 card.dataset.state = d === 0 ? "front" : (d === 1 ? "side" : "back");
+                if (d === 0) overlay.href = card.href;
             });
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === active);
