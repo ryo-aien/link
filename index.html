@@ -13,11 +13,11 @@
             --accent: #38bdf8;
             --text-main: #f8fafc;
             --text-sub: #cbd5e1;
-            --card-w: 280px;
-            --card-h: 200px;
+            --card-w: 240px;
+            --card-h: 172px;
             --duration: 900ms;
             --ease: cubic-bezier(.25,.8,.25,1);
-            --radius: 380px;
+            --radius: 520px;
         }
 
         * { box-sizing: border-box; }
@@ -226,9 +226,9 @@
 
         @media (max-width: 480px) {
             :root {
-                --card-w: 260px;
-                --card-h: 180px;
-                --radius: 320px;
+                --card-w: 220px;
+                --card-h: 156px;
+                --radius: 420px;
             }
             .card { padding: 20px; }
             .card-icon { font-size: 2rem; margin-right: 16px; }
@@ -280,6 +280,8 @@
 
     <script>
         const linkData = [
+            { title: "Help RAG Admin Demo", desc: "Admin interface", icon: "fas fa-user-shield", url: "https://help-rag-admin-demo-210052289712.asia-northeast1.run.app/" },
+            { title: "Help RAG Help Demo", desc: "Help interface", icon: "fas fa-circle-question", url: "https://help-rag-help-demo-210052289712.asia-northeast1.run.app/" },
             { title: "Vector Search Support AI", desc: "AI assistant", icon: "fab fa-github", url: "https://github.com/ryo-aien/vector-search-chatbot" },
             { title: "Corporate AI Blueprint", desc: "Enterprise AI guide", icon: "fas fa-building", url: "https://ryo-aien.github.io/corporate-ai-blueprint/" },
             { title: "Retrieval Studio", desc: "Search & fetch · Gemini", icon: "fas fa-laptop-code", url: "https://gemini-retrieval-platform-136795632311.asia-northeast1.run.app/" },
