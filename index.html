@@ -247,9 +247,88 @@
             .card-title { font-size: 1rem; }
         }
 
+        .achievements-section {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            z-index: 2;
+            margin-top: 40px;
+            animation: fadeInUp 1.2s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        .achievements-title {
+            margin: 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--text-sub);
+            text-transform: uppercase;
+        }
+
+        .achievements-title::before {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 1px;
+            background: var(--accent);
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .achievements-title::after {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 1px;
+            background: var(--accent);
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .achievements-logos {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(8px, 2vw, 20px);
+            width: 100%;
+        }
+
+        .logo-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 0;
+            min-width: 0;
+            padding: clamp(10px, 2.2vw, 20px) clamp(10px, 2.2vw, 28px);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .92);
+            border: 1px solid rgba(255, 255, 255, .15);
+            transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .logo-badge img {
+            height: clamp(20px, 5vw, 52px);
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-badge:hover {
+            border-color: var(--accent);
+            background: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,.25);
+        }
+
         .mail-link {
             position: fixed;
-            bottom: calc(24px + 4rem);
+            bottom: 24px;
             left: 50%;
             transform: translateX(-50%);
             color: #ffffff;
@@ -285,6 +364,18 @@
         </div>
 
         <div class="card-indicator" id="indicator"></div>
+    </div>
+
+    <div class="achievements-section">
+        <h2 class="achievements-title">実績</h2>
+        <div class="achievements-logos">
+            <span class="logo-badge"><img src="assets/logos/ntt-data.svg" alt="NTTデータ"></span>
+            <span class="logo-badge"><img src="assets/logos/uniqlo.svg" alt="ユニクロ"></span>
+            <span class="logo-badge"><img src="assets/logos/gu.svg" alt="GU"></span>
+            <span class="logo-badge"><img src="assets/logos/kawaijuku.svg" alt="河合塾"></span>
+            <span class="logo-badge"><img src="assets/logos/nishimatsuya.svg" alt="西松屋"></span>
+            <span class="logo-badge"><img src="assets/logos/ecoring.png" alt="EcoRing"></span>
+        </div>
     </div>
 
     <a class="mail-link" href="mailto:ryo.aiengineer@gmail.com" title="ryo.aiengineer@gmail.com">
