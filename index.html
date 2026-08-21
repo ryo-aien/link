@@ -72,19 +72,388 @@
         }
 
         .profile-sheet {
-            width: min(100%, 1120px);
+            --corp-bg: var(--bg-end);
+            --corp-text: var(--text-main);
+            --corp-text-sub: var(--text-sub);
+            --corp-border: rgba(255, 255, 255, .14);
+            --corp-accent: var(--accent);
+            --corp-accent-soft: rgba(56, 189, 248, .12);
+            --corp-accent-border: rgba(56, 189, 248, .4);
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
             z-index: 2;
             animation: fadeInUp 1.2s ease-out 0.15s forwards;
             opacity: 0;
+            color: var(--corp-text);
+            padding: clamp(64px, 8vw, 120px) 0;
+            margin-bottom: 48px;
         }
 
-        .profile-sheet img {
+        .profile-sheet-inner {
+            width: min(100%, 1760px);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== ナンバリング行レイアウト ===== */
+        .corp-row {
+            display: grid;
+            grid-template-columns: minmax(220px, 22%) 1fr;
+            gap: clamp(40px, 5vw, 88px);
+            padding: clamp(48px, 6vw, 88px) 0;
+            border-top: 1px solid var(--corp-border);
+        }
+
+        .corp-row:first-child {
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .corp-row-label {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: sticky;
+            top: 32px;
+            align-self: start;
+        }
+
+        .corp-num {
+            font-size: .85rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: .08em;
+            color: var(--corp-accent-border);
+        }
+
+        .corp-row-label h3 {
+            margin: 0;
+            font-size: clamp(1.2rem, 2.1vw, 1.7rem);
+            font-weight: 800;
+            line-height: 1.4;
+            color: var(--corp-text);
+        }
+
+        /* ===== できること ===== */
+        .service-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 40px;
+        }
+
+        .service-item {
+            display: flex;
+            gap: 16px;
+            padding: 24px 0;
+            border-top: 1px solid var(--corp-border);
+        }
+
+        .service-item:nth-child(-n+2) {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .service-icon {
+            flex: 0 0 auto;
+            width: 36px;
+            height: 36px;
+            margin-top: 2px;
+            border-radius: 8px;
+            background: var(--corp-accent-soft);
+            color: var(--corp-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .service-item h4 {
+            margin: 0 0 6px;
+            font-size: .96rem;
+            font-weight: 700;
+            color: var(--corp-text);
+        }
+
+        .service-item p {
+            margin: 0;
+            font-size: .83rem;
+            line-height: 1.75;
+            color: var(--corp-text-sub);
+        }
+
+        /* ===== 技術スキル ===== */
+        .skill-groups {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .skill-group {
+            display: grid;
+            grid-template-columns: 168px 1fr;
+            gap: 20px;
+            align-items: baseline;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--corp-border);
+        }
+
+        .skill-group:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .skill-group-label {
+            font-size: .82rem;
+            font-weight: 700;
+            letter-spacing: .03em;
+            color: var(--corp-text);
+        }
+
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 6px 15px;
+            border-radius: 999px;
+            background: var(--corp-accent-soft);
+            border: 1px solid var(--corp-accent-border);
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--corp-accent);
+        }
+
+        /* ===== AI・先端技術への取り組み ===== */
+
+        .ai-block > p.lead {
+            max-width: 640px;
+            margin: 0 0 32px;
+            font-size: .95rem;
+            line-height: 1.85;
+            color: var(--corp-text-sub);
+        }
+
+        .ai-columns {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 40px;
+        }
+
+        .ai-columns h4 {
+            margin: 0 0 16px;
+            font-size: .8rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--corp-accent);
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .87rem;
+            line-height: 1.65;
+            color: var(--corp-text-sub);
+        }
+
+        .check-list li i {
+            flex: 0 0 auto;
+            margin-top: 4px;
+            color: var(--corp-accent);
+            font-size: .78rem;
+        }
+
+        /* ===== 開発スタイル：番号リスト ===== */
+        .process-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .process-list li {
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            gap: 24px;
+            padding: 26px 0;
+            border-top: 1px solid var(--corp-border);
+        }
+
+        .process-list li:first-child {
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .process-list-num {
+            font-size: 1.4rem;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+            color: var(--corp-accent-border);
+        }
+
+        .process-list h4 {
+            margin: 0 0 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--corp-text);
+        }
+
+        .process-list p {
+            margin: 0;
+            font-size: .87rem;
+            line-height: 1.75;
+            color: var(--corp-text-sub);
+            max-width: 640px;
+        }
+
+        /* ===== 対応工程：タイムライン ===== */
+        .process-flow {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .process-flow::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--corp-accent), var(--corp-accent-border) 85%, transparent);
+        }
+
+        .process-flow-step {
+            position: relative;
+            flex: 1;
+            text-align: center;
+            padding: 0 6px;
+        }
+
+        .process-flow-dot {
             display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 14px;
-            border: 1px solid rgba(148, 163, 184, .35);
-            box-shadow: 0 24px 54px rgba(0, 0, 0, .32);
+            width: 11px;
+            height: 11px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: var(--corp-accent);
+            box-shadow: 0 0 0 4px var(--corp-bg);
+        }
+
+        .process-flow-step h4 {
+            margin: 0;
+            font-size: .85rem;
+            font-weight: 700;
+            line-height: 1.5;
+            color: var(--corp-text);
+        }
+
+        /* ===== 提供できる価値 ===== */
+        .value-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .value-block:first-child {
+            padding-right: 48px;
+            border-right: 1px solid var(--corp-border);
+        }
+
+        .value-block h4 {
+            margin: 0 0 18px;
+            padding-bottom: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--corp-text);
+            border-bottom: 2px solid var(--corp-accent);
+            display: inline-block;
+        }
+
+        @media (max-width: 1000px) {
+            .corp-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .corp-row-label {
+                position: static;
+                flex-direction: row;
+                align-items: baseline;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+            .service-item:nth-child(-n+2) {
+                border-top: 1px solid var(--corp-border);
+                padding-top: 24px;
+            }
+            .service-item:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+            .ai-columns {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .value-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .value-block:first-child {
+                padding-right: 0;
+                padding-bottom: 32px;
+                border-right: none;
+                border-bottom: 1px solid var(--corp-border);
+            }
+            .skill-group {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .process-flow {
+                flex-wrap: wrap;
+                row-gap: 28px;
+            }
+            .process-flow::before {
+                display: none;
+            }
+            .process-flow-step {
+                flex: 1 1 30%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .corp-row {
+                padding: 40px 0;
+            }
+            .process-list li {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
         }
 
         .carousel-section {
@@ -96,7 +465,7 @@
             z-index: 2;
             animation: fadeInUp 1.2s ease-out 0.3s forwards;
             opacity: 0;
-            /* 3Dカードの見切れを避け、紹介資料との間隔を確保する */
+            /* 3Dカードの見切れを避けるための余白 */
             padding-top: 112px;
         }
 
@@ -265,7 +634,6 @@
             .card-title { font-size: 1rem; }
             body { padding: 32px 14px 84px; }
             .profile h1 { font-size: 2rem; }
-            .profile-sheet img { border-radius: 10px; }
             .carousel-section { padding-top: 72px; }
         }
 
@@ -373,10 +741,6 @@
         <p>Software Engineer</p>
     </div>
 
-    <section class="profile-sheet" aria-label="対応スキル・提供価値">
-        <img src="assets/images/ai-web-engineer-profile.png" alt="Web開発からAI活用まで対応できるエンジニアのスキルと提供価値">
-    </section>
-
     <div class="carousel-section">
         <div class="stage">
             <div class="carousel" id="carousel"></div>
@@ -390,6 +754,267 @@
 
         <div class="card-indicator" id="indicator"></div>
     </div>
+
+    <section class="profile-sheet" aria-label="プロフィール・提供価値">
+      <div class="profile-sheet-inner">
+
+        <div class="corp-row">
+            <div class="corp-row-label">
+                <span class="corp-num">01</span>
+                <h3>Capabilities</h3>
+            </div>
+            <div class="corp-row-content">
+                <ul class="service-list">
+                    <li class="service-item">
+                        <span class="service-icon"><i class="fas fa-code"></i></span>
+                        <div>
+                            <h4>Webシステム開発</h4>
+                            <p>Python・PHPを中心に、API・バッチ・画面開発まで一連の工程に対応できます。</p>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-icon"><i class="fas fa-database"></i></span>
+                        <div>
+                            <h4>大規模データ処理・バッチ開発</h4>
+                            <p>数億件規模のデータ処理や、BigQuery・Airflowを用いた高負荷バッチの開発経験があります。</p>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-icon"><i class="fas fa-brain"></i></span>
+                        <div>
+                            <h4>AI活用・プロダクト開発</h4>
+                            <p>LLM・RAG・AIエージェント等の技術検証からPoC/プロダクト開発・評価まで一貫して実践しています。</p>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-icon"><i class="fas fa-chart-line"></i></span>
+                        <div>
+                            <h4>品質向上・効率化</h4>
+                            <p>テスト自動化・CI/CD導入・設定一元管理などにより、開発品質と運用効率の向上に貢献します。</p>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-icon"><i class="fas fa-shield-alt"></i></span>
+                        <div>
+                            <h4>障害対応・保守運用</h4>
+                            <p>本番障害の原因調査から恒久対応、保守運用まで責任を持って対応できます。</p>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-icon"><i class="fas fa-users"></i></span>
+                        <div>
+                            <h4>チーム貢献・リーダーシップ</h4>
+                            <p>サブリーダー経験や複数案件の並行対応を通じて、チーム全体の生産性向上に貢献します。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="corp-row">
+            <div class="corp-row-label">
+                <span class="corp-num">02</span>
+                <h3>Tech Stack</h3>
+            </div>
+            <div class="corp-row-content">
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <span class="skill-group-label">言語</span>
+                        <div class="tag-row">
+                            <span class="tag">Python</span><span class="tag">PHP</span><span class="tag">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-group-label">フレームワーク</span>
+                        <div class="tag-row">
+                            <span class="tag">Airflow</span><span class="tag">Laravel</span><span class="tag">Slim</span><span class="tag">独自FW</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-group-label">データベース</span>
+                        <div class="tag-row">
+                            <span class="tag">BigQuery</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-group-label">クラウド環境</span>
+                        <div class="tag-row">
+                            <span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">GCP</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-group-label">開発ツール・その他</span>
+                        <div class="tag-row">
+                            <span class="tag">GitHub</span><span class="tag">Git</span><span class="tag">Bitbucket</span>
+                            <span class="tag">Azure DevOps</span><span class="tag">Jenkins</span>
+                            <span class="tag">VS Code</span><span class="tag">Cursor</span>
+                            <span class="tag">Docker</span><span class="tag">Ollama</span><span class="tag">LM Studio</span>
+                            <span class="tag">Redmine</span><span class="tag">Backlog</span><span class="tag">JIRA</span><span class="tag">TestRail</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-group-label">AI・LLM関連</span>
+                        <div class="tag-row">
+                            <span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">LangSmith</span>
+                            <span class="tag">MCP</span><span class="tag">Agent Skills</span>
+                            <span class="tag">RAG</span><span class="tag">Embedding</span><span class="tag">Vector DB</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-group-label">AIツール</span>
+                        <div class="tag-row">
+                            <span class="tag">ChatGPT</span><span class="tag">Claude</span><span class="tag">Gemini</span>
+                            <span class="tag">NotebookLM</span><span class="tag">Genspark</span><span class="tag">Manus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="corp-row">
+            <div class="corp-row-label">
+                <span class="corp-num">03</span>
+                <h3>AI Initiatives</h3>
+            </div>
+            <div class="corp-row-content">
+                <div class="ai-block">
+                    <p class="lead">LLM、RAG、AIエージェント、MCPなどの最新技術をキャッチアップし、業務に活かすプロダクト開発まで一貫して取り組んでいます。</p>
+                    <div class="ai-columns">
+                        <div>
+                            <h4>取り組み内容</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>機械学習・大規模言語モデル・推論プロセスの学習</li>
+                                <li><i class="fas fa-check"></i>Embedding・Vector DB・RAG構成・評価検証</li>
+                                <li><i class="fas fa-check"></i>プロンプト/コンテキスト設計・ローカルLLM実行</li>
+                                <li><i class="fas fa-check"></i>AIエージェント・ワークフロー・ガードレール検証</li>
+                                <li><i class="fas fa-check"></i>LangChain / LangGraph / LangSmith / MCP 検証</li>
+                                <li><i class="fas fa-check"></i>Sandbox環境を含むセキュアな実行環境の構築</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>AIツール</h4>
+                            <div class="tag-row">
+                                <span class="tag">ChatGPT</span><span class="tag">Claude</span><span class="tag">Gemini</span>
+                                <span class="tag">NotebookLM</span><span class="tag">Genspark</span><span class="tag">Manus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="corp-row">
+            <div class="corp-row-label">
+                <span class="corp-num">04</span>
+                <h3>Working Style</h3>
+            </div>
+            <div class="corp-row-content">
+                <ol class="process-list">
+                    <li>
+                        <span class="process-list-num">01</span>
+                        <div>
+                            <h4>全体最適で考える</h4>
+                            <p>画面・API・バッチ・DB・外部連携まで含め、影響範囲を把握して着手。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="process-list-num">02</span>
+                        <div>
+                            <h4>設計意図を理解する</h4>
+                            <p>既存コードやドキュメントから設計意図や業務を整理し、最適な実装方針を判断。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="process-list-num">03</span>
+                        <div>
+                            <h4>品質と保守性を重視</h4>
+                            <p>テスト・CI/CD・ドキュメント整備により、保守性と拡張性の高い開発を実現。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="process-list-num">04</span>
+                        <div>
+                            <h4>課題を構造化して解決</h4>
+                            <p>現状・原因・影響・対応策を整理し、関係者と認識を合わせながら推進。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="process-list-num">05</span>
+                        <div>
+                            <h4>運用まで見据えて改善</h4>
+                            <p>精度・速度・セキュリティ・運用負荷を考慮し、継続利用できる仕組みを構築。</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="corp-row">
+            <div class="corp-row-label">
+                <span class="corp-num">05</span>
+                <h3>Process</h3>
+            </div>
+            <div class="corp-row-content">
+                <div class="process-flow">
+                    <div class="process-flow-step">
+                        <span class="process-flow-dot"></span>
+                        <h4>要件整理</h4>
+                    </div>
+                    <div class="process-flow-step">
+                        <span class="process-flow-dot"></span>
+                        <h4>基本設計</h4>
+                    </div>
+                    <div class="process-flow-step">
+                        <span class="process-flow-dot"></span>
+                        <h4>実装</h4>
+                    </div>
+                    <div class="process-flow-step">
+                        <span class="process-flow-dot"></span>
+                        <h4>テスト<br>（単体・結合）</h4>
+                    </div>
+                    <div class="process-flow-step">
+                        <span class="process-flow-dot"></span>
+                        <h4>リリース</h4>
+                    </div>
+                    <div class="process-flow-step">
+                        <span class="process-flow-dot"></span>
+                        <h4>保守運用・改善</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="corp-row">
+            <div class="corp-row-label">
+                <span class="corp-num">06</span>
+                <h3>Value</h3>
+            </div>
+            <div class="corp-row-content">
+                <div class="value-grid">
+                    <div class="value-block">
+                        <h4>提供できる価値</h4>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>安定稼働するシステム</li>
+                            <li><i class="fas fa-check"></i>高品質で保守しやすい設計</li>
+                            <li><i class="fas fa-check"></i>業務にフィットする改善提案</li>
+                            <li><i class="fas fa-check"></i>チームの生産性向上</li>
+                        </ul>
+                    </div>
+                    <div class="value-block">
+                        <h4>こんな課題解決に貢献できます</h4>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i>AIを活用した業務効率化・新機能開発を進めたい</li>
+                            <li><i class="fas fa-check"></i>大規模データ処理や配信基盤を安定運用したい</li>
+                            <li><i class="fas fa-check"></i>開発品質やテスト自動化で生産性を向上させたい</li>
+                            <li><i class="fas fa-check"></i>保守性の高いシステムにリファクタリングしたい</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
 
     <div class="achievements-section">
         <h2 class="achievements-title">実績</h2>
