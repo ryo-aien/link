@@ -181,6 +181,21 @@
             font-size: 1rem;
         }
 
+        .service-icon-glyph {
+            display: block;
+            width: 19px;
+            height: 19px;
+            background-color: currentColor;
+            -webkit-mask-image: var(--glyph-src);
+            mask-image: var(--glyph-src);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+        }
+
         .service-item h4 {
             margin: 0 0 6px;
             font-size: .96rem;
@@ -796,42 +811,42 @@
             <div class="corp-row-content">
                 <ul class="service-list">
                     <li class="service-item">
-                        <span class="service-icon"><i class="fas fa-code"></i></span>
+                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.8%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M8.5 6 3 12l5.5 6%27/><path d=%2715.5 6 21 12l-5.5 6%27/></svg>')"></i></span>
                         <div>
                             <h4>Webシステム開発</h4>
                             <p>Python・PHPを中心に、API・バッチ・画面開発まで一連の工程に対応できます。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="fas fa-database"></i></span>
+                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><ellipse cx=%2712%27 cy=%276%27 rx=%277%27 ry=%272.8%27/><path d=%27M5 6v12c0 1.6 3.1 2.8 7 2.8s7-1.2 7-2.8V6%27/><path d=%27M5 12c0 1.6 3.1 2.8 7 2.8s7-1.2 7-2.8%27/></svg>')"></i></span>
                         <div>
                             <h4>大規模データ処理・バッチ開発</h4>
                             <p>数億件規模のデータ処理や、BigQuery・Airflowを用いた高負荷バッチの開発経験があります。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="fas fa-brain"></i></span>
+                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M9.5 4.5c-2 0-3.5 1.5-3.5 3.2 0 .6.2 1.1.5 1.6-1.1.5-1.8 1.6-1.8 2.9 0 1.2.7 2.3 1.7 2.8-.1.3-.2.7-.2 1 0 1.8 1.6 3.2 3.5 3.2 1 0 1.8-.4 2.3-1%27/><path d=%27M14.5 4.5c2 0 3.5 1.5 3.5 3.2 0 .6-.2 1.1-.5 1.6 1.1.5 1.8 1.6 1.8 2.9 0 1.2-.7 2.3-1.7 2.8.1.3.2.7.2 1 0 1.8-1.6 3.2-3.5 3.2-1 0-1.8-.4-2.3-1%27/><path d=%27M12 5v14%27/><path d=%27M9 9.5h2.2%27/><path d=%27M12.8 13.5H15%27/></svg>')"></i></span>
                         <div>
                             <h4>AI活用・プロダクト開発</h4>
                             <p>LLM・RAG・AIエージェント等の技術検証からPoC/プロダクト開発・評価まで一貫して実践しています。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.8%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M4 17l5.5-5.5 4 4L21 8%27/><path d=%27M15.5 8H21v5.5%27/></svg>')"></i></span>
                         <div>
                             <h4>品質向上・効率化</h4>
                             <p>テスト自動化・CI/CD導入・設定一元管理などにより、開発品質と運用効率の向上に貢献します。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="fas fa-shield-alt"></i></span>
+                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M12 3.2 19 6v5.5c0 5-3 8.2-7 9.3-4-1.1-7-4.3-7-9.3V6l7-2.8z%27/><path d=%27M9 12.3l2 2 4.2-4.6%27/></svg>')"></i></span>
                         <div>
                             <h4>障害対応・保守運用</h4>
                             <p>本番障害の原因調査から恒久対応、保守運用まで責任を持って対応できます。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="fas fa-users"></i></span>
+                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><circle cx=%278%27 cy=%278%27 r=%272.6%27/><circle cx=%2716%27 cy=%278%27 r=%272.6%27/><path d=%27M3 19c0-3 2.2-5 5-5s5 2 5 5%27/><path d=%2711 19c0-3 2.2-5 5-5s5 2 5 5%27/></svg>')"></i></span>
                         <div>
                             <h4>チーム貢献・リーダーシップ</h4>
                             <p>サブリーダー経験や複数案件の並行対応を通じて、チーム全体の生産性向上に貢献します。</p>
