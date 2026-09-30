@@ -12,22 +12,22 @@
         gtag('config', 'G-5MCVEHM40D');
     </script>
     <title>Yoshimura | Freelance Software Engineer</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230f172a'/><path fill='%23f8fafc' d='M32 14c-9.4 0-17 7.6-17 17 0 7.5 4.9 13.9 11.7 16.1.9.2 1.3-.4 1.3-.9v-3.1c-4.8 1-5.8-2.1-5.8-2.1-.8-2-1.9-2.5-1.9-2.5-1.6-1.1.1-1.1.1-1.1 1.7.1 2.6 1.8 2.6 1.8 1.6 2.7 4.2 1.9 5.2 1.4.2-1.1.6-1.9 1.1-2.3-3.8-.4-7.8-1.9-7.8-8.4 0-1.9.7-3.5 1.8-4.7-.2-.4-.8-2.1.2-4.4 0 0 1.5-.5 4.9 1.8 1.4-.4 2.9-.6 4.4-.6s3 .2 4.4.6c3.4-2.3 4.9-1.8 4.9-1.8 1 2.3.4 4 .2 4.4 1.1 1.2 1.8 2.8 1.8 4.7 0 6.5-4 8-7.8 8.4.6.5 1.2 1.6 1.2 3.2v4.8c0 .5.4 1.1 1.3.9C44.1 44.9 49 38.5 49 31c0-9.4-7.6-17-17-17z'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23171a16'/><path fill='%23f5f6f1' d='M32 14c-9.4 0-17 7.6-17 17 0 7.5 4.9 13.9 11.7 16.1.9.2 1.3-.4 1.3-.9v-3.1c-4.8 1-5.8-2.1-5.8-2.1-.8-2-1.9-2.5-1.9-2.5-1.6-1.1.1-1.1.1-1.1 1.7.1 2.6 1.8 2.6 1.8 1.6 2.7 4.2 1.9 5.2 1.4.2-1.1.6-1.9 1.1-2.3-3.8-.4-7.8-1.9-7.8-8.4 0-1.9.7-3.5 1.8-4.7-.2-.4-.8-2.1.2-4.4 0 0 1.5-.5 4.9 1.8 1.4-.4 2.9-.6 4.4-.6s3 .2 4.4.6c3.4-2.3 4.9-1.8 4.9-1.8 1 2.3.4 4 .2 4.4 1.1 1.2 1.8 2.8 1.8 4.7 0 6.5-4 8-7.8 8.4.6.5 1.2 1.6 1.2 3.2v4.8c0 .5.4 1.1 1.3.9C44.1 44.9 49 38.5 49 31c0-9.4-7.6-17-17-17z'/></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #ffffff;
-            --bg-alt: #f8fafc;
-            --text-main: #0f172a;
-            --text-sub: #64748b;
-            --border: #e2e8f0;
-            --accent: #2563eb;
-            --accent-dark: #1d4ed8;
-            --accent-soft: rgba(37, 99, 235, .08);
-            --accent-border: rgba(37, 99, 235, .35);
-            --footer-bg: #0f172a;
-            --footer-text: #cbd5e1;
-            --footer-text-strong: #f8fafc;
+            --paper: #f5f6f1;
+            --paper-raised: #eef0e9;
+            --ink: #171a16;
+            --ink-soft: #5b6058;
+            --rule: #dadfd4;
+            --ledger: #2f5d45;
+            --ledger-dark: #234634;
+            --ledger-soft: rgba(47, 93, 69, .08);
+            --ledger-border: rgba(47, 93, 69, .3);
         }
 
         * { box-sizing: border-box; }
@@ -36,36 +36,45 @@
             scroll-behavior: smooth;
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+        }
+
         body {
-            background: var(--bg);
-            color: var(--text-main);
-            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'IBM Plex Sans JP', 'IBM Plex Sans', -apple-system, sans-serif;
             margin: 0;
             -webkit-font-smoothing: antialiased;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        a { color: inherit; }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--ledger);
+            outline-offset: 3px;
         }
 
-        a { color: inherit; }
+        @keyframes riseIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
         /* ===== ヘッダー ===== */
         .site-header {
             position: sticky;
             top: 0;
             z-index: 50;
-            background: rgba(255, 255, 255, .88);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
+            background: var(--paper);
+            border-bottom: 1px solid var(--rule);
         }
 
         .site-header-inner {
-            max-width: 1200px;
+            max-width: 1680px;
             margin: 0 auto;
-            padding: 16px 24px;
+            padding: 18px 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -73,17 +82,17 @@
         }
 
         .brand {
-            font-weight: 800;
-            font-size: 1.05rem;
-            letter-spacing: .02em;
+            font-family: 'IBM Plex Serif', serif;
+            font-weight: 600;
+            font-size: 1.1rem;
             text-decoration: none;
-            color: var(--text-main);
+            color: var(--ink);
             white-space: nowrap;
         }
 
         .site-nav {
             display: flex;
-            gap: 28px;
+            gap: 30px;
             overflow-x: auto;
             scrollbar-width: none;
         }
@@ -91,53 +100,61 @@
         .site-nav::-webkit-scrollbar { display: none; }
 
         .site-nav a {
-            font-size: .88rem;
-            font-weight: 600;
-            color: var(--text-sub);
+            font-size: .85rem;
+            font-weight: 500;
+            color: var(--ink-soft);
             text-decoration: none;
             white-space: nowrap;
-            transition: color .2s ease;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+            transition: color .2s ease, border-color .2s ease;
         }
 
         .site-nav a:hover {
-            color: var(--accent);
+            color: var(--ledger);
+            border-color: var(--ledger-border);
         }
 
         /* ===== ヒーロー ===== */
         .hero {
-            max-width: 760px;
+            max-width: 1680px;
             margin: 0 auto;
-            padding: 96px 20px 72px;
-            text-align: center;
-            animation: fadeInUp 0.8s ease-out forwards;
+            padding: clamp(56px, 9vw, 108px) 24px clamp(64px, 8vw, 96px);
+            display: grid;
+            grid-template-columns: 1.3fr .7fr;
+            gap: clamp(32px, 5vw, 72px);
+            align-items: start;
         }
 
-        .hero-eyebrow {
-            margin: 0 0 16px;
-            font-size: .8rem;
-            font-weight: 700;
-            letter-spacing: .14em;
-            text-transform: uppercase;
-            color: var(--accent);
+        .hero-inner {
+            animation: riseIn .7s ease-out forwards;
         }
 
-        .hero h1 {
-            margin: 0 0 18px;
-            font-size: clamp(2.2rem, 5vw, 3.1rem);
+        .hero-headline {
+            margin: 0 0 24px;
+            font-family: 'Shippori Mincho', serif;
             font-weight: 800;
-            letter-spacing: -.01em;
+            font-size: clamp(2rem, 4.6vw, 3.2rem);
+            line-height: 1.4;
+            letter-spacing: .01em;
+            color: var(--ink);
         }
 
         .hero-lead {
             margin: 0 0 36px;
-            font-size: 1.05rem;
-            line-height: 1.95;
-            color: var(--text-sub);
+            max-width: 46ch;
+            font-size: 1rem;
+            line-height: 2;
+            color: var(--ink-soft);
         }
 
-        .hero-cta {
+        .hero-lead strong {
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        .hero-actions {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
             gap: 14px;
         }
@@ -146,67 +163,114 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 13px 28px;
-            border-radius: 8px;
+            padding: 13px 26px;
+            border-radius: 2px;
             font-weight: 700;
-            font-size: .92rem;
+            font-size: .88rem;
             text-decoration: none;
-            transition: background .2s ease, border-color .2s ease, color .2s ease, transform .15s ease;
+            border: 1px solid transparent;
+            transition: background .2s ease, border-color .2s ease, color .2s ease;
         }
 
         .btn-primary {
-            background: var(--accent);
-            color: #ffffff;
+            background: var(--ledger);
+            color: var(--paper);
         }
 
         .btn-primary:hover {
-            background: var(--accent-dark);
-            transform: translateY(-1px);
+            background: var(--ledger-dark);
         }
 
         .btn-outline {
             background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border);
+            color: var(--ink);
+            border-color: var(--ink);
         }
 
         .btn-outline:hover {
-            border-color: var(--accent);
-            color: var(--accent);
+            border-color: var(--ledger);
+            color: var(--ledger);
         }
 
-        /* ===== プロフィールシート（企業サイト風セクション群） ===== */
+        .hero-index {
+            border: 1px solid var(--rule);
+            border-top: 3px solid var(--ledger);
+            background: var(--paper-raised);
+            padding: 28px 26px;
+            animation: riseIn .7s ease-out .12s backwards;
+        }
+
+        .hero-index-label {
+            margin: 0 0 18px;
+            font-size: .82rem;
+            color: var(--ink-soft);
+        }
+
+        .hero-index-list {
+            list-style: none;
+            margin: 0 0 20px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .hero-index-list li {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            font-size: .9rem;
+            line-height: 1.6;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .hero-index-list li:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .cap-code {
+            flex: 0 0 auto;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: .76rem;
+            font-weight: 600;
+            color: var(--ledger);
+        }
+
+        .hero-index-more {
+            display: inline-block;
+            font-size: .85rem;
+            font-weight: 600;
+            color: var(--ledger);
+            text-decoration: none;
+            border-bottom: 1px solid var(--ledger-border);
+        }
+
+        .hero-index-more:hover {
+            border-color: var(--ledger);
+        }
+
+        /* ===== プロフィールシート ===== */
         .profile-sheet {
-            --corp-bg: var(--bg);
-            --corp-text: var(--text-main);
-            --corp-text-sub: var(--text-sub);
-            --corp-border: var(--border);
-            --corp-accent: var(--accent);
-            --corp-accent-soft: var(--accent-soft);
-            --corp-accent-border: var(--accent-border);
-            width: 100vw;
-            margin-left: calc(50% - 50vw);
-            margin-right: calc(50% - 50vw);
-            color: var(--corp-text);
-            padding: clamp(64px, 8vw, 120px) 0;
+            padding: clamp(48px, 6vw, 88px) 0;
         }
 
         .profile-sheet-inner {
-            width: min(100%, 1160px);
+            width: min(100%, 1680px);
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
             display: flex;
             flex-direction: column;
         }
 
-        /* ===== ナンバリング行レイアウト ===== */
         .corp-row {
             display: grid;
-            grid-template-columns: minmax(220px, 22%) 1fr;
-            gap: clamp(40px, 5vw, 88px);
-            padding: clamp(48px, 6vw, 88px) 0;
-            border-top: 1px solid var(--corp-border);
-            scroll-margin-top: 88px;
+            grid-template-columns: minmax(200px, 260px) 1fr;
+            gap: clamp(36px, 5vw, 80px);
+            padding: clamp(48px, 6vw, 84px) 0;
+            border-top: 1px solid var(--rule);
+            scroll-margin-top: 84px;
         }
 
         .corp-row:first-child {
@@ -215,80 +279,146 @@
         }
 
         .corp-row-label {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
             position: sticky;
-            top: 96px;
+            top: 84px;
             align-self: start;
         }
 
-        .corp-num {
-            font-size: .85rem;
-            font-weight: 700;
-            font-variant-numeric: tabular-nums;
-            letter-spacing: .08em;
-            color: var(--corp-accent-border);
-        }
-
         .corp-row-label h3 {
-            margin: 0;
-            font-size: clamp(1.2rem, 2.1vw, 1.7rem);
-            font-weight: 800;
-            line-height: 1.4;
-            color: var(--corp-text);
+            margin: 0 0 10px;
+            font-family: 'IBM Plex Serif', serif;
+            font-size: clamp(1.15rem, 1.9vw, 1.5rem);
+            font-weight: 600;
+            color: var(--ink);
         }
 
-        /* ===== できること ===== */
-        .capability-groups {
+        .corp-row-desc {
+            margin: 0;
+            font-size: .86rem;
+            line-height: 1.8;
+            color: var(--ink-soft);
+            max-width: 32ch;
+        }
+
+        /* ===== 対応領域：目次 ===== */
+        .cap-index {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin-bottom: clamp(40px, 5vw, 64px);
+            border-top: 1px solid var(--rule);
+            border-left: 1px solid var(--rule);
+        }
+
+        .cap-index-item {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            padding: 13px 16px;
+            border-right: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            text-decoration: none;
+            color: var(--ink);
+            font-size: .82rem;
+            line-height: 1.5;
+            transition: background .15s ease, color .15s ease;
+        }
+
+        .cap-index-item:hover {
+            background: var(--ledger-soft);
+            color: var(--ledger-dark);
+        }
+
+        .cap-index-item .cap-code {
+            color: var(--ink-soft);
+        }
+
+        .cap-index-item:hover .cap-code {
+            color: var(--ledger);
+        }
+
+        /* ===== 対応領域：詳細エントリ ===== */
+        .cap-entries {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0 56px;
         }
 
-        .capability-group {
-            padding: 28px 0;
-            border-top: 1px solid var(--corp-border);
+        .cap-entry {
+            padding: 26px 0;
+            border-top: 1px solid var(--rule);
         }
 
-        .capability-group:nth-child(-n+2) {
+        .cap-entry:nth-child(-n+2) {
             border-top: none;
             padding-top: 0;
         }
 
-        .capability-group h4 {
-            margin: 0 0 14px;
-            font-size: .96rem;
-            font-weight: 800;
-            color: var(--corp-text);
+        .cap-entry-head {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 14px;
         }
 
-        /* ===== 技術スキル ===== */
+        .cap-entry-head h4 {
+            margin: 0;
+            font-size: .98rem;
+            font-weight: 700;
+            line-height: 1.5;
+            color: var(--ink);
+        }
+
+        .dash-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .dash-list li {
+            position: relative;
+            padding-left: 16px;
+            font-size: .87rem;
+            line-height: 1.65;
+            color: var(--ink-soft);
+        }
+
+        .dash-list li::before {
+            content: "\2013";
+            position: absolute;
+            left: 0;
+            color: var(--ledger);
+        }
+
+        /* ===== 技術スタック ===== */
         .skill-groups {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 0;
         }
 
         .skill-group {
             display: grid;
-            grid-template-columns: 168px 1fr;
+            grid-template-columns: 170px 1fr;
             gap: 20px;
             align-items: baseline;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--corp-border);
+            padding: 18px 0;
+            border-top: 1px solid var(--rule);
         }
 
-        .skill-group:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
+        .skill-group:first-child {
+            border-top: none;
+            padding-top: 0;
         }
 
         .skill-group-label {
-            font-size: .82rem;
-            font-weight: 700;
-            letter-spacing: .03em;
-            color: var(--corp-text);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: .78rem;
+            font-weight: 500;
+            color: var(--ink-soft);
         }
 
         .tag-row {
@@ -300,19 +430,25 @@
         .tag {
             display: inline-flex;
             align-items: center;
-            padding: 6px 15px;
-            border-radius: 999px;
-            background: var(--corp-accent-soft);
-            border: 1px solid var(--corp-accent-border);
-            font-size: .82rem;
-            font-weight: 600;
-            color: var(--corp-accent);
+            padding: 6px 12px;
+            border-radius: 2px;
+            background: transparent;
+            border: 1px solid var(--rule);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: .78rem;
+            font-weight: 500;
+            color: var(--ink);
+            transition: border-color .15s ease;
+        }
+
+        .tag:hover {
+            border-color: var(--ledger-border);
         }
 
         .tech-icon {
-            width: 14px;
-            height: 14px;
-            margin-right: 6px;
+            width: 13px;
+            height: 13px;
+            margin-right: 7px;
             flex: 0 0 auto;
             background-color: var(--icon-color, currentColor);
             -webkit-mask-image: var(--icon-src);
@@ -326,13 +462,12 @@
         }
 
         /* ===== AI・先端技術への取り組み ===== */
-
         .ai-block > p.lead {
             max-width: 640px;
             margin: 0 0 32px;
             font-size: .95rem;
-            line-height: 1.85;
-            color: var(--corp-text-sub);
+            line-height: 1.9;
+            color: var(--ink-soft);
         }
 
         .ai-block > p.lead.lead-wide {
@@ -347,11 +482,9 @@
 
         .ai-columns h4 {
             margin: 0 0 16px;
-            font-size: .8rem;
-            font-weight: 800;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            color: var(--corp-accent);
+            font-size: .86rem;
+            font-weight: 700;
+            color: var(--ink);
         }
 
         .check-list {
@@ -364,19 +497,18 @@
         }
 
         .check-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            position: relative;
+            padding-left: 16px;
             font-size: .87rem;
-            line-height: 1.65;
-            color: var(--corp-text-sub);
+            line-height: 1.75;
+            color: var(--ink-soft);
         }
 
-        .check-list li i {
-            flex: 0 0 auto;
-            margin-top: 4px;
-            color: var(--corp-accent);
-            font-size: .78rem;
+        .check-list li::before {
+            content: "\2013";
+            position: absolute;
+            left: 0;
+            color: var(--ledger);
         }
 
         /* ===== 開発スタイル：番号リスト ===== */
@@ -388,10 +520,10 @@
 
         .process-list li {
             display: grid;
-            grid-template-columns: 64px 1fr;
+            grid-template-columns: 56px 1fr;
             gap: 24px;
-            padding: 26px 0;
-            border-top: 1px solid var(--corp-border);
+            padding: 24px 0;
+            border-top: 1px solid var(--rule);
         }
 
         .process-list li:first-child {
@@ -400,28 +532,29 @@
         }
 
         .process-list-num {
-            font-size: 1.4rem;
-            font-weight: 800;
-            font-variant-numeric: tabular-nums;
-            color: var(--corp-accent-border);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--ledger);
         }
 
         .process-list h4 {
             margin: 0 0 6px;
+            font-family: 'IBM Plex Serif', serif;
             font-size: 1rem;
-            font-weight: 700;
-            color: var(--corp-text);
+            font-weight: 600;
+            color: var(--ink);
         }
 
         .process-list p {
             margin: 0;
             font-size: .87rem;
-            line-height: 1.75;
-            color: var(--corp-text-sub);
+            line-height: 1.8;
+            color: var(--ink-soft);
             max-width: 640px;
         }
 
-        /* ===== 対応工程：タイムライン ===== */
+        /* ===== 工程：タイムライン ===== */
         .process-flow {
             position: relative;
             display: flex;
@@ -432,11 +565,11 @@
         .process-flow::before {
             content: "";
             position: absolute;
-            top: 5px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--corp-accent), var(--corp-accent-border) 85%, transparent);
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            height: 1px;
+            background: var(--rule);
         }
 
         .process-flow-step {
@@ -447,13 +580,19 @@
         }
 
         .process-flow-dot {
-            display: block;
-            width: 11px;
-            height: 11px;
-            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            margin: 0 auto 16px;
             border-radius: 50%;
-            background: var(--corp-accent);
-            box-shadow: 0 0 0 4px var(--corp-bg);
+            background: var(--paper);
+            border: 1.5px solid var(--ledger);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: .72rem;
+            font-weight: 600;
+            color: var(--ledger);
         }
 
         .process-flow-step h4 {
@@ -461,7 +600,7 @@
             font-size: .85rem;
             font-weight: 700;
             line-height: 1.5;
-            color: var(--corp-text);
+            color: var(--ink);
         }
 
         /* ===== 提供できる価値 ===== */
@@ -473,43 +612,46 @@
 
         .value-block:first-child {
             padding-right: 48px;
-            border-right: 1px solid var(--corp-border);
+            border-right: 1px solid var(--rule);
         }
 
         .value-block h4 {
             margin: 0 0 18px;
             padding-bottom: 12px;
+            font-family: 'IBM Plex Serif', serif;
             font-size: 1rem;
-            font-weight: 700;
-            color: var(--corp-text);
-            border-bottom: 2px solid var(--corp-accent);
+            font-weight: 600;
+            color: var(--ink);
+            border-bottom: 2px solid var(--ledger);
             display: inline-block;
         }
 
         @media (max-width: 1000px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
             .corp-row {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
             .corp-row-label {
                 position: static;
-                flex-direction: row;
-                align-items: baseline;
-                gap: 12px;
+            }
+            .corp-row-desc {
+                max-width: none;
             }
         }
 
         @media (max-width: 900px) {
-            .capability-groups {
+            .cap-index {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .cap-entries {
                 grid-template-columns: 1fr;
             }
-            .capability-group:nth-child(-n+2) {
-                border-top: 1px solid var(--corp-border);
-                padding-top: 28px;
-            }
-            .capability-group:first-child {
-                border-top: none;
-                padding-top: 0;
+            .cap-entry:nth-child(2) {
+                border-top: 1px solid var(--rule);
+                padding-top: 26px;
             }
             .ai-columns {
                 grid-template-columns: 1fr;
@@ -523,7 +665,7 @@
                 padding-right: 0;
                 padding-bottom: 32px;
                 border-right: none;
-                border-bottom: 1px solid var(--corp-border);
+                border-bottom: 1px solid var(--rule);
             }
             .skill-group {
                 grid-template-columns: 1fr;
@@ -532,6 +674,9 @@
         }
 
         @media (max-width: 700px) {
+            .cap-index {
+                grid-template-columns: 1fr;
+            }
             .process-flow {
                 flex-wrap: wrap;
                 row-gap: 28px;
@@ -556,13 +701,13 @@
                 gap: 6px;
             }
             .hero {
-                padding: 64px 20px 56px;
+                padding: 48px 20px 56px;
             }
         }
 
         .achievements-section {
             width: 100%;
-            max-width: 1100px;
+            max-width: 1680px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -578,31 +723,9 @@
 
         .achievements-title {
             margin: 0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            letter-spacing: 0.15em;
-            color: var(--text-sub);
-            text-transform: uppercase;
-        }
-
-        .achievements-title::before {
-            content: "";
-            display: inline-block;
-            width: 24px;
-            height: 1px;
-            background: var(--accent);
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        .achievements-title::after {
-            content: "";
-            display: inline-block;
-            width: 24px;
-            height: 1px;
-            background: var(--accent);
-            margin-left: 10px;
-            vertical-align: middle;
+            color: var(--ink-soft);
         }
 
         .achievements-logos {
@@ -621,10 +744,10 @@
             flex: 1 1 0;
             min-width: 0;
             padding: clamp(10px, 2.2vw, 20px) clamp(10px, 2.2vw, 28px);
-            border-radius: 16px;
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+            border-radius: 2px;
+            background: var(--paper-raised);
+            border: 1px solid var(--rule);
+            transition: border-color 0.25s ease, transform 0.25s ease;
         }
 
         .logo-badge img {
@@ -636,52 +759,50 @@
         }
 
         .logo-badge:hover {
-            border-color: var(--accent);
-            background: #ffffff;
+            border-color: var(--ledger);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(15, 23, 42, .1);
         }
 
         /* ===== フッター ===== */
         .site-footer {
-            background: var(--footer-bg);
-            color: var(--footer-text);
-            padding: 56px 20px 28px;
+            background: var(--ink);
+            color: #c7ccc2;
+            padding: 56px 24px 28px;
         }
 
         .site-footer-inner {
-            max-width: 1160px;
+            max-width: 1680px;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 40px;
             padding-bottom: 32px;
-            border-bottom: 1px solid rgba(255, 255, 255, .12);
+            border-bottom: 1px solid rgba(245, 246, 241, .14);
         }
 
         .footer-brand h2 {
             margin: 0 0 10px;
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--footer-text-strong);
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--paper);
         }
 
         .footer-brand p {
             margin: 0;
             max-width: 340px;
             font-size: .85rem;
-            line-height: 1.8;
-            color: var(--footer-text);
+            line-height: 1.85;
+            color: #c7ccc2;
         }
 
         .footer-col h4 {
             margin: 0 0 16px;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: .78rem;
-            font-weight: 700;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            color: var(--footer-text-strong);
+            font-weight: 500;
+            color: var(--paper);
         }
 
         .footer-col ul {
@@ -695,13 +816,13 @@
 
         .footer-col a {
             font-size: .85rem;
-            color: var(--footer-text);
+            color: #c7ccc2;
             text-decoration: none;
             transition: color .2s ease;
         }
 
         .footer-col a:hover {
-            color: var(--footer-text-strong);
+            color: var(--paper);
         }
 
         .footer-mail {
@@ -711,15 +832,15 @@
         }
 
         .site-footer-bottom {
-            max-width: 1160px;
+            max-width: 1680px;
             margin: 24px auto 0;
             font-size: .78rem;
-            color: rgba(203, 213, 225, .6);
+            color: rgba(199, 204, 194, .55);
             text-align: center;
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 2rem; }
+            .hero-headline { font-size: 1.9rem; }
             .site-header-inner { padding: 14px 18px; }
         }
     </style>
@@ -740,12 +861,23 @@
 
     <main>
         <section class="hero" id="top">
-            <p class="hero-eyebrow">Freelance Software Engineer</p>
-            <h1>Yoshimura</h1>
-            <p class="hero-lead">Webシステム開発から大規模データ処理、AI活用・プロダクト開発まで。要件整理から設計・実装・運用まで一気通貫で対応するフリーランスエンジニアです。</p>
-            <div class="hero-cta">
-                <a href="#capabilities" class="btn btn-primary">Capabilities を見る</a>
-                <a href="#contact" class="btn btn-outline">お問い合わせ</a>
+            <div class="hero-inner">
+                <h1 class="hero-headline">曖昧な要件を、<br>動くシステムに変える。</h1>
+                <p class="hero-lead"><strong>Yoshimura</strong> — Webシステム開発から大規模データ処理、AI活用・プロダクト開発まで。要件整理から設計・実装・運用まで一気通貫で対応するフリーランスソフトウェアエンジニアです。</p>
+                <div class="hero-actions">
+                    <a href="#capabilities" class="btn btn-primary">対応領域を見る</a>
+                    <a href="#contact" class="btn btn-outline">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="hero-index">
+                <p class="hero-index-label">対応領域の目録から抜粋</p>
+                <ol class="hero-index-list">
+                    <li><span class="cap-code">C01</span><span>ユーザー・権限・ロールを管理できる</span></li>
+                    <li><span class="cap-code">C05</span><span>社内データを自然言語で検索できるようにする</span></li>
+                    <li><span class="cap-code">C14</span><span>AIの品質を評価できる</span></li>
+                    <li><span class="cap-code">C20</span><span>曖昧な業務要件をシステムに落とし込める</span></li>
+                </ol>
+                <a class="hero-index-more" href="#capabilities">全21項目（C01–C21）を見る</a>
             </div>
         </section>
 
@@ -754,270 +886,294 @@
 
             <div class="corp-row" id="capabilities">
                 <div class="corp-row-label">
-                    <span class="corp-num">01</span>
                     <h3>Capabilities</h3>
+                    <p class="corp-row-desc">要件整理から本番運用まで、実務で積み重ねてきた対応領域の目録です。</p>
                 </div>
                 <div class="corp-row-content">
-                    <div class="capability-groups">
-                        <div class="capability-group">
-                            <h4>ユーザー・権限・ロールを管理できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>管理者、一般ユーザー、閲覧者などのロール設定</li>
-                                <li><i class="fas fa-check"></i>ログイン・認証・認可</li>
-                                <li><i class="fas fa-check"></i>Google / Microsoft / GitHubなどのSSO連携</li>
-                                <li><i class="fas fa-check"></i>組織・部署・チーム単位のアクセス制御</li>
-                                <li><i class="fas fa-check"></i>「誰がどのデータを見られるか」を安全に制御する</li>
+                    <nav class="cap-index" aria-label="対応領域の目次">
+                        <a class="cap-index-item" href="#cap-01"><span class="cap-code">C01</span><span>ユーザー・権限・ロールを管理できる</span></a>
+                        <a class="cap-index-item" href="#cap-02"><span class="cap-code">C02</span><span>バラバラに存在するデータを集められる</span></a>
+                        <a class="cap-index-item" href="#cap-03"><span class="cap-code">C03</span><span>集めたデータを整理・加工できる</span></a>
+                        <a class="cap-index-item" href="#cap-04"><span class="cap-code">C04</span><span>データを保存・検索できる</span></a>
+                        <a class="cap-index-item" href="#cap-05"><span class="cap-code">C05</span><span>社内データを自然言語で検索できるようにする</span></a>
+                        <a class="cap-index-item" href="#cap-06"><span class="cap-code">C06</span><span>AIチャットを作れる</span></a>
+                        <a class="cap-index-item" href="#cap-07"><span class="cap-code">C07</span><span>外部サービスとの連携</span></a>
+                        <a class="cap-index-item" href="#cap-08"><span class="cap-code">C08</span><span>通知システムを作れる</span></a>
+                        <a class="cap-index-item" href="#cap-09"><span class="cap-code">C09</span><span>バックグラウンド処理を作れる</span></a>
+                        <a class="cap-index-item" href="#cap-10"><span class="cap-code">C10</span><span>クラウドにシステムを構築できる</span></a>
+                        <a class="cap-index-item" href="#cap-11"><span class="cap-code">C11</span><span>Dockerで環境を統一できる</span></a>
+                        <a class="cap-index-item" href="#cap-12"><span class="cap-code">C12</span><span>本番環境へ自動デプロイできる</span></a>
+                        <a class="cap-index-item" href="#cap-13"><span class="cap-code">C13</span><span>システムの障害を調査できる</span></a>
+                        <a class="cap-index-item" href="#cap-14"><span class="cap-code">C14</span><span>AIの品質を評価できる</span></a>
+                        <a class="cap-index-item" href="#cap-15"><span class="cap-code">C15</span><span>AIの精度を改善できる</span></a>
+                        <a class="cap-index-item" href="#cap-16"><span class="cap-code">C16</span><span>AIのコストを削減できる</span></a>
+                        <a class="cap-index-item" href="#cap-17"><span class="cap-code">C17</span><span>AIシステムの速度を改善できる</span></a>
+                        <a class="cap-index-item" href="#cap-18"><span class="cap-code">C18</span><span>セキュリティを考慮したAIシステムを作れる</span></a>
+                        <a class="cap-index-item" href="#cap-19"><span class="cap-code">C19</span><span>AIに任せてよい処理／人間が確認すべき処理を設計できる</span></a>
+                        <a class="cap-index-item" href="#cap-20"><span class="cap-code">C20</span><span>曖昧な業務要件をシステムに落とし込める</span></a>
+                        <a class="cap-index-item" href="#cap-21"><span class="cap-code">C21</span><span>PoCで終わらず、本番運用まで持っていける</span></a>
+                    </nav>
+
+                    <div class="cap-entries">
+                        <article class="cap-entry" id="cap-01">
+                            <div class="cap-entry-head"><span class="cap-code">C01</span><h4>ユーザー・権限・ロールを管理できる</h4></div>
+                            <ul class="dash-list">
+                                <li>管理者、一般ユーザー、閲覧者などのロール設定</li>
+                                <li>ログイン・認証・認可</li>
+                                <li>Google / Microsoft / GitHubなどのSSO連携</li>
+                                <li>組織・部署・チーム単位のアクセス制御</li>
+                                <li>「誰がどのデータを見られるか」を安全に制御する</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>バラバラに存在するデータを集められる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>Excel、CSV、Google Sheetsから取得</li>
-                                <li><i class="fas fa-check"></i>DBから取得</li>
-                                <li><i class="fas fa-check"></i>REST APIから取得</li>
-                                <li><i class="fas fa-check"></i>SaaSから取得</li>
-                                <li><i class="fas fa-check"></i>Slack、Notion、Google Drive、SharePointなどから取得</li>
-                                <li><i class="fas fa-check"></i>PDFやWordなどの非構造化データを取り込む</li>
-                                <li><i class="fas fa-check"></i>複数システムのデータを一つに統合する</li>
-                                <li><i class="fas fa-check"></i>定期的に自動同期する</li>
+                        </article>
+                        <article class="cap-entry" id="cap-02">
+                            <div class="cap-entry-head"><span class="cap-code">C02</span><h4>バラバラに存在するデータを集められる</h4></div>
+                            <ul class="dash-list">
+                                <li>Excel、CSV、Google Sheetsから取得</li>
+                                <li>DBから取得</li>
+                                <li>REST APIから取得</li>
+                                <li>SaaSから取得</li>
+                                <li>Slack、Notion、Google Drive、SharePointなどから取得</li>
+                                <li>PDFやWordなどの非構造化データを取り込む</li>
+                                <li>複数システムのデータを一つに統合する</li>
+                                <li>定期的に自動同期する</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>集めたデータを整理・加工できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>データ形式を統一する</li>
-                                <li><i class="fas fa-check"></i>重複データを削除する</li>
-                                <li><i class="fas fa-check"></i>名前やIDを紐付ける</li>
-                                <li><i class="fas fa-check"></i>異なるシステム間のデータをJOINする</li>
-                                <li><i class="fas fa-check"></i>日付、金額、単位などを正規化する</li>
-                                <li><i class="fas fa-check"></i>AIで文章から必要情報を抽出する</li>
-                                <li><i class="fas fa-check"></i>ETL / ELTパイプラインを作る</li>
+                        </article>
+                        <article class="cap-entry" id="cap-03">
+                            <div class="cap-entry-head"><span class="cap-code">C03</span><h4>集めたデータを整理・加工できる</h4></div>
+                            <ul class="dash-list">
+                                <li>データ形式を統一する</li>
+                                <li>重複データを削除する</li>
+                                <li>名前やIDを紐付ける</li>
+                                <li>異なるシステム間のデータをJOINする</li>
+                                <li>日付、金額、単位などを正規化する</li>
+                                <li>AIで文章から必要情報を抽出する</li>
+                                <li>ETL / ELTパイプラインを作る</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>データを保存・検索できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>PostgreSQLなどに保存する</li>
-                                <li><i class="fas fa-check"></i>Redisでキャッシュする</li>
-                                <li><i class="fas fa-check"></i>Vector DBにEmbeddingを保存する</li>
-                                <li><i class="fas fa-check"></i>大量データを効率的に検索できるようにする</li>
-                                <li><i class="fas fa-check"></i>DB設計、テーブル設計、インデックス設計をする</li>
+                        </article>
+                        <article class="cap-entry" id="cap-04">
+                            <div class="cap-entry-head"><span class="cap-code">C04</span><h4>データを保存・検索できる</h4></div>
+                            <ul class="dash-list">
+                                <li>PostgreSQLなどに保存する</li>
+                                <li>Redisでキャッシュする</li>
+                                <li>Vector DBにEmbeddingを保存する</li>
+                                <li>大量データを効率的に検索できるようにする</li>
+                                <li>DB設計、テーブル設計、インデックス設計をする</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>社内データを自然言語で検索できるようにする</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>「○○についての資料を探して」で検索</li>
-                                <li><i class="fas fa-check"></i>PDF、議事録、マニュアルを横断検索</li>
-                                <li><i class="fas fa-check"></i>RAGを構築する</li>
-                                <li><i class="fas fa-check"></i>Semantic Searchを実装する</li>
-                                <li><i class="fas fa-check"></i>キーワード検索＋ベクトル検索を組み合わせる</li>
-                                <li><i class="fas fa-check"></i>検索結果をRerankingする</li>
-                                <li><i class="fas fa-check"></i>回答と一緒に引用元を表示する</li>
+                        </article>
+                        <article class="cap-entry" id="cap-05">
+                            <div class="cap-entry-head"><span class="cap-code">C05</span><h4>社内データを自然言語で検索できるようにする</h4></div>
+                            <ul class="dash-list">
+                                <li>「○○についての資料を探して」で検索</li>
+                                <li>PDF、議事録、マニュアルを横断検索</li>
+                                <li>RAGを構築する</li>
+                                <li>Semantic Searchを実装する</li>
+                                <li>キーワード検索＋ベクトル検索を組み合わせる</li>
+                                <li>検索結果をRerankingする</li>
+                                <li>回答と一緒に引用元を表示する</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>AIチャットを作れる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>ChatGPTのようなUIを作る</li>
-                                <li><i class="fas fa-check"></i>社内専用AIチャットを作る</li>
-                                <li><i class="fas fa-check"></i>ユーザーごとに会話履歴を管理する</li>
-                                <li><i class="fas fa-check"></i>システムプロンプトを設定する</li>
-                                <li><i class="fas fa-check"></i>ユーザーや部署によってAIの振る舞いを変える</li>
-                                <li><i class="fas fa-check"></i>Structured Outputで決まった形式を返す</li>
-                                <li><i class="fas fa-check"></i>AIの回答をストリーミング表示する</li>
+                        </article>
+                        <article class="cap-entry" id="cap-06">
+                            <div class="cap-entry-head"><span class="cap-code">C06</span><h4>AIチャットを作れる</h4></div>
+                            <ul class="dash-list">
+                                <li>ChatGPTのようなUIを作る</li>
+                                <li>社内専用AIチャットを作る</li>
+                                <li>ユーザーごとに会話履歴を管理する</li>
+                                <li>システムプロンプトを設定する</li>
+                                <li>ユーザーや部署によってAIの振る舞いを変える</li>
+                                <li>Structured Outputで決まった形式を返す</li>
+                                <li>AIの回答をストリーミング表示する</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>外部サービスとの連携</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>Webhookを利用したリアルタイム連携</li>
-                                <li><i class="fas fa-check"></i>データ同期</li>
+                        </article>
+                        <article class="cap-entry" id="cap-07">
+                            <div class="cap-entry-head"><span class="cap-code">C07</span><h4>外部サービスとの連携</h4></div>
+                            <ul class="dash-list">
+                                <li>Webhookを利用したリアルタイム連携</li>
+                                <li>データ同期</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>通知システムを作れる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>Slack通知</li>
-                                <li><i class="fas fa-check"></i>メール通知</li>
-                                <li><i class="fas fa-check"></i>Teams通知</li>
-                                <li><i class="fas fa-check"></i>Push通知</li>
-                                <li><i class="fas fa-check"></i>「条件を満たしたら通知」</li>
-                                <li><i class="fas fa-check"></i>AIが重要と判断した場合だけ通知</li>
-                                <li><i class="fas fa-check"></i>エラーや異常を自動通知する</li>
+                        </article>
+                        <article class="cap-entry" id="cap-08">
+                            <div class="cap-entry-head"><span class="cap-code">C08</span><h4>通知システムを作れる</h4></div>
+                            <ul class="dash-list">
+                                <li>Slack通知</li>
+                                <li>メール通知</li>
+                                <li>Teams通知</li>
+                                <li>Push通知</li>
+                                <li>「条件を満たしたら通知」</li>
+                                <li>AIが重要と判断した場合だけ通知</li>
+                                <li>エラーや異常を自動通知する</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>バックグラウンド処理を作れる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>大量データを順番に処理する</li>
-                                <li><i class="fas fa-check"></i>Queueを使う</li>
-                                <li><i class="fas fa-check"></i>非同期処理</li>
-                                <li><i class="fas fa-check"></i>バッチ処理</li>
-                                <li><i class="fas fa-check"></i>Cron</li>
-                                <li><i class="fas fa-check"></i>リトライ</li>
-                                <li><i class="fas fa-check"></i>処理失敗時の復旧</li>
+                        </article>
+                        <article class="cap-entry" id="cap-09">
+                            <div class="cap-entry-head"><span class="cap-code">C09</span><h4>バックグラウンド処理を作れる</h4></div>
+                            <ul class="dash-list">
+                                <li>大量データを順番に処理する</li>
+                                <li>Queueを使う</li>
+                                <li>非同期処理</li>
+                                <li>バッチ処理</li>
+                                <li>Cron</li>
+                                <li>リトライ</li>
+                                <li>処理失敗時の復旧</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>クラウドにシステムを構築できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>AWS / GCP / Azure</li>
-                                <li><i class="fas fa-check"></i>サーバー構築</li>
-                                <li><i class="fas fa-check"></i>Serverless</li>
-                                <li><i class="fas fa-check"></i>Storage</li>
-                                <li><i class="fas fa-check"></i>Database</li>
-                                <li><i class="fas fa-check"></i>CDN</li>
-                                <li><i class="fas fa-check"></i>IAM</li>
-                                <li><i class="fas fa-check"></i>Secret管理</li>
-                                <li><i class="fas fa-check"></i>Infrastructure as Code</li>
+                        </article>
+                        <article class="cap-entry" id="cap-10">
+                            <div class="cap-entry-head"><span class="cap-code">C10</span><h4>クラウドにシステムを構築できる</h4></div>
+                            <ul class="dash-list">
+                                <li>AWS / GCP / Azure</li>
+                                <li>サーバー構築</li>
+                                <li>Serverless</li>
+                                <li>Storage</li>
+                                <li>Database</li>
+                                <li>CDN</li>
+                                <li>IAM</li>
+                                <li>Secret管理</li>
+                                <li>Infrastructure as Code</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>Dockerで環境を統一できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>開発環境構築</li>
-                                <li><i class="fas fa-check"></i>Dockerfile作成</li>
-                                <li><i class="fas fa-check"></i>Docker Compose</li>
-                                <li><i class="fas fa-check"></i>本番環境へのデプロイ</li>
-                                <li><i class="fas fa-check"></i>GPU環境構築</li>
+                        </article>
+                        <article class="cap-entry" id="cap-11">
+                            <div class="cap-entry-head"><span class="cap-code">C11</span><h4>Dockerで環境を統一できる</h4></div>
+                            <ul class="dash-list">
+                                <li>開発環境構築</li>
+                                <li>Dockerfile作成</li>
+                                <li>Docker Compose</li>
+                                <li>本番環境へのデプロイ</li>
+                                <li>GPU環境構築</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>本番環境へ自動デプロイできる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>GitHub Actions</li>
-                                <li><i class="fas fa-check"></i>CI/CD</li>
-                                <li><i class="fas fa-check"></i>テスト自動化</li>
-                                <li><i class="fas fa-check"></i>Build</li>
-                                <li><i class="fas fa-check"></i>Deploy</li>
-                                <li><i class="fas fa-check"></i>Rollback</li>
-                                <li><i class="fas fa-check"></i>staging / productionの分離</li>
+                        </article>
+                        <article class="cap-entry" id="cap-12">
+                            <div class="cap-entry-head"><span class="cap-code">C12</span><h4>本番環境へ自動デプロイできる</h4></div>
+                            <ul class="dash-list">
+                                <li>GitHub Actions</li>
+                                <li>CI/CD</li>
+                                <li>テスト自動化</li>
+                                <li>Build</li>
+                                <li>Deploy</li>
+                                <li>Rollback</li>
+                                <li>staging / productionの分離</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>システムの障害を調査できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>ログを見る</li>
-                                <li><i class="fas fa-check"></i>エラーを追跡する</li>
-                                <li><i class="fas fa-check"></i>Stack Traceを読む</li>
-                                <li><i class="fas fa-check"></i>DBの負荷を調査する</li>
-                                <li><i class="fas fa-check"></i>APIの遅延を調査する</li>
-                                <li><i class="fas fa-check"></i>CPU / Memoryを見る</li>
-                                <li><i class="fas fa-check"></i>AI APIの失敗原因を調査する</li>
-                                <li><i class="fas fa-check"></i>ボトルネックを特定する</li>
+                        </article>
+                        <article class="cap-entry" id="cap-13">
+                            <div class="cap-entry-head"><span class="cap-code">C13</span><h4>システムの障害を調査できる</h4></div>
+                            <ul class="dash-list">
+                                <li>ログを見る</li>
+                                <li>エラーを追跡する</li>
+                                <li>Stack Traceを読む</li>
+                                <li>DBの負荷を調査する</li>
+                                <li>APIの遅延を調査する</li>
+                                <li>CPU / Memoryを見る</li>
+                                <li>AI APIの失敗原因を調査する</li>
+                                <li>ボトルネックを特定する</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>AIの品質を評価できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>正しい回答率を測る</li>
-                                <li><i class="fas fa-check"></i>Hallucinationを検出する</li>
-                                <li><i class="fas fa-check"></i>RAGの検索精度を評価する</li>
-                                <li><i class="fas fa-check"></i>Promptを比較する</li>
-                                <li><i class="fas fa-check"></i>モデルを比較する</li>
-                                <li><i class="fas fa-check"></i>LLM-as-a-Judge</li>
-                                <li><i class="fas fa-check"></i>人間による評価</li>
-                                <li><i class="fas fa-check"></i>Evaluation Datasetを作る</li>
+                        </article>
+                        <article class="cap-entry" id="cap-14">
+                            <div class="cap-entry-head"><span class="cap-code">C14</span><h4>AIの品質を評価できる</h4></div>
+                            <ul class="dash-list">
+                                <li>正しい回答率を測る</li>
+                                <li>Hallucinationを検出する</li>
+                                <li>RAGの検索精度を評価する</li>
+                                <li>Promptを比較する</li>
+                                <li>モデルを比較する</li>
+                                <li>LLM-as-a-Judge</li>
+                                <li>人間による評価</li>
+                                <li>Evaluation Datasetを作る</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>AIの精度を改善できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>Prompt改善</li>
-                                <li><i class="fas fa-check"></i>Context改善</li>
-                                <li><i class="fas fa-check"></i>RAG改善</li>
-                                <li><i class="fas fa-check"></i>Chunking改善</li>
-                                <li><i class="fas fa-check"></i>Retrieval改善</li>
-                                <li><i class="fas fa-check"></i>Reranking</li>
-                                <li><i class="fas fa-check"></i>モデル変更</li>
-                                <li><i class="fas fa-check"></i>評価結果をもとに継続改善する</li>
+                        </article>
+                        <article class="cap-entry" id="cap-15">
+                            <div class="cap-entry-head"><span class="cap-code">C15</span><h4>AIの精度を改善できる</h4></div>
+                            <ul class="dash-list">
+                                <li>Prompt改善</li>
+                                <li>Context改善</li>
+                                <li>RAG改善</li>
+                                <li>Chunking改善</li>
+                                <li>Retrieval改善</li>
+                                <li>Reranking</li>
+                                <li>モデル変更</li>
+                                <li>評価結果をもとに継続改善する</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>AIのコストを削減できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>モデルを使い分ける</li>
-                                <li><i class="fas fa-check"></i>小さいモデルに処理を振る</li>
-                                <li><i class="fas fa-check"></i>Promptを短くする</li>
-                                <li><i class="fas fa-check"></i>Contextを減らす</li>
-                                <li><i class="fas fa-check"></i>Cacheを使う</li>
-                                <li><i class="fas fa-check"></i>Batch APIを使う</li>
-                                <li><i class="fas fa-check"></i>不要なLLM呼び出しを減らす</li>
-                                <li><i class="fas fa-check"></i>Token使用量を監視する</li>
+                        </article>
+                        <article class="cap-entry" id="cap-16">
+                            <div class="cap-entry-head"><span class="cap-code">C16</span><h4>AIのコストを削減できる</h4></div>
+                            <ul class="dash-list">
+                                <li>モデルを使い分ける</li>
+                                <li>小さいモデルに処理を振る</li>
+                                <li>Promptを短くする</li>
+                                <li>Contextを減らす</li>
+                                <li>Cacheを使う</li>
+                                <li>Batch APIを使う</li>
+                                <li>不要なLLM呼び出しを減らす</li>
+                                <li>Token使用量を監視する</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>AIシステムの速度を改善できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>Streaming</li>
-                                <li><i class="fas fa-check"></i>Cache</li>
-                                <li><i class="fas fa-check"></i>非同期処理</li>
-                                <li><i class="fas fa-check"></i>モデル選択</li>
-                                <li><i class="fas fa-check"></i>Context削減</li>
-                                <li><i class="fas fa-check"></i>Vector Search高速化</li>
-                                <li><i class="fas fa-check"></i>DBクエリ最適化</li>
+                        </article>
+                        <article class="cap-entry" id="cap-17">
+                            <div class="cap-entry-head"><span class="cap-code">C17</span><h4>AIシステムの速度を改善できる</h4></div>
+                            <ul class="dash-list">
+                                <li>Streaming</li>
+                                <li>Cache</li>
+                                <li>非同期処理</li>
+                                <li>モデル選択</li>
+                                <li>Context削減</li>
+                                <li>Vector Search高速化</li>
+                                <li>DBクエリ最適化</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>セキュリティを考慮したAIシステムを作れる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>Prompt Injection対策</li>
-                                <li><i class="fas fa-check"></i>機密情報の漏洩防止</li>
-                                <li><i class="fas fa-check"></i>個人情報をマスキングする</li>
-                                <li><i class="fas fa-check"></i>入力・出力を検証する</li>
-                                <li><i class="fas fa-check"></i>Tool Callingの権限を制限する</li>
-                                <li><i class="fas fa-check"></i>ユーザー単位で参照可能データを分ける</li>
-                                <li><i class="fas fa-check"></i>Secretを安全に管理する</li>
+                        </article>
+                        <article class="cap-entry" id="cap-18">
+                            <div class="cap-entry-head"><span class="cap-code">C18</span><h4>セキュリティを考慮したAIシステムを作れる</h4></div>
+                            <ul class="dash-list">
+                                <li>Prompt Injection対策</li>
+                                <li>機密情報の漏洩防止</li>
+                                <li>個人情報をマスキングする</li>
+                                <li>入力・出力を検証する</li>
+                                <li>Tool Callingの権限を制限する</li>
+                                <li>ユーザー単位で参照可能データを分ける</li>
+                                <li>Secretを安全に管理する</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>AIに任せてよい処理／人間が確認すべき処理を設計できる</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>自動実行してよい処理</li>
-                                <li><i class="fas fa-check"></i>承認が必要な処理</li>
-                                <li><i class="fas fa-check"></i>金額や重要度による分岐</li>
-                                <li><i class="fas fa-check"></i>Human-in-the-loop</li>
-                                <li><i class="fas fa-check"></i>Confidence Scoreによる分岐</li>
-                                <li><i class="fas fa-check"></i>AIが分からない場合のEscalation</li>
+                        </article>
+                        <article class="cap-entry" id="cap-19">
+                            <div class="cap-entry-head"><span class="cap-code">C19</span><h4>AIに任せてよい処理／人間が確認すべき処理を設計できる</h4></div>
+                            <ul class="dash-list">
+                                <li>自動実行してよい処理</li>
+                                <li>承認が必要な処理</li>
+                                <li>金額や重要度による分岐</li>
+                                <li>Human-in-the-loop</li>
+                                <li>Confidence Scoreによる分岐</li>
+                                <li>AIが分からない場合のEscalation</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>曖昧な業務要件をシステムに落とし込める</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>現場へのヒアリング</li>
-                                <li><i class="fas fa-check"></i>現在の業務フローを整理</li>
-                                <li><i class="fas fa-check"></i>ボトルネックを発見</li>
-                                <li><i class="fas fa-check"></i>AIで解決すべき部分を特定</li>
-                                <li><i class="fas fa-check"></i>AIを使わない方がよい部分も判断</li>
-                                <li><i class="fas fa-check"></i>要件定義</li>
-                                <li><i class="fas fa-check"></i>DB/API/UI設計</li>
-                                <li><i class="fas fa-check"></i>MVPに必要な機能を絞る</li>
+                        </article>
+                        <article class="cap-entry" id="cap-20">
+                            <div class="cap-entry-head"><span class="cap-code">C20</span><h4>曖昧な業務要件をシステムに落とし込める</h4></div>
+                            <ul class="dash-list">
+                                <li>現場へのヒアリング</li>
+                                <li>現在の業務フローを整理</li>
+                                <li>ボトルネックを発見</li>
+                                <li>AIで解決すべき部分を特定</li>
+                                <li>AIを使わない方がよい部分も判断</li>
+                                <li>要件定義</li>
+                                <li>DB/API/UI設計</li>
+                                <li>MVPに必要な機能を絞る</li>
                             </ul>
-                        </div>
-                        <div class="capability-group">
-                            <h4>PoCで終わらず、本番運用まで持っていける</h4>
-                            <ul class="check-list">
-                                <li><i class="fas fa-check"></i>認証</li>
-                                <li><i class="fas fa-check"></i>権限</li>
-                                <li><i class="fas fa-check"></i>ログ</li>
-                                <li><i class="fas fa-check"></i>エラー処理</li>
-                                <li><i class="fas fa-check"></i>評価</li>
-                                <li><i class="fas fa-check"></i>セキュリティ</li>
-                                <li><i class="fas fa-check"></i>コスト</li>
-                                <li><i class="fas fa-check"></i>監視</li>
-                                <li><i class="fas fa-check"></i>デプロイ</li>
-                                <li><i class="fas fa-check"></i>運用フローまで設計する</li>
+                        </article>
+                        <article class="cap-entry" id="cap-21">
+                            <div class="cap-entry-head"><span class="cap-code">C21</span><h4>PoCで終わらず、本番運用まで持っていける</h4></div>
+                            <ul class="dash-list">
+                                <li>認証</li>
+                                <li>権限</li>
+                                <li>ログ</li>
+                                <li>エラー処理</li>
+                                <li>評価</li>
+                                <li>セキュリティ</li>
+                                <li>コスト</li>
+                                <li>監視</li>
+                                <li>デプロイ</li>
+                                <li>運用フローまで設計する</li>
                             </ul>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
 
             <div class="corp-row" id="techstack">
                 <div class="corp-row-label">
-                    <span class="corp-num">02</span>
                     <h3>Tech Stack</h3>
+                    <p class="corp-row-desc">案件で実際に使用してきた言語・基盤・ツールです。</p>
                 </div>
                 <div class="corp-row-content">
                     <div class="skill-groups">
@@ -1071,8 +1227,8 @@
 
             <div class="corp-row" id="ai">
                 <div class="corp-row-label">
-                    <span class="corp-num">03</span>
                     <h3>AI Initiatives</h3>
+                    <p class="corp-row-desc">LLM・RAG・AIエージェントなど、最新動向のキャッチアップと実装検証を継続しています。</p>
                 </div>
                 <div class="corp-row-content">
                     <div class="ai-block">
@@ -1081,12 +1237,12 @@
                             <div>
                                 <h4>取り組み内容</h4>
                                 <ul class="check-list">
-                                    <li><i class="fas fa-check"></i>機械学習・大規模言語モデル・推論プロセスの学習</li>
-                                    <li><i class="fas fa-check"></i>Embedding・Vector DB・RAG構成・評価検証</li>
-                                    <li><i class="fas fa-check"></i>プロンプト/コンテキスト設計・ローカルLLM実行</li>
-                                    <li><i class="fas fa-check"></i>AIエージェント・ワークフロー・ガードレール検証</li>
-                                    <li><i class="fas fa-check"></i>LangChain / LangGraph / LangSmith / MCP 検証</li>
-                                    <li><i class="fas fa-check"></i>Sandbox環境を含むセキュアな実行環境の構築</li>
+                                    <li>機械学習・大規模言語モデル・推論プロセスの学習</li>
+                                    <li>Embedding・Vector DB・RAG構成・評価検証</li>
+                                    <li>プロンプト/コンテキスト設計・ローカルLLM実行</li>
+                                    <li>AIエージェント・ワークフロー・ガードレール検証</li>
+                                    <li>LangChain / LangGraph / LangSmith / MCP 検証</li>
+                                    <li>Sandbox環境を含むセキュアな実行環境の構築</li>
                                 </ul>
                             </div>
                             <div>
@@ -1103,7 +1259,6 @@
 
             <div class="corp-row">
                 <div class="corp-row-label">
-                    <span class="corp-num">04</span>
                     <h3>AI Agent Development Flow</h3>
                 </div>
                 <div class="corp-row-content">
@@ -1111,23 +1266,23 @@
                         <p class="lead lead-wide">顧客業務理解からAgent設計、実装、データ/API接続、本番運用まで一気通貫で対応します。<br>非エンジニアの方にも分かりやすいドキュメントを整備し、導入後も安心して使い続けられる体制を構築します。</p>
                         <div class="process-flow">
                             <div class="process-flow-step">
-                                <span class="process-flow-dot"></span>
+                                <span class="process-flow-dot">01</span>
                                 <h4>顧客業務理解</h4>
                             </div>
                             <div class="process-flow-step">
-                                <span class="process-flow-dot"></span>
+                                <span class="process-flow-dot">02</span>
                                 <h4>Agent設計</h4>
                             </div>
                             <div class="process-flow-step">
-                                <span class="process-flow-dot"></span>
+                                <span class="process-flow-dot">03</span>
                                 <h4>実装</h4>
                             </div>
                             <div class="process-flow-step">
-                                <span class="process-flow-dot"></span>
+                                <span class="process-flow-dot">04</span>
                                 <h4>データ/API接続</h4>
                             </div>
                             <div class="process-flow-step">
-                                <span class="process-flow-dot"></span>
+                                <span class="process-flow-dot">05</span>
                                 <h4>本番運用</h4>
                             </div>
                         </div>
@@ -1137,8 +1292,8 @@
 
             <div class="corp-row">
                 <div class="corp-row-label">
-                    <span class="corp-num">05</span>
                     <h3>Working Style</h3>
+                    <p class="corp-row-desc">開発に取り組むときに大切にしている5つの姿勢です。</p>
                 </div>
                 <div class="corp-row-content">
                     <ol class="process-list">
@@ -1183,62 +1338,62 @@
 
             <div class="corp-row">
                 <div class="corp-row-label">
-                    <span class="corp-num">06</span>
                     <h3>Process</h3>
+                    <p class="corp-row-desc">要件整理からリリース後の改善まで、一貫して対応します。</p>
                 </div>
                 <div class="corp-row-content">
                     <div class="process-flow">
                         <div class="process-flow-step">
-                            <span class="process-flow-dot"></span>
+                            <span class="process-flow-dot">01</span>
                             <h4>要件整理</h4>
                         </div>
                         <div class="process-flow-step">
-                            <span class="process-flow-dot"></span>
+                            <span class="process-flow-dot">02</span>
                             <h4>基本設計</h4>
                         </div>
                         <div class="process-flow-step">
-                            <span class="process-flow-dot"></span>
+                            <span class="process-flow-dot">03</span>
                             <h4>実装</h4>
                         </div>
                         <div class="process-flow-step">
-                            <span class="process-flow-dot"></span>
+                            <span class="process-flow-dot">04</span>
                             <h4>テスト<br>（単体・結合）</h4>
                         </div>
                         <div class="process-flow-step">
-                            <span class="process-flow-dot"></span>
+                            <span class="process-flow-dot">05</span>
                             <h4>リリース</h4>
                         </div>
                         <div class="process-flow-step">
-                            <span class="process-flow-dot"></span>
+                            <span class="process-flow-dot">06</span>
                             <h4>保守運用・改善</h4>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="corp-row">
+            <div class="corp-row" id="value">
                 <div class="corp-row-label">
-                    <span class="corp-num">07</span>
                     <h3>Value</h3>
+                    <p class="corp-row-desc">業務のどんな場面で力になれるかをまとめました。</p>
                 </div>
                 <div class="corp-row-content">
                     <div class="value-grid">
                         <div class="value-block">
                             <h4>提供できる価値</h4>
                             <ul class="check-list">
-                                <li><i class="fas fa-check"></i>安定稼働するシステム</li>
-                                <li><i class="fas fa-check"></i>高品質で保守しやすい設計</li>
-                                <li><i class="fas fa-check"></i>業務にフィットする改善提案</li>
-                                <li><i class="fas fa-check"></i>チームの生産性向上</li>
+                                <li>安定稼働するシステム</li>
+                                <li>高品質で保守しやすい設計</li>
+                                <li>業務にフィットする改善提案</li>
+                                <li>チームの生産性向上</li>
                             </ul>
                         </div>
                         <div class="value-block">
                             <h4>こんな課題解決に貢献できます</h4>
                             <ul class="check-list">
-                                <li><i class="fas fa-check"></i>AIを活用した業務効率化・新機能開発を進める</li>
-                                <li><i class="fas fa-check"></i>大規模データ処理や配信基盤を安定運用</li>
-                                <li><i class="fas fa-check"></i>開発品質やテスト自動化で生産性を向上</li>
-                                <li><i class="fas fa-check"></i>保守性の高いシステムにリファクタリング</li>
+                                <li>AIを活用した業務効率化・新機能開発を進める</li>
+                                <li>大規模データ処理や配信基盤を安定運用</li>
+                                <li>開発品質やテスト自動化で生産性を向上</li>
+                                <li>保守性の高いシステムにリファクタリング</li>
                             </ul>
                         </div>
                     </div>
