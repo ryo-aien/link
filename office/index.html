@@ -240,68 +240,27 @@
         }
 
         /* ===== できること ===== */
-        .service-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        .capability-groups {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0 40px;
+            gap: 0 56px;
         }
 
-        .service-item {
-            display: flex;
-            gap: 16px;
-            padding: 24px 0;
+        .capability-group {
+            padding: 28px 0;
             border-top: 1px solid var(--corp-border);
         }
 
-        .service-item:nth-child(-n+2) {
+        .capability-group:nth-child(-n+2) {
             border-top: none;
             padding-top: 0;
         }
 
-        .service-icon {
-            flex: 0 0 auto;
-            width: 36px;
-            height: 36px;
-            margin-top: 2px;
-            border-radius: 8px;
-            background: var(--corp-accent-soft);
-            color: var(--corp-accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-        }
-
-        .service-icon-glyph {
-            display: block;
-            width: 19px;
-            height: 19px;
-            background-color: currentColor;
-            -webkit-mask-image: var(--glyph-src);
-            mask-image: var(--glyph-src);
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-            -webkit-mask-position: center;
-            mask-position: center;
-            -webkit-mask-size: contain;
-            mask-size: contain;
-        }
-
-        .service-item h4 {
-            margin: 0 0 6px;
+        .capability-group h4 {
+            margin: 0 0 14px;
             font-size: .96rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--corp-text);
-        }
-
-        .service-item p {
-            margin: 0;
-            font-size: .83rem;
-            line-height: 1.75;
-            color: var(--corp-text-sub);
         }
 
         /* ===== 技術スキル ===== */
@@ -541,14 +500,14 @@
         }
 
         @media (max-width: 900px) {
-            .service-list {
+            .capability-groups {
                 grid-template-columns: 1fr;
             }
-            .service-item:nth-child(-n+2) {
+            .capability-group:nth-child(-n+2) {
                 border-top: 1px solid var(--corp-border);
-                padding-top: 24px;
+                padding-top: 28px;
             }
-            .service-item:first-child {
+            .capability-group:first-child {
                 border-top: none;
                 padding-top: 0;
             }
@@ -799,50 +758,259 @@
                     <h3>Capabilities</h3>
                 </div>
                 <div class="corp-row-content">
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.8%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M8.5 6 3 12l5.5 6%27/><path d=%2715.5 6 21 12l-5.5 6%27/></svg>')"></i></span>
-                            <div>
-                                <h4>Webシステム開発</h4>
-                                <p>Python・PHPを中心に、API・バッチ・画面開発まで一連の工程に対応できます。</p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><ellipse cx=%2712%27 cy=%276%27 rx=%277%27 ry=%272.8%27/><path d=%27M5 6v12c0 1.6 3.1 2.8 7 2.8s7-1.2 7-2.8V6%27/><path d=%27M5 12c0 1.6 3.1 2.8 7 2.8s7-1.2 7-2.8%27/></svg>')"></i></span>
-                            <div>
-                                <h4>大規模データ処理・バッチ開発</h4>
-                                <p>数億件規模のデータ処理や、BigQuery・Airflowを用いた高負荷バッチの開発経験があります。</p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M9.5 4.5c-2 0-3.5 1.5-3.5 3.2 0 .6.2 1.1.5 1.6-1.1.5-1.8 1.6-1.8 2.9 0 1.2.7 2.3 1.7 2.8-.1.3-.2.7-.2 1 0 1.8 1.6 3.2 3.5 3.2 1 0 1.8-.4 2.3-1%27/><path d=%27M14.5 4.5c2 0 3.5 1.5 3.5 3.2 0 .6-.2 1.1-.5 1.6 1.1.5 1.8 1.6 1.8 2.9 0 1.2-.7 2.3-1.7 2.8.1.3.2.7.2 1 0 1.8-1.6 3.2-3.5 3.2-1 0-1.8-.4-2.3-1%27/><path d=%27M12 5v14%27/><path d=%27M9 9.5h2.2%27/><path d=%2712.8 13.5H15%27/></svg>')"></i></span>
-                            <div>
-                                <h4>AI活用・プロダクト開発</h4>
-                                <p>LLM・RAG・AIエージェント等の技術検証からPoC/プロダクト開発・評価まで一貫して実践しています。</p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.8%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M4 17l5.5-5.5 4 4L21 8%27/><path d=%2715.5 8H21v5.5%27/></svg>')"></i></span>
-                            <div>
-                                <h4>品質向上・効率化</h4>
-                                <p>テスト自動化・CI/CD導入・設定一元管理などにより、開発品質と運用効率の向上に貢献します。</p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%2712 3.2 19 6v5.5c0 5-3 8.2-7 9.3-4-1.1-7-4.3-7-9.3V6l7-2.8z%27/><path d=%279 12.3l2 2 4.2-4.6%27/></svg>')"></i></span>
-                            <div>
-                                <h4>障害対応・保守運用</h4>
-                                <p>本番障害の原因調査から恒久対応、保守運用まで責任を持って対応できます。</p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><circle cx=%278%27 cy=%278%27 r=%272.6%27/><circle cx=%2716%27 cy=%278%27 r=%272.6%27/><path d=%27M3 19c0-3 2.2-5 5-5s5 2 5 5%27/><path d=%2711 19c0-3 2.2-5 5-5s5 2 5 5%27/></svg>')"></i></span>
-                            <div>
-                                <h4>チーム貢献・リーダーシップ</h4>
-                                <p>サブリーダー経験や複数案件の並行対応を通じて、チーム全体の生産性向上に貢献します。</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="capability-groups">
+                        <div class="capability-group">
+                            <h4>ユーザー・権限・ロールを管理できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>管理者、一般ユーザー、閲覧者などのロール設定</li>
+                                <li><i class="fas fa-check"></i>ログイン・認証・認可</li>
+                                <li><i class="fas fa-check"></i>Google / Microsoft / GitHubなどのSSO連携</li>
+                                <li><i class="fas fa-check"></i>組織・部署・チーム単位のアクセス制御</li>
+                                <li><i class="fas fa-check"></i>「誰がどのデータを見られるか」を安全に制御する</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>バラバラに存在するデータを集められる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>Excel、CSV、Google Sheetsから取得</li>
+                                <li><i class="fas fa-check"></i>DBから取得</li>
+                                <li><i class="fas fa-check"></i>REST APIから取得</li>
+                                <li><i class="fas fa-check"></i>SaaSから取得</li>
+                                <li><i class="fas fa-check"></i>Slack、Notion、Google Drive、SharePointなどから取得</li>
+                                <li><i class="fas fa-check"></i>PDFやWordなどの非構造化データを取り込む</li>
+                                <li><i class="fas fa-check"></i>複数システムのデータを一つに統合する</li>
+                                <li><i class="fas fa-check"></i>定期的に自動同期する</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>集めたデータを整理・加工できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>データ形式を統一する</li>
+                                <li><i class="fas fa-check"></i>重複データを削除する</li>
+                                <li><i class="fas fa-check"></i>名前やIDを紐付ける</li>
+                                <li><i class="fas fa-check"></i>異なるシステム間のデータをJOINする</li>
+                                <li><i class="fas fa-check"></i>日付、金額、単位などを正規化する</li>
+                                <li><i class="fas fa-check"></i>AIで文章から必要情報を抽出する</li>
+                                <li><i class="fas fa-check"></i>ETL / ELTパイプラインを作る</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>データを保存・検索できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>PostgreSQLなどに保存する</li>
+                                <li><i class="fas fa-check"></i>Redisでキャッシュする</li>
+                                <li><i class="fas fa-check"></i>Vector DBにEmbeddingを保存する</li>
+                                <li><i class="fas fa-check"></i>大量データを効率的に検索できるようにする</li>
+                                <li><i class="fas fa-check"></i>DB設計、テーブル設計、インデックス設計をする</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>社内データを自然言語で検索できるようにする</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>「○○についての資料を探して」で検索</li>
+                                <li><i class="fas fa-check"></i>PDF、議事録、マニュアルを横断検索</li>
+                                <li><i class="fas fa-check"></i>RAGを構築する</li>
+                                <li><i class="fas fa-check"></i>Semantic Searchを実装する</li>
+                                <li><i class="fas fa-check"></i>キーワード検索＋ベクトル検索を組み合わせる</li>
+                                <li><i class="fas fa-check"></i>検索結果をRerankingする</li>
+                                <li><i class="fas fa-check"></i>回答と一緒に引用元を表示する</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>AIチャットを作れる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>ChatGPTのようなUIを作る</li>
+                                <li><i class="fas fa-check"></i>社内専用AIチャットを作る</li>
+                                <li><i class="fas fa-check"></i>ユーザーごとに会話履歴を管理する</li>
+                                <li><i class="fas fa-check"></i>システムプロンプトを設定する</li>
+                                <li><i class="fas fa-check"></i>ユーザーや部署によってAIの振る舞いを変える</li>
+                                <li><i class="fas fa-check"></i>Structured Outputで決まった形式を返す</li>
+                                <li><i class="fas fa-check"></i>AIの回答をストリーミング表示する</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>外部サービスとの連携</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>Webhookを利用したリアルタイム連携</li>
+                                <li><i class="fas fa-check"></i>データ同期</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>通知システムを作れる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>Slack通知</li>
+                                <li><i class="fas fa-check"></i>メール通知</li>
+                                <li><i class="fas fa-check"></i>Teams通知</li>
+                                <li><i class="fas fa-check"></i>Push通知</li>
+                                <li><i class="fas fa-check"></i>「条件を満たしたら通知」</li>
+                                <li><i class="fas fa-check"></i>AIが重要と判断した場合だけ通知</li>
+                                <li><i class="fas fa-check"></i>エラーや異常を自動通知する</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>バックグラウンド処理を作れる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>大量データを順番に処理する</li>
+                                <li><i class="fas fa-check"></i>Queueを使う</li>
+                                <li><i class="fas fa-check"></i>非同期処理</li>
+                                <li><i class="fas fa-check"></i>バッチ処理</li>
+                                <li><i class="fas fa-check"></i>Cron</li>
+                                <li><i class="fas fa-check"></i>リトライ</li>
+                                <li><i class="fas fa-check"></i>処理失敗時の復旧</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>クラウドにシステムを構築できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>AWS / GCP / Azure</li>
+                                <li><i class="fas fa-check"></i>サーバー構築</li>
+                                <li><i class="fas fa-check"></i>Serverless</li>
+                                <li><i class="fas fa-check"></i>Storage</li>
+                                <li><i class="fas fa-check"></i>Database</li>
+                                <li><i class="fas fa-check"></i>CDN</li>
+                                <li><i class="fas fa-check"></i>IAM</li>
+                                <li><i class="fas fa-check"></i>Secret管理</li>
+                                <li><i class="fas fa-check"></i>Infrastructure as Code</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>Dockerで環境を統一できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>開発環境構築</li>
+                                <li><i class="fas fa-check"></i>Dockerfile作成</li>
+                                <li><i class="fas fa-check"></i>Docker Compose</li>
+                                <li><i class="fas fa-check"></i>本番環境へのデプロイ</li>
+                                <li><i class="fas fa-check"></i>GPU環境構築</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>本番環境へ自動デプロイできる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>GitHub Actions</li>
+                                <li><i class="fas fa-check"></i>CI/CD</li>
+                                <li><i class="fas fa-check"></i>テスト自動化</li>
+                                <li><i class="fas fa-check"></i>Build</li>
+                                <li><i class="fas fa-check"></i>Deploy</li>
+                                <li><i class="fas fa-check"></i>Rollback</li>
+                                <li><i class="fas fa-check"></i>staging / productionの分離</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>システムの障害を調査できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>ログを見る</li>
+                                <li><i class="fas fa-check"></i>エラーを追跡する</li>
+                                <li><i class="fas fa-check"></i>Stack Traceを読む</li>
+                                <li><i class="fas fa-check"></i>DBの負荷を調査する</li>
+                                <li><i class="fas fa-check"></i>APIの遅延を調査する</li>
+                                <li><i class="fas fa-check"></i>CPU / Memoryを見る</li>
+                                <li><i class="fas fa-check"></i>AI APIの失敗原因を調査する</li>
+                                <li><i class="fas fa-check"></i>ボトルネックを特定する</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>AIの品質を評価できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>正しい回答率を測る</li>
+                                <li><i class="fas fa-check"></i>Hallucinationを検出する</li>
+                                <li><i class="fas fa-check"></i>RAGの検索精度を評価する</li>
+                                <li><i class="fas fa-check"></i>Promptを比較する</li>
+                                <li><i class="fas fa-check"></i>モデルを比較する</li>
+                                <li><i class="fas fa-check"></i>LLM-as-a-Judge</li>
+                                <li><i class="fas fa-check"></i>人間による評価</li>
+                                <li><i class="fas fa-check"></i>Evaluation Datasetを作る</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>AIの精度を改善できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>Prompt改善</li>
+                                <li><i class="fas fa-check"></i>Context改善</li>
+                                <li><i class="fas fa-check"></i>RAG改善</li>
+                                <li><i class="fas fa-check"></i>Chunking改善</li>
+                                <li><i class="fas fa-check"></i>Retrieval改善</li>
+                                <li><i class="fas fa-check"></i>Reranking</li>
+                                <li><i class="fas fa-check"></i>モデル変更</li>
+                                <li><i class="fas fa-check"></i>評価結果をもとに継続改善する</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>AIのコストを削減できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>モデルを使い分ける</li>
+                                <li><i class="fas fa-check"></i>小さいモデルに処理を振る</li>
+                                <li><i class="fas fa-check"></i>Promptを短くする</li>
+                                <li><i class="fas fa-check"></i>Contextを減らす</li>
+                                <li><i class="fas fa-check"></i>Cacheを使う</li>
+                                <li><i class="fas fa-check"></i>Batch APIを使う</li>
+                                <li><i class="fas fa-check"></i>不要なLLM呼び出しを減らす</li>
+                                <li><i class="fas fa-check"></i>Token使用量を監視する</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>AIシステムの速度を改善できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>Streaming</li>
+                                <li><i class="fas fa-check"></i>Cache</li>
+                                <li><i class="fas fa-check"></i>非同期処理</li>
+                                <li><i class="fas fa-check"></i>モデル選択</li>
+                                <li><i class="fas fa-check"></i>Context削減</li>
+                                <li><i class="fas fa-check"></i>Vector Search高速化</li>
+                                <li><i class="fas fa-check"></i>DBクエリ最適化</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>セキュリティを考慮したAIシステムを作れる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>Prompt Injection対策</li>
+                                <li><i class="fas fa-check"></i>機密情報の漏洩防止</li>
+                                <li><i class="fas fa-check"></i>個人情報をマスキングする</li>
+                                <li><i class="fas fa-check"></i>入力・出力を検証する</li>
+                                <li><i class="fas fa-check"></i>Tool Callingの権限を制限する</li>
+                                <li><i class="fas fa-check"></i>ユーザー単位で参照可能データを分ける</li>
+                                <li><i class="fas fa-check"></i>Secretを安全に管理する</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>AIに任せてよい処理／人間が確認すべき処理を設計できる</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>自動実行してよい処理</li>
+                                <li><i class="fas fa-check"></i>承認が必要な処理</li>
+                                <li><i class="fas fa-check"></i>金額や重要度による分岐</li>
+                                <li><i class="fas fa-check"></i>Human-in-the-loop</li>
+                                <li><i class="fas fa-check"></i>Confidence Scoreによる分岐</li>
+                                <li><i class="fas fa-check"></i>AIが分からない場合のEscalation</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>曖昧な業務要件をシステムに落とし込める</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>現場へのヒアリング</li>
+                                <li><i class="fas fa-check"></i>現在の業務フローを整理</li>
+                                <li><i class="fas fa-check"></i>ボトルネックを発見</li>
+                                <li><i class="fas fa-check"></i>AIで解決すべき部分を特定</li>
+                                <li><i class="fas fa-check"></i>AIを使わない方がよい部分も判断</li>
+                                <li><i class="fas fa-check"></i>要件定義</li>
+                                <li><i class="fas fa-check"></i>DB/API/UI設計</li>
+                                <li><i class="fas fa-check"></i>MVPに必要な機能を絞る</li>
+                            </ul>
+                        </div>
+                        <div class="capability-group">
+                            <h4>PoCで終わらず、本番運用まで持っていける</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i>認証</li>
+                                <li><i class="fas fa-check"></i>権限</li>
+                                <li><i class="fas fa-check"></i>ログ</li>
+                                <li><i class="fas fa-check"></i>エラー処理</li>
+                                <li><i class="fas fa-check"></i>評価</li>
+                                <li><i class="fas fa-check"></i>セキュリティ</li>
+                                <li><i class="fas fa-check"></i>コスト</li>
+                                <li><i class="fas fa-check"></i>監視</li>
+                                <li><i class="fas fa-check"></i>デプロイ</li>
+                                <li><i class="fas fa-check"></i>運用フローまで設計する</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
