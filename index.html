@@ -16,11 +16,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --bg-start: #1e293b;
-            --bg-end: #0f172a;
-            --accent: #38bdf8;
-            --text-main: #f8fafc;
-            --text-sub: #cbd5e1;
+            --bg: #fafaf8;
+            --surface: #ffffff;
+            --surface-2: #f2f2ef;
+            --line: #e4e4e0;
+            --line-strong: #cfcfca;
+            --accent: #2563eb;
+            --accent-soft: rgba(37, 99, 235, .08);
+            --text-main: #0b0b0c;
+            --text-sub: #5f6062;
             --card-w: 240px;
             --card-h: 172px;
             --duration: 900ms;
@@ -31,7 +35,7 @@
         * { box-sizing: border-box; }
 
         body {
-            background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+            background: var(--bg);
             color: var(--text-main);
             font-family: 'Inter', -apple-system, sans-serif;
             display: flex;
@@ -80,13 +84,13 @@
         }
 
         .profile-sheet {
-            --corp-bg: var(--bg-end);
+            --corp-bg: var(--bg);
             --corp-text: var(--text-main);
             --corp-text-sub: var(--text-sub);
-            --corp-border: rgba(255, 255, 255, .14);
+            --corp-border: var(--line);
             --corp-accent: var(--accent);
-            --corp-accent-soft: rgba(56, 189, 248, .12);
-            --corp-accent-border: rgba(56, 189, 248, .4);
+            --corp-accent-soft: var(--accent-soft);
+            --corp-accent-border: rgba(37, 99, 235, .4);
             width: 100vw;
             margin-left: calc(50% - 50vw);
             margin-right: calc(50% - 50vw);
@@ -145,6 +149,27 @@
             color: var(--corp-text);
         }
 
+        /* ===== セクション画像 ===== */
+        .row-visual {
+            margin: 0 0 clamp(32px, 4vw, 48px);
+            aspect-ratio: 21 / 8;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--corp-border);
+            background: var(--surface-2);
+        }
+
+        .row-visual img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 600px) {
+            .row-visual { aspect-ratio: 16 / 9; }
+        }
+
         /* ===== できること ===== */
         .service-list {
             list-style: none;
@@ -167,33 +192,16 @@
             padding-top: 0;
         }
 
-        .service-icon {
+        .service-num {
             flex: 0 0 auto;
-            width: 36px;
-            height: 36px;
-            margin-top: 2px;
-            border-radius: 8px;
-            background: var(--corp-accent-soft);
+            width: 28px;
+            padding-top: 3px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: .04em;
+            font-variant-numeric: tabular-nums;
             color: var(--corp-accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-        }
-
-        .service-icon-glyph {
-            display: block;
-            width: 19px;
-            height: 19px;
-            background-color: currentColor;
-            -webkit-mask-image: var(--glyph-src);
-            mask-image: var(--glyph-src);
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-            -webkit-mask-position: center;
-            mask-position: center;
-            -webkit-mask-size: contain;
-            mask-size: contain;
         }
 
         .service-item h4 {
@@ -249,11 +257,11 @@
             align-items: center;
             padding: 6px 15px;
             border-radius: 999px;
-            background: var(--corp-accent-soft);
-            border: 1px solid var(--corp-accent-border);
+            background: var(--surface);
+            border: 1px solid var(--corp-border);
             font-size: .82rem;
             font-weight: 600;
-            color: var(--corp-accent);
+            color: var(--corp-text);
         }
 
         .tech-icon {
@@ -270,6 +278,13 @@
             mask-repeat: no-repeat;
             -webkit-mask-position: center;
             mask-position: center;
+        }
+
+        /* Font Awesome アイコンも tech-icon と同じ幅に揃える */
+        .tag > i:not(.tech-icon) {
+            flex: 0 0 auto;
+            width: 14px;
+            text-align: center;
         }
 
         /* ===== AI・先端技術への取り組み ===== */
@@ -537,11 +552,9 @@
             position: absolute;
             inset: 0;
             border-radius: 20px;
-            background: rgba(255,255,255,.06);
-            border: 1px solid rgba(255,255,255,.15);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            box-shadow: 0 30px 55px rgba(0,0,0,.55);
+            background: var(--surface);
+            border: 1px solid var(--line);
+            box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 24px 48px -24px rgba(0,0,0,.22);
             display: flex;
             align-items: center;
             padding: 24px;
@@ -557,24 +570,24 @@
             position: absolute;
             inset: -60% -60% auto -60%;
             height: 70%;
-            background: radial-gradient(circle at 30% 30%, rgba(56, 189, 248, .25), transparent 60%);
+            background: radial-gradient(circle at 30% 30%, rgba(37, 99, 235, .12), transparent 60%);
             transform: rotate(12deg);
             pointer-events: none;
         }
 
         .card:hover {
             border-color: var(--accent);
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--surface);
         }
 
         .card[data-state="side"] {
             opacity: .55;
-            filter: blur(.2px) brightness(.85);
+            filter: blur(.2px);
         }
 
         .card[data-state="back"] {
             opacity: .25;
-            filter: blur(.4px) brightness(.7);
+            filter: blur(.4px);
         }
 
         .card-link-overlay {
@@ -587,14 +600,14 @@
 
         .stage:hover .card[data-state="front"] {
             border-color: var(--accent);
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--surface);
         }
 
         .card-icon {
             font-size: 2.5rem;
             margin-right: 20px;
             color: var(--accent);
-            filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.4));
+            filter: drop-shadow(0 0 8px rgba(37, 99, 235, .25));
             flex-shrink: 0;
         }
 
@@ -622,8 +635,8 @@
             display: flex;
             gap: 12px;
             padding: 12px 16px;
-            background: rgba(56, 189, 248, .10);
-            border: 1px solid rgba(56, 189, 248, .25);
+            background: var(--surface);
+            border: 1px solid var(--line);
             border-radius: 999px;
             backdrop-filter: blur(10px);
         }
@@ -633,8 +646,8 @@
             border: none;
             padding: 10px 18px;
             border-radius: 999px;
-            color: var(--text-main);
-            background: rgba(56, 189, 248, .20);
+            color: var(--bg);
+            background: var(--text-main);
             cursor: pointer;
             font-weight: 700;
             font-size: 0.95rem;
@@ -642,7 +655,7 @@
         }
 
         .controls button:hover {
-            background: rgba(56, 189, 248, .35);
+            background: #2a2a2c;
         }
 
         .controls button:active {
@@ -659,7 +672,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
+            background: var(--line-strong);
             transition: background 0.3s ease, transform 0.3s ease;
         }
 
@@ -746,8 +759,8 @@
             min-width: 0;
             padding: clamp(10px, 2.2vw, 20px) clamp(10px, 2.2vw, 28px);
             border-radius: 16px;
-            background: rgba(255, 255, 255, .92);
-            border: 1px solid rgba(255, 255, 255, .15);
+            background: var(--surface);
+            border: 1px solid var(--line);
             transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
         }
 
@@ -763,7 +776,7 @@
             border-color: var(--accent);
             background: #ffffff;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,.25);
+            box-shadow: 0 10px 20px rgba(0,0,0,.08);
         }
 
         .mail-link {
@@ -771,7 +784,7 @@
             align-items: center;
             justify-content: center;
             margin-top: 52px;
-            color: #ffffff;
+            color: var(--text-main);
             font-size: 1.6rem;
             text-decoration: none;
             opacity: 0.7;
@@ -814,44 +827,47 @@
                 <h3>Capabilities</h3>
             </div>
             <div class="corp-row-content">
+                <figure class="row-visual">
+                    <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1600&q=70" alt="柔らかい光の中でコードが表示されたノートPC" loading="lazy">
+                </figure>
                 <ul class="service-list">
                     <li class="service-item">
-                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.8%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M8.5 6 3 12l5.5 6%27/><path d=%2715.5 6 21 12l-5.5 6%27/></svg>')"></i></span>
+                        <span class="service-num">01</span>
                         <div>
                             <h4>Webシステム開発</h4>
                             <p>Python・PHPを中心に、API・バッチ・画面開発まで一連の工程に対応できます。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><ellipse cx=%2712%27 cy=%276%27 rx=%277%27 ry=%272.8%27/><path d=%27M5 6v12c0 1.6 3.1 2.8 7 2.8s7-1.2 7-2.8V6%27/><path d=%27M5 12c0 1.6 3.1 2.8 7 2.8s7-1.2 7-2.8%27/></svg>')"></i></span>
+                        <span class="service-num">02</span>
                         <div>
                             <h4>大規模データ処理・バッチ開発</h4>
                             <p>数億件規模のデータ処理や、BigQuery・Airflowを用いた高負荷バッチの開発経験があります。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M9.5 4.5c-2 0-3.5 1.5-3.5 3.2 0 .6.2 1.1.5 1.6-1.1.5-1.8 1.6-1.8 2.9 0 1.2.7 2.3 1.7 2.8-.1.3-.2.7-.2 1 0 1.8 1.6 3.2 3.5 3.2 1 0 1.8-.4 2.3-1%27/><path d=%27M14.5 4.5c2 0 3.5 1.5 3.5 3.2 0 .6-.2 1.1-.5 1.6 1.1.5 1.8 1.6 1.8 2.9 0 1.2-.7 2.3-1.7 2.8.1.3.2.7.2 1 0 1.8-1.6 3.2-3.5 3.2-1 0-1.8-.4-2.3-1%27/><path d=%27M12 5v14%27/><path d=%27M9 9.5h2.2%27/><path d=%27M12.8 13.5H15%27/></svg>')"></i></span>
+                        <span class="service-num">03</span>
                         <div>
                             <h4>AI活用・プロダクト開発</h4>
                             <p>LLM・RAG・AIエージェント等の技術検証からPoC/プロダクト開発・評価まで一貫して実践しています。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.8%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M4 17l5.5-5.5 4 4L21 8%27/><path d=%27M15.5 8H21v5.5%27/></svg>')"></i></span>
+                        <span class="service-num">04</span>
                         <div>
                             <h4>品質向上・効率化</h4>
                             <p>テスト自動化・CI/CD導入・設定一元管理などにより、開発品質と運用効率の向上に貢献します。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><path d=%27M12 3.2 19 6v5.5c0 5-3 8.2-7 9.3-4-1.1-7-4.3-7-9.3V6l7-2.8z%27/><path d=%27M9 12.3l2 2 4.2-4.6%27/></svg>')"></i></span>
+                        <span class="service-num">05</span>
                         <div>
                             <h4>障害対応・保守運用</h4>
                             <p>本番障害の原因調査から恒久対応、保守運用まで責任を持って対応できます。</p>
                         </div>
                     </li>
                     <li class="service-item">
-                        <span class="service-icon"><i class="service-icon-glyph" style="--glyph-src:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><circle cx=%278%27 cy=%278%27 r=%272.6%27/><circle cx=%2716%27 cy=%278%27 r=%272.6%27/><path d=%27M3 19c0-3 2.2-5 5-5s5 2 5 5%27/><path d=%2711 19c0-3 2.2-5 5-5s5 2 5 5%27/></svg>')"></i></span>
+                        <span class="service-num">06</span>
                         <div>
                             <h4>チーム貢献・リーダーシップ</h4>
                             <p>サブリーダー経験や複数案件の並行対応を通じて、チーム全体の生産性向上に貢献します。</p>
@@ -877,7 +893,7 @@
                     <div class="skill-group">
                         <span class="skill-group-label">フレームワーク</span>
                         <div class="tag-row">
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/apacheairflow.svg');--icon-color:#017CEE"></i>Airflow</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/laravel.svg');--icon-color:#FF2D20"></i>Laravel</span><span class="tag">Slim</span><span class="tag">独自FW</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/apacheairflow.svg');--icon-color:#017CEE"></i>Airflow</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/laravel.svg');--icon-color:#FF2D20"></i>Laravel</span><span class="tag"><i class="fas fa-layer-group" style="color:#74A045;margin-right:6px;font-size:.85em"></i>Slim</span><span class="tag"><i class="fas fa-code" style="color:#334155;margin-right:6px;font-size:.85em"></i>独自FW</span>
                         </div>
                     </div>
                     <div class="skill-group">
@@ -895,21 +911,21 @@
                     <div class="skill-group">
                         <span class="skill-group-label">開発ツール・その他</span>
                         <div class="tag-row">
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/github.svg');--icon-color:#f8fafc"></i>GitHub</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/git.svg');--icon-color:#F03C2E"></i>Git</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/bitbucket.svg');--icon-color:#0052CC"></i>Bitbucket</span><span class="tag"><i class="fab fa-microsoft" style="color:#0078D7;margin-right:6px;font-size:.85em"></i>Azure DevOps</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jenkins.svg');--icon-color:#D24939"></i>Jenkins</span><span class="tag">VS Code</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/cursor.svg');--icon-color:#f8fafc"></i>Cursor</span>
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/docker.svg');--icon-color:#2496ED"></i>Docker</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/ollama.svg');--icon-color:#f8fafc"></i>Ollama</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/lmstudio.svg');--icon-color:#f8fafc"></i>LM Studio</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/redmine.svg');--icon-color:#B32024"></i>Redmine</span><span class="tag">Backlog</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jira.svg');--icon-color:#0052CC"></i>JIRA</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/testrail.svg');--icon-color:#65C179"></i>TestRail</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/github.svg');--icon-color:#334155"></i>GitHub</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/git.svg');--icon-color:#F03C2E"></i>Git</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/bitbucket.svg');--icon-color:#0052CC"></i>Bitbucket</span><span class="tag"><i class="fab fa-microsoft" style="color:#0078D7;margin-right:6px;font-size:.85em"></i>Azure DevOps</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jenkins.svg');--icon-color:#D24939"></i>Jenkins</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@9.21.0/icons/visualstudiocode.svg');--icon-color:#007ACC"></i>VS Code</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/cursor.svg');--icon-color:#334155"></i>Cursor</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/docker.svg');--icon-color:#2496ED"></i>Docker</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/ollama.svg');--icon-color:#334155"></i>Ollama</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/lmstudio.svg');--icon-color:#334155"></i>LM Studio</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/redmine.svg');--icon-color:#B32024"></i>Redmine</span><span class="tag"><i class="fas fa-list-check" style="color:#42CE9F;margin-right:6px;font-size:.85em"></i>Backlog</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jira.svg');--icon-color:#0052CC"></i>JIRA</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/testrail.svg');--icon-color:#65C179"></i>TestRail</span>
                         </div>
                     </div>
                     <div class="skill-group">
                         <span class="skill-group-label">AI・LLM関連</span>
                         <div class="tag-row">
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langchain.svg');--icon-color:#7FC8FF"></i>LangChain</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langgraph.svg');--icon-color:#7FC8FF"></i>LangGraph</span><span class="tag">LangSmith</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/modelcontextprotocol.svg');--icon-color:#f8fafc"></i>MCP</span>
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/agentskills.svg');--icon-color:#f8fafc"></i>Agent Skills</span><span class="tag">RAG</span><span class="tag">Embedding</span><span class="tag">Vector DB</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langchain.svg');--icon-color:#1C3C3C"></i>LangChain</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langgraph.svg');--icon-color:#1C3C3C"></i>LangGraph</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langchain.svg');--icon-color:#1C3C3C"></i>LangSmith</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/modelcontextprotocol.svg');--icon-color:#334155"></i>MCP</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/agentskills.svg');--icon-color:#334155"></i>Agent Skills</span><span class="tag"><i class="fas fa-magnifying-glass" style="color:#334155;margin-right:6px;font-size:.85em"></i>RAG</span><span class="tag"><i class="fas fa-diagram-project" style="color:#334155;margin-right:6px;font-size:.85em"></i>Embedding</span><span class="tag"><i class="fas fa-database" style="color:#334155;margin-right:6px;font-size:.85em"></i>Vector DB</span>
                         </div>
                     </div>
                     <div class="skill-group">
                         <span class="skill-group-label">AIツール</span>
                         <div class="tag-row">
-                            <span class="tag">ChatGPT</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/claude.svg');--icon-color:#D97757"></i>Claude</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlegemini.svg');--icon-color:#8E75B2"></i>Gemini</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/notebooklm.svg');--icon-color:#f8fafc"></i>NotebookLM</span><span class="tag">Genspark</span><span class="tag">Manus</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/openai.svg');--icon-color:#334155"></i>ChatGPT</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/claude.svg');--icon-color:#D97757"></i>Claude</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlegemini.svg');--icon-color:#8E75B2"></i>Gemini</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/notebooklm.svg');--icon-color:#334155"></i>NotebookLM</span><span class="tag"><i class="fas fa-wand-magic-sparkles" style="color:#334155;margin-right:6px;font-size:.85em"></i>Genspark</span><span class="tag"><i class="fas fa-robot" style="color:#334155;margin-right:6px;font-size:.85em"></i>Manus</span>
                         </div>
                     </div>
                 </div>
