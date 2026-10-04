@@ -133,22 +133,10 @@
         }
 
         .brand-mark {
-            width: 22px;
-            height: 22px;
-            border-radius: 5px;
-            background: var(--ink);
-            position: relative;
-        }
-
-        .brand-mark::after {
-            content: "";
-            position: absolute;
-            right: 4px;
-            bottom: 4px;
-            width: 6px;
-            height: 6px;
-            border-radius: 1px;
-            background: var(--accent);
+            width: 18px;
+            height: 18px;
+            flex: 0 0 auto;
+            display: block;
         }
 
         .site-nav {
@@ -990,7 +978,7 @@
 
     <header class="site-header">
         <div class="wrap site-header-inner">
-            <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>Yoshimura</a>
+            <a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 18 18" aria-hidden="true"><rect width="8" height="8" fill="#0b0b0c"/><rect x="10" width="8" height="8" fill="#0b0b0c"/><rect y="10" width="8" height="8" fill="#0b0b0c"/><rect x="10" y="10" width="8" height="8" fill="#ff5a1f"/></svg>Yoshimura</a>
             <nav class="site-nav">
                 <a href="#capabilities">Capabilities</a>
                 <a href="#techstack">Tech Stack</a>
@@ -1043,7 +1031,7 @@
                 </div>
 
                 <figure class="visual-band" style="margin-left:0;margin-right:0;margin-bottom:0">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=70" alt="ノートPCでコードを書く明るいデスク" loading="eager">
+                    <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=2000&q=70" alt="柔らかい光の中でコードが表示されたノートPC" loading="eager">
                     <figcaption class="visual-caption">
                         <div>
                             <span class="mono-label">Web / Data / AI</span>
@@ -1385,7 +1373,7 @@
                     <div class="stack-row">
                         <span class="mono-label">フレームワーク</span>
                         <div class="tag-row">
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/apacheairflow.svg');--icon-color:#017CEE"></i>Airflow</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/laravel.svg');--icon-color:#FF2D20"></i>Laravel</span><span class="tag">Slim</span><span class="tag">独自FW</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/apacheairflow.svg');--icon-color:#017CEE"></i>Airflow</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/laravel.svg');--icon-color:#FF2D20"></i>Laravel</span><span class="tag"><i class="fas fa-layer-group" style="color:#74A045;margin-right:6px;font-size:.85em"></i>Slim</span><span class="tag"><i class="fas fa-code" style="color:#334155;margin-right:6px;font-size:.85em"></i>独自FW</span>
                         </div>
                     </div>
                     <div class="stack-row">
@@ -1403,21 +1391,21 @@
                     <div class="stack-row">
                         <span class="mono-label">開発ツール・その他</span>
                         <div class="tag-row">
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/github.svg');--icon-color:#334155"></i>GitHub</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/git.svg');--icon-color:#F03C2E"></i>Git</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/bitbucket.svg');--icon-color:#0052CC"></i>Bitbucket</span><span class="tag"><i class="fab fa-microsoft" style="color:#0078D7;margin-right:6px;font-size:.85em"></i>Azure DevOps</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jenkins.svg');--icon-color:#D24939"></i>Jenkins</span><span class="tag">VS Code</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/cursor.svg');--icon-color:#334155"></i>Cursor</span>
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/docker.svg');--icon-color:#2496ED"></i>Docker</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/ollama.svg');--icon-color:#334155"></i>Ollama</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/lmstudio.svg');--icon-color:#334155"></i>LM Studio</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/redmine.svg');--icon-color:#B32024"></i>Redmine</span><span class="tag">Backlog</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jira.svg');--icon-color:#0052CC"></i>JIRA</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/testrail.svg');--icon-color:#65C179"></i>TestRail</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/github.svg');--icon-color:#334155"></i>GitHub</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/git.svg');--icon-color:#F03C2E"></i>Git</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/bitbucket.svg');--icon-color:#0052CC"></i>Bitbucket</span><span class="tag"><i class="fab fa-microsoft" style="color:#0078D7;margin-right:6px;font-size:.85em"></i>Azure DevOps</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jenkins.svg');--icon-color:#D24939"></i>Jenkins</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@9.21.0/icons/visualstudiocode.svg');--icon-color:#007ACC"></i>VS Code</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/cursor.svg');--icon-color:#334155"></i>Cursor</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/docker.svg');--icon-color:#2496ED"></i>Docker</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/ollama.svg');--icon-color:#334155"></i>Ollama</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/lmstudio.svg');--icon-color:#334155"></i>LM Studio</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/redmine.svg');--icon-color:#B32024"></i>Redmine</span><span class="tag"><i class="fas fa-list-check" style="color:#42CE9F;margin-right:6px;font-size:.85em"></i>Backlog</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jira.svg');--icon-color:#0052CC"></i>JIRA</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/testrail.svg');--icon-color:#65C179"></i>TestRail</span>
                         </div>
                     </div>
                     <div class="stack-row">
                         <span class="mono-label">AI・LLM関連</span>
                         <div class="tag-row">
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langchain.svg');--icon-color:#1C3C3C"></i>LangChain</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langgraph.svg');--icon-color:#1C3C3C"></i>LangGraph</span><span class="tag">LangSmith</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/modelcontextprotocol.svg');--icon-color:#334155"></i>MCP</span>
-                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/agentskills.svg');--icon-color:#334155"></i>Agent Skills</span><span class="tag">RAG</span><span class="tag">Embedding</span><span class="tag">Vector DB</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langchain.svg');--icon-color:#1C3C3C"></i>LangChain</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langgraph.svg');--icon-color:#1C3C3C"></i>LangGraph</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langchain.svg');--icon-color:#1C3C3C"></i>LangSmith</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/modelcontextprotocol.svg');--icon-color:#334155"></i>MCP</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/agentskills.svg');--icon-color:#334155"></i>Agent Skills</span><span class="tag"><i class="fas fa-magnifying-glass" style="color:#334155;margin-right:6px;font-size:.85em"></i>RAG</span><span class="tag"><i class="fas fa-diagram-project" style="color:#334155;margin-right:6px;font-size:.85em"></i>Embedding</span><span class="tag"><i class="fas fa-database" style="color:#334155;margin-right:6px;font-size:.85em"></i>Vector DB</span>
                         </div>
                     </div>
                     <div class="stack-row">
                         <span class="mono-label">AIツール</span>
                         <div class="tag-row">
-                            <span class="tag">ChatGPT</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/claude.svg');--icon-color:#D97757"></i>Claude</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlegemini.svg');--icon-color:#8E75B2"></i>Gemini</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/notebooklm.svg');--icon-color:#334155"></i>NotebookLM</span><span class="tag">Genspark</span><span class="tag">Manus</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/openai.svg');--icon-color:#334155"></i>ChatGPT</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/claude.svg');--icon-color:#D97757"></i>Claude</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlegemini.svg');--icon-color:#8E75B2"></i>Gemini</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/notebooklm.svg');--icon-color:#334155"></i>NotebookLM</span><span class="tag"><i class="fas fa-wand-magic-sparkles" style="color:#334155;margin-right:6px;font-size:.85em"></i>Genspark</span><span class="tag"><i class="fas fa-robot" style="color:#334155;margin-right:6px;font-size:.85em"></i>Manus</span>
                         </div>
                     </div>
                 </div>
@@ -1617,7 +1605,7 @@
         <div class="wrap">
             <div class="site-footer-inner">
                 <div class="footer-brand">
-                    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>Yoshimura</a>
+                    <a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 18 18" aria-hidden="true"><rect width="8" height="8" fill="#0b0b0c"/><rect x="10" width="8" height="8" fill="#0b0b0c"/><rect y="10" width="8" height="8" fill="#0b0b0c"/><rect x="10" y="10" width="8" height="8" fill="#ff5a1f"/></svg>Yoshimura</a>
                     <p>Webシステム開発・大規模データ処理・AI活用まで一気通貫で対応するフリーランスソフトウェアエンジニアです。</p>
                 </div>
                 <div class="footer-col">
