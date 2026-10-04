@@ -12,29 +12,32 @@
         gtag('config', 'G-5MCVEHM40D');
     </script>
     <title>Yoshimura | Freelance Software Engineer</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23171a16'/><path fill='%23f5f6f1' d='M32 14c-9.4 0-17 7.6-17 17 0 7.5 4.9 13.9 11.7 16.1.9.2 1.3-.4 1.3-.9v-3.1c-4.8 1-5.8-2.1-5.8-2.1-.8-2-1.9-2.5-1.9-2.5-1.6-1.1.1-1.1.1-1.1 1.7.1 2.6 1.8 2.6 1.8 1.6 2.7 4.2 1.9 5.2 1.4.2-1.1.6-1.9 1.1-2.3-3.8-.4-7.8-1.9-7.8-8.4 0-1.9.7-3.5 1.8-4.7-.2-.4-.8-2.1.2-4.4 0 0 1.5-.5 4.9 1.8 1.4-.4 2.9-.6 4.4-.6s3 .2 4.4.6c3.4-2.3 4.9-1.8 4.9-1.8 1 2.3.4 4 .2 4.4 1.1 1.2 1.8 2.8 1.8 4.7 0 6.5-4 8-7.8 8.4.6.5 1.2 1.6 1.2 3.2v4.8c0 .5.4 1.1 1.3.9C44.1 44.9 49 38.5 49 31c0-9.4-7.6-17-17-17z'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b0b0c'/><path fill='%23fafaf8' d='M32 14c-9.4 0-17 7.6-17 17 0 7.5 4.9 13.9 11.7 16.1.9.2 1.3-.4 1.3-.9v-3.1c-4.8 1-5.8-2.1-5.8-2.1-.8-2-1.9-2.5-1.9-2.5-1.6-1.1.1-1.1.1-1.1 1.7.1 2.6 1.8 2.6 1.8 1.6 2.7 4.2 1.9 5.2 1.4.2-1.1.6-1.9 1.1-2.3-3.8-.4-7.8-1.9-7.8-8.4 0-1.9.7-3.5 1.8-4.7-.2-.4-.8-2.1.2-4.4 0 0 1.5-.5 4.9 1.8 1.4-.4 2.9-.6 4.4-.6s3 .2 4.4.6c3.4-2.3 4.9-1.8 4.9-1.8 1 2.3.4 4 .2 4.4 1.1 1.2 1.8 2.8 1.8 4.7 0 6.5-4 8-7.8 8.4.6.5 1.2 1.6 1.2 3.2v4.8c0 .5.4 1.1 1.3.9C44.1 44.9 49 38.5 49 31c0-9.4-7.6-17-17-17z'/></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --paper: #f5f6f1;
-            --paper-raised: #eef0e9;
-            --ink: #171a16;
-            --ink-soft: #5b6058;
-            --rule: #dadfd4;
-            --ledger: #2f5d45;
-            --ledger-dark: #234634;
-            --ledger-soft: rgba(47, 93, 69, .08);
-            --ledger-border: rgba(47, 93, 69, .3);
+            --bg: #fafaf8;
+            --surface: #ffffff;
+            --surface-2: #f2f2ef;
+            --ink: #0b0b0c;
+            --ink-soft: #5f6062;
+            --ink-faint: #9a9b9d;
+            --line: #e4e4e0;
+            --line-strong: #cfcfca;
+            --accent: #ff5a1f;
+            --accent-soft: rgba(255, 90, 31, .08);
+            --sans: 'Inter', 'Noto Sans JP', -apple-system, sans-serif;
+            --mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
+            --wrap: 1440px;
+            --gutter: clamp(16px, 3vw, 40px);
         }
 
         * { box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
@@ -42,24 +45,61 @@
         }
 
         body {
-            background: var(--paper);
-            color: var(--ink);
-            font-family: 'IBM Plex Sans JP', 'IBM Plex Sans', -apple-system, sans-serif;
             margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
             -webkit-font-smoothing: antialiased;
+            font-feature-settings: "palt";
         }
 
         a { color: inherit; }
+        img { display: block; max-width: 100%; }
 
         a:focus-visible,
         button:focus-visible {
-            outline: 2px solid var(--ledger);
+            outline: 2px solid var(--accent);
             outline-offset: 3px;
         }
 
+        .wrap {
+            max-width: var(--wrap);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+        }
+
+        /* モノスペースの小見出し */
+        .mono-label {
+            font-family: var(--mono);
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+        }
+
+        .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            vertical-align: middle;
+        }
+
         @keyframes riseIn {
-            from { opacity: 0; transform: translateY(14px); }
+            from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .35; }
+        }
+
+        @keyframes drawLine {
+            from { stroke-dashoffset: 600; }
+            to { stroke-dashoffset: 0; }
         }
 
         /* ===== ヘッダー ===== */
@@ -67,32 +107,53 @@
             position: sticky;
             top: 0;
             z-index: 50;
-            background: var(--paper);
-            border-bottom: 1px solid var(--rule);
+            background: rgba(250, 250, 248, .86);
+            backdrop-filter: saturate(160%) blur(12px);
+            -webkit-backdrop-filter: saturate(160%) blur(12px);
+            border-bottom: 1px solid var(--line);
         }
 
         .site-header-inner {
-            max-width: 1680px;
-            margin: 0 auto;
-            padding: 18px 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            gap: 24px;
+            height: 64px;
         }
 
         .brand {
-            font-family: 'IBM Plex Serif', serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            letter-spacing: -.01em;
             text-decoration: none;
-            color: var(--ink);
             white-space: nowrap;
+        }
+
+        .brand-mark {
+            width: 22px;
+            height: 22px;
+            border-radius: 5px;
+            background: var(--ink);
+            position: relative;
+        }
+
+        .brand-mark::after {
+            content: "";
+            position: absolute;
+            right: 4px;
+            bottom: 4px;
+            width: 6px;
+            height: 6px;
+            border-radius: 1px;
+            background: var(--accent);
         }
 
         .site-nav {
             display: flex;
-            gap: 30px;
+            gap: 28px;
             overflow-x: auto;
             scrollbar-width: none;
         }
@@ -100,277 +161,375 @@
         .site-nav::-webkit-scrollbar { display: none; }
 
         .site-nav a {
-            font-size: .85rem;
-            font-weight: 500;
+            font-family: var(--mono);
+            font-size: .74rem;
+            letter-spacing: .06em;
+            text-transform: uppercase;
             color: var(--ink-soft);
             text-decoration: none;
             white-space: nowrap;
-            border-bottom: 1px solid transparent;
-            padding-bottom: 2px;
-            transition: color .2s ease, border-color .2s ease;
+            transition: color .2s ease;
         }
 
-        .site-nav a:hover {
-            color: var(--ledger);
-            border-color: var(--ledger-border);
+        .site-nav a:hover { color: var(--ink); }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 18px;
         }
+
+        .header-clock {
+            font-family: var(--mono);
+            font-size: .72rem;
+            color: var(--ink-faint);
+            white-space: nowrap;
+        }
+
+        /* ===== ボタン ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 999px;
+            font-family: var(--sans);
+            font-size: .86rem;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid transparent;
+            transition: background .2s ease, color .2s ease, border-color .2s ease;
+            white-space: nowrap;
+        }
+
+        .btn-sm { padding: 8px 16px; font-size: .8rem; }
+
+        .btn-dark { background: var(--ink); color: var(--bg); }
+        .btn-dark:hover { background: #2a2a2c; }
+
+        .btn-ghost { border-color: var(--line-strong); color: var(--ink); background: var(--surface); }
+        .btn-ghost:hover { border-color: var(--ink); }
+
+        .btn .arrow { transition: transform .2s ease; }
+        .btn:hover .arrow { transform: translateX(3px); }
 
         /* ===== ヒーロー ===== */
         .hero {
-            max-width: 1680px;
-            margin: 0 auto;
-            padding: clamp(56px, 9vw, 108px) 24px clamp(64px, 8vw, 96px);
-            display: grid;
-            grid-template-columns: 1.3fr .7fr;
-            gap: clamp(32px, 5vw, 72px);
-            align-items: start;
+            padding: clamp(56px, 9vw, 120px) 0 clamp(48px, 6vw, 80px);
         }
 
-        .hero-inner {
-            animation: riseIn .7s ease-out forwards;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.35fr .9fr;
+            gap: clamp(32px, 5vw, 80px);
+            align-items: end;
         }
+
+        .hero-inner { animation: riseIn .7s ease-out both; }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 28px;
+            padding: 6px 12px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--surface);
+        }
+
+        .hero-eyebrow .dot { animation: pulse 2s ease-in-out infinite; }
 
         .hero-headline {
-            margin: 0 0 24px;
-            font-family: 'Shippori Mincho', serif;
-            font-weight: 800;
-            font-size: clamp(2rem, 4.6vw, 3.2rem);
-            line-height: 1.4;
-            letter-spacing: .01em;
-            color: var(--ink);
+            margin: 0 0 28px;
+            font-weight: 500;
+            font-size: clamp(2.3rem, 5.6vw, 4.6rem);
+            line-height: 1.18;
+            letter-spacing: -.035em;
         }
+
+        .hero-headline .muted { color: var(--ink-faint); }
 
         .hero-lead {
             margin: 0 0 36px;
-            max-width: 46ch;
+            max-width: 44ch;
             font-size: 1rem;
-            line-height: 2;
+            line-height: 1.95;
             color: var(--ink-soft);
         }
 
-        .hero-lead strong {
-            color: var(--ink);
-            font-weight: 700;
-        }
+        .hero-lead strong { color: var(--ink); font-weight: 600; }
 
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 12px;
         }
 
-        .btn {
+        /* ヒーロー右：データパネル */
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 24px 48px -32px rgba(0,0,0,.18);
+            overflow: hidden;
+            animation: riseIn .7s ease-out .15s both;
+        }
+
+        .panel-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .panel-status {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 13px 26px;
-            border-radius: 2px;
-            font-weight: 700;
-            font-size: .88rem;
-            text-decoration: none;
-            border: 1px solid transparent;
-            transition: background .2s ease, border-color .2s ease, color .2s ease;
-        }
-
-        .btn-primary {
-            background: var(--ledger);
-            color: var(--paper);
-        }
-
-        .btn-primary:hover {
-            background: var(--ledger-dark);
-        }
-
-        .btn-outline {
-            background: transparent;
+            font-family: var(--mono);
+            font-size: .7rem;
             color: var(--ink);
-            border-color: var(--ink);
         }
 
-        .btn-outline:hover {
-            border-color: var(--ledger);
-            color: var(--ledger);
+        .panel-status .dot { background: #1fb85c; animation: pulse 2s ease-in-out infinite; }
+
+        .panel-chart {
+            padding: 18px 18px 6px;
+            border-bottom: 1px solid var(--line);
         }
 
-        .hero-index {
-            border: 1px solid var(--rule);
-            border-top: 3px solid var(--ledger);
-            background: var(--paper-raised);
-            padding: 28px 26px;
-            animation: riseIn .7s ease-out .12s backwards;
+        .panel-chart-top {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 10px;
         }
 
-        .hero-index-label {
-            margin: 0 0 18px;
+        .panel-chart-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -.02em;
+        }
+
+        .panel-chart svg { width: 100%; height: 72px; display: block; }
+
+        .panel-chart .line {
+            fill: none;
+            stroke: var(--accent);
+            stroke-width: 1.6;
+            stroke-dasharray: 600;
+            animation: drawLine 2.2s ease-out .4s both;
+        }
+
+        .panel-chart .area { fill: url(#areaFill); }
+
+        .panel-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .panel-list li {
+            display: grid;
+            grid-template-columns: 34px 1fr;
+            gap: 10px;
+            padding: 13px 18px;
+            font-size: .88rem;
+            line-height: 1.6;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .panel-list li:last-child { border-bottom: none; }
+
+        .code {
+            font-family: var(--mono);
+            font-size: .72rem;
+            font-weight: 500;
+            color: var(--ink-faint);
+            padding-top: 2px;
+        }
+
+        .panel-foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 18px;
+            background: var(--surface-2);
+            border-top: 1px solid var(--line);
+        }
+
+        .panel-foot a {
+            font-size: .82rem;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .panel-foot a:hover { color: var(--accent); }
+
+        /* ===== 画像バンド ===== */
+        .visual-band {
+            position: relative;
+            margin-top: clamp(24px, 4vw, 48px);
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 21 / 8;
+            min-height: 240px;
+            background: var(--ink);
+        }
+
+        .visual-band img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(.35) contrast(1.02);
+        }
+
+        .visual-band::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(to right, rgba(255,255,255,.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,.08) 1px, transparent 1px);
+            background-size: 64px 64px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .visual-band::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(11,11,12,0) 40%, rgba(11,11,12,.7) 100%);
+            z-index: 1;
+        }
+
+        .visual-caption {
+            position: absolute;
+            left: 24px;
+            right: 24px;
+            bottom: 20px;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 16px;
+            color: #fff;
+        }
+
+        .visual-caption .mono-label { color: rgba(255,255,255,.75); }
+
+        .visual-caption p {
+            margin: 6px 0 0;
+            font-size: clamp(1rem, 2vw, 1.35rem);
+            font-weight: 500;
+            letter-spacing: -.01em;
+        }
+
+        /* ===== 数値ストリップ ===== */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: clamp(24px, 4vw, 40px);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .stat {
+            padding: 24px 20px;
+            border-left: 1px solid var(--line);
+        }
+
+        .stat:first-child { border-left: none; padding-left: 0; }
+
+        .stat-value {
+            display: block;
+            margin: 10px 0 4px;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 500;
+            letter-spacing: -.03em;
+        }
+
+        .stat-note {
             font-size: .82rem;
             color: var(--ink-soft);
         }
 
-        .hero-index-list {
-            list-style: none;
-            margin: 0 0 20px;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
+        /* ===== セクション共通 ===== */
+        .section {
+            padding: clamp(64px, 8vw, 120px) 0;
+            border-top: 1px solid var(--line);
+            scroll-margin-top: 64px;
         }
 
-        .hero-index-list li {
-            display: flex;
-            align-items: baseline;
-            gap: 12px;
-            font-size: .9rem;
-            line-height: 1.6;
-            padding-bottom: 14px;
-            border-bottom: 1px solid var(--rule);
-        }
-
-        .hero-index-list li:last-child {
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .cap-code {
-            flex: 0 0 auto;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: .76rem;
-            font-weight: 600;
-            color: var(--ledger);
-        }
-
-        .hero-index-more {
-            display: inline-block;
-            font-size: .85rem;
-            font-weight: 600;
-            color: var(--ledger);
-            text-decoration: none;
-            border-bottom: 1px solid var(--ledger-border);
-        }
-
-        .hero-index-more:hover {
-            border-color: var(--ledger);
-        }
-
-        /* ===== プロフィールシート ===== */
-        .profile-sheet {
-            padding: clamp(48px, 6vw, 88px) 0;
-        }
-
-        .profile-sheet-inner {
-            width: min(100%, 1680px);
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .corp-row {
+        .section-head {
             display: grid;
-            grid-template-columns: minmax(200px, 260px) 1fr;
-            gap: clamp(36px, 5vw, 80px);
-            padding: clamp(48px, 6vw, 84px) 0;
-            border-top: 1px solid var(--rule);
-            scroll-margin-top: 84px;
+            grid-template-columns: minmax(200px, 300px) 1fr;
+            gap: clamp(24px, 5vw, 80px);
+            margin-bottom: clamp(36px, 5vw, 64px);
+            align-items: end;
         }
 
-        .corp-row:has(> .corp-row-label:only-child) {
-            grid-template-columns: 1fr;
-        }
+        .section-head .mono-label { display: block; margin-bottom: 14px; }
 
-        .corp-row:first-child {
-            padding-top: 0;
-            border-top: none;
-        }
-
-        .corp-row-label {
-            position: sticky;
-            top: 84px;
-            align-self: start;
-        }
-
-        .corp-row-label h3 {
-            margin: 0 0 10px;
-            font-family: 'IBM Plex Serif', serif;
-            font-size: clamp(1.15rem, 1.9vw, 1.5rem);
-            font-weight: 600;
-            color: var(--ink);
-        }
-
-        .corp-row-desc {
+        .section-title {
             margin: 0;
-            font-size: .86rem;
-            line-height: 1.8;
-            color: var(--ink-soft);
-            max-width: 32ch;
+            font-size: clamp(1.8rem, 3.6vw, 2.9rem);
+            font-weight: 500;
+            letter-spacing: -.03em;
+            line-height: 1.15;
         }
 
-        /* ===== 対応領域：目次 ===== */
-        .cap-index {
+        .section-desc {
+            margin: 0;
+            max-width: 56ch;
+            font-size: .95rem;
+            line-height: 1.9;
+            color: var(--ink-soft);
+        }
+
+        /* ===== 対応領域：グリッド ===== */
+        .cap-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-            margin-bottom: clamp(40px, 5vw, 64px);
-            border-top: 1px solid var(--rule);
-            border-left: 1px solid var(--rule);
+            border-top: 1px solid var(--line);
+            border-left: 1px solid var(--line);
         }
 
-        .cap-index-item {
+        .cap-cell {
+            padding: 26px 24px 28px;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            background: transparent;
+            transition: background .2s ease;
+            scroll-margin-top: 80px;
+        }
+
+        .cap-cell:hover { background: var(--surface); }
+
+        .cap-cell-head {
             display: flex;
-            align-items: baseline;
-            gap: 10px;
-            padding: 13px 16px;
-            border-right: 1px solid var(--rule);
-            border-bottom: 1px solid var(--rule);
-            text-decoration: none;
-            color: var(--ink);
-            font-size: .82rem;
-            line-height: 1.5;
-            transition: background .15s ease, color .15s ease;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
         }
 
-        .cap-index-item:hover {
-            background: var(--ledger-soft);
-            color: var(--ledger-dark);
+        .cap-cell-head .code { padding: 0; }
+
+        .cap-cell-head .tick {
+            width: 8px;
+            height: 8px;
+            border: 1px solid var(--line-strong);
         }
 
-        .cap-index-item .cap-code {
-            color: var(--ink-soft);
-        }
-
-        .cap-index-item:hover .cap-code {
-            color: var(--ledger);
-        }
-
-        /* ===== 対応領域：詳細エントリ ===== */
-        .cap-entries {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0 56px;
-        }
-
-        .cap-entry {
-            padding: 26px 0;
-            border-top: 1px solid var(--rule);
-        }
-
-        .cap-entry:nth-child(-n+2) {
-            border-top: none;
-            padding-top: 0;
-        }
-
-        .cap-entry-head {
-            display: flex;
-            align-items: baseline;
-            gap: 12px;
-            margin-bottom: 14px;
-        }
-
-        .cap-entry-head h4 {
-            margin: 0;
-            font-size: .98rem;
-            font-weight: 700;
-            line-height: 1.5;
-            color: var(--ink);
+        .cap-cell h4 {
+            margin: 0 0 16px;
+            font-size: 1.02rem;
+            font-weight: 600;
+            line-height: 1.55;
+            letter-spacing: -.005em;
         }
 
         .dash-list {
@@ -379,50 +538,39 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            gap: 9px;
+            gap: 7px;
         }
 
         .dash-list li {
             position: relative;
             padding-left: 16px;
-            font-size: .87rem;
+            font-size: .85rem;
             line-height: 1.65;
             color: var(--ink-soft);
         }
 
         .dash-list li::before {
-            content: "\2013";
+            content: "";
             position: absolute;
             left: 0;
-            color: var(--ledger);
+            top: .72em;
+            width: 6px;
+            height: 1px;
+            background: var(--ink-faint);
         }
 
         /* ===== 技術スタック ===== */
-        .skill-groups {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
+        .stack-table {
+            border-top: 1px solid var(--ink);
         }
 
-        .skill-group {
+        .stack-row {
             display: grid;
-            grid-template-columns: 170px 1fr;
-            gap: 20px;
+            grid-template-columns: minmax(200px, 300px) 1fr;
+            gap: clamp(16px, 5vw, 80px);
             align-items: baseline;
-            padding: 18px 0;
-            border-top: 1px solid var(--rule);
-        }
-
-        .skill-group:first-child {
-            border-top: none;
-            padding-top: 0;
-        }
-
-        .skill-group-label {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: .78rem;
-            font-weight: 500;
-            color: var(--ink-soft);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--line);
         }
 
         .tag-row {
@@ -435,19 +583,16 @@
             display: inline-flex;
             align-items: center;
             padding: 6px 12px;
-            border-radius: 2px;
-            background: transparent;
-            border: 1px solid var(--rule);
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: .78rem;
-            font-weight: 500;
+            border-radius: 999px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            font-family: var(--mono);
+            font-size: .76rem;
             color: var(--ink);
             transition: border-color .15s ease;
         }
 
-        .tag:hover {
-            border-color: var(--ledger-border);
-        }
+        .tag:hover { border-color: var(--ink-faint); }
 
         .tech-icon {
             width: 13px;
@@ -465,349 +610,300 @@
             mask-position: center;
         }
 
-        /* ===== AI・先端技術への取り組み ===== */
-        .ai-block > p.lead {
-            max-width: 640px;
-            margin: 0 0 32px;
-            font-size: .95rem;
-            line-height: 1.9;
-            color: var(--ink-soft);
-        }
-
-        .ai-block > p.lead.lead-wide {
-            max-width: 960px;
-        }
-
-        .ai-columns {
+        /* ===== AI ===== */
+        .ai-grid {
             display: grid;
-            grid-template-columns: 1.15fr .85fr;
-            gap: 40px;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(24px, 4vw, 56px);
+            align-items: stretch;
         }
 
-        .ai-columns h4 {
-            margin: 0 0 16px;
-            font-size: .86rem;
-            font-weight: 700;
-            color: var(--ink);
+        .ai-visual {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            min-height: 360px;
+            background: var(--ink);
         }
+
+        .ai-visual img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(.3) contrast(1.05);
+        }
+
+        .ai-visual-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255,255,255,.92);
+            font-family: var(--mono);
+            font-size: .68rem;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .ai-body {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .ai-box {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: var(--surface);
+            padding: 24px;
+        }
+
+        .ai-box .mono-label { display: block; margin-bottom: 16px; }
 
         .check-list {
             list-style: none;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            counter-reset: chk;
         }
 
         .check-list li {
-            position: relative;
-            padding-left: 16px;
-            font-size: .87rem;
-            line-height: 1.75;
+            display: grid;
+            grid-template-columns: 34px 1fr;
+            gap: 8px;
+            padding: 11px 0;
+            border-top: 1px solid var(--line);
+            font-size: .88rem;
+            line-height: 1.7;
             color: var(--ink-soft);
+            counter-increment: chk;
         }
+
+        .check-list li:first-child { border-top: none; padding-top: 0; }
 
         .check-list li::before {
-            content: "\2013";
-            position: absolute;
-            left: 0;
-            color: var(--ledger);
+            content: counter(chk, decimal-leading-zero);
+            font-family: var(--mono);
+            font-size: .72rem;
+            color: var(--ink-faint);
+            padding-top: 2px;
         }
 
-        /* ===== 開発スタイル：番号リスト ===== */
-        .process-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .process-list li {
-            display: grid;
-            grid-template-columns: 56px 1fr;
-            gap: 24px;
-            padding: 24px 0;
-            border-top: 1px solid var(--rule);
-        }
-
-        .process-list li:first-child {
-            padding-top: 0;
-            border-top: none;
-        }
-
-        .process-list-num {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--ledger);
-        }
-
-        .process-list h4 {
-            margin: 0 0 6px;
-            font-family: 'IBM Plex Serif', serif;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--ink);
-        }
-
-        .process-list p {
-            margin: 0;
-            font-size: .87rem;
-            line-height: 1.8;
-            color: var(--ink-soft);
-            max-width: 640px;
-        }
-
-        /* ===== 工程：タイムライン ===== */
-        .process-flow {
+        /* ===== タイムライン ===== */
+        .timeline {
             position: relative;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(var(--steps, 5), 1fr);
+            border-top: 1px solid var(--ink);
         }
 
-        .process-flow::before {
+        .timeline-step {
+            position: relative;
+            padding: 28px 20px 8px 0;
+        }
+
+        .timeline-step::before {
             content: "";
             position: absolute;
-            top: 15px;
-            left: 15px;
-            right: 15px;
-            height: 1px;
-            background: var(--rule);
-        }
-
-        .process-flow-step {
-            position: relative;
-            flex: 1;
-            text-align: center;
-            padding: 0 6px;
-        }
-
-        .process-flow-dot {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            margin: 0 auto 16px;
+            top: -5px;
+            left: 0;
+            width: 9px;
+            height: 9px;
             border-radius: 50%;
-            background: var(--paper);
-            border: 1.5px solid var(--ledger);
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: .72rem;
-            font-weight: 600;
-            color: var(--ledger);
+            background: var(--bg);
+            border: 1px solid var(--ink);
         }
 
-        .process-flow-step h4 {
+        .timeline-step:last-child::before {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .timeline-step .code { display: block; margin-bottom: 10px; }
+
+        .timeline-step h4 {
             margin: 0;
-            font-size: .85rem;
-            font-weight: 700;
-            line-height: 1.5;
-            color: var(--ink);
-        }
-
-        /* ===== 提供できる価値 ===== */
-        .value-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-        }
-
-        .value-block:first-child {
-            padding-right: 48px;
-            border-right: 1px solid var(--rule);
-        }
-
-        .value-block h4 {
-            margin: 0 0 18px;
-            padding-bottom: 12px;
-            font-family: 'IBM Plex Serif', serif;
             font-size: 1rem;
             font-weight: 600;
-            color: var(--ink);
-            border-bottom: 2px solid var(--ledger);
-            display: inline-block;
+            line-height: 1.5;
         }
 
-        @media (max-width: 1000px) {
-            .hero {
-                grid-template-columns: 1fr;
-            }
-            .corp-row {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            .corp-row-label {
-                position: static;
-            }
-            .corp-row-desc {
-                max-width: none;
-            }
-        }
+        .sub-block + .sub-block { margin-top: clamp(56px, 7vw, 96px); }
 
-        @media (max-width: 900px) {
-            .cap-index {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .cap-entries {
-                grid-template-columns: 1fr;
-            }
-            .cap-entry:nth-child(2) {
-                border-top: 1px solid var(--rule);
-                padding-top: 26px;
-            }
-            .ai-columns {
-                grid-template-columns: 1fr;
-                gap: 28px;
-            }
-            .value-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .value-block:first-child {
-                padding-right: 0;
-                padding-bottom: 32px;
-                border-right: none;
-                border-bottom: 1px solid var(--rule);
-            }
-            .skill-group {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-        }
-
-        @media (max-width: 700px) {
-            .cap-index {
-                grid-template-columns: 1fr;
-            }
-            .process-flow {
-                flex-wrap: wrap;
-                row-gap: 28px;
-            }
-            .process-flow::before {
-                display: none;
-            }
-            .process-flow-step {
-                flex: 1 1 30%;
-            }
-            .site-nav {
-                gap: 18px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .corp-row {
-                padding: 40px 0;
-            }
-            .process-list li {
-                grid-template-columns: 1fr;
-                gap: 6px;
-            }
-            .hero {
-                padding: 48px 20px 56px;
-            }
-        }
-
-        .achievements-section {
-            width: 100%;
-            max-width: 1680px;
-            margin: 0 auto;
+        .sub-head {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 28px;
-            padding: 0 20px 64px;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 28px;
         }
 
-        .achievements-section[hidden],
-        .achievements-logos[hidden] {
-            display: none;
-        }
-
-        .achievements-title {
+        .sub-head h3 {
             margin: 0;
-            font-size: 0.9rem;
-            font-weight: 700;
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            font-weight: 500;
+            letter-spacing: -.02em;
+        }
+
+        .sub-lead {
+            margin: 0 0 36px;
+            max-width: 72ch;
+            font-size: .93rem;
+            line-height: 1.95;
             color: var(--ink-soft);
         }
 
-        .achievements-logos {
+        /* ===== Working Style ===== */
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .style-card {
             display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: center;
-            gap: clamp(8px, 2vw, 20px);
-            width: 100%;
+            flex-direction: column;
+            gap: 14px;
+            padding: 20px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: var(--surface);
+            transition: border-color .2s ease, transform .2s ease;
         }
 
-        .logo-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1 1 0;
-            min-width: 0;
-            padding: clamp(10px, 2.2vw, 20px) clamp(10px, 2.2vw, 28px);
-            border-radius: 2px;
-            background: var(--paper-raised);
-            border: 1px solid var(--rule);
-            transition: border-color 0.25s ease, transform 0.25s ease;
-        }
-
-        .logo-badge img {
-            height: clamp(20px, 5vw, 52px);
-            width: auto;
-            max-width: 100%;
-            object-fit: contain;
-            display: block;
-        }
-
-        .logo-badge:hover {
-            border-color: var(--ledger);
+        .style-card:hover {
+            border-color: var(--ink-faint);
             transform: translateY(-3px);
         }
 
+        .style-card h4 {
+            margin: 0 0 10px;
+            font-size: 1.02rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .style-card p {
+            margin: 0;
+            font-size: .84rem;
+            line-height: 1.8;
+            color: var(--ink-soft);
+        }
+
+        /* ===== Value ===== */
+        .value-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .value-block {
+            padding: clamp(24px, 3vw, 36px);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: var(--surface);
+        }
+
+        .value-block.inverse {
+            background: var(--ink);
+            border-color: var(--ink);
+            color: var(--bg);
+        }
+
+        .value-block .mono-label { display: block; margin-bottom: 12px; }
+        .value-block.inverse .mono-label { color: rgba(250,250,248,.6); }
+
+        .value-block h4 {
+            margin: 0 0 24px;
+            font-size: clamp(1.15rem, 2vw, 1.45rem);
+            font-weight: 500;
+            letter-spacing: -.02em;
+        }
+
+        .value-block.inverse .check-list li {
+            color: rgba(250,250,248,.78);
+            border-color: rgba(250,250,248,.14);
+        }
+
+        .value-block.inverse .check-list li::before { color: var(--accent); }
+
+        /* ===== 実績 ===== */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            border-top: 1px solid var(--line);
+            border-left: 1px solid var(--line);
+        }
+
+        .logo-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 3 / 2;
+            padding: clamp(16px, 2.4vw, 32px);
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            transition: background .2s ease;
+        }
+
+        .logo-cell img {
+            max-height: 48px;
+            max-width: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-cell:hover { background: var(--surface); }
+
+        /* ===== CTA ===== */
+        .cta {
+            padding: clamp(72px, 10vw, 140px) 0;
+            border-top: 1px solid var(--line);
+            text-align: center;
+            background:
+                radial-gradient(ellipse 60% 80% at 50% 100%, var(--accent-soft), transparent 70%);
+        }
+
+        .cta .mono-label { display: block; margin-bottom: 20px; }
+
+        .cta h2 {
+            margin: 0 auto 36px;
+            max-width: 18ch;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 500;
+            letter-spacing: -.035em;
+            line-height: 1.2;
+        }
+
+        .cta .hero-actions { justify-content: center; }
+
         /* ===== フッター ===== */
         .site-footer {
-            background: var(--ink);
-            color: #c7ccc2;
-            padding: 56px 24px 28px;
+            border-top: 1px solid var(--line);
+            background: var(--surface-2);
+            padding: 56px 0 28px;
         }
 
         .site-footer-inner {
-            max-width: 1680px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 40px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid rgba(245, 246, 241, .14);
-        }
-
-        .footer-brand h2 {
-            margin: 0 0 10px;
-            font-family: 'IBM Plex Serif', serif;
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--paper);
+            padding-bottom: 36px;
+            border-bottom: 1px solid var(--line);
         }
 
         .footer-brand p {
-            margin: 0;
-            max-width: 340px;
+            margin: 14px 0 0;
+            max-width: 360px;
             font-size: .85rem;
             line-height: 1.85;
-            color: #c7ccc2;
+            color: var(--ink-soft);
         }
 
-        .footer-col h4 {
-            margin: 0 0 16px;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: .78rem;
-            font-weight: 500;
-            color: var(--paper);
-        }
+        .footer-col .mono-label { display: block; margin-bottom: 16px; }
 
         .footer-col ul {
             list-style: none;
@@ -819,606 +915,751 @@
         }
 
         .footer-col a {
-            font-size: .85rem;
-            color: #c7ccc2;
+            font-size: .86rem;
+            color: var(--ink);
             text-decoration: none;
             transition: color .2s ease;
         }
 
-        .footer-col a:hover {
-            color: var(--paper);
-        }
+        .footer-col a:hover { color: var(--accent); }
 
         .footer-mail {
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            word-break: break-all;
         }
 
         .site-footer-bottom {
-            max-width: 1680px;
-            margin: 24px auto 0;
-            font-size: .78rem;
-            color: rgba(199, 204, 194, .55);
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            margin-top: 22px;
+            font-family: var(--mono);
+            font-size: .72rem;
+            color: var(--ink-faint);
         }
 
-        @media (max-width: 480px) {
-            .hero-headline { font-size: 1.9rem; }
-            .site-header-inner { padding: 14px 18px; }
+        /* ===== レスポンシブ ===== */
+        @media (max-width: 1100px) {
+            .style-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 1000px) {
+            .hero-grid { grid-template-columns: 1fr; align-items: start; }
+            .section-head { grid-template-columns: 1fr; gap: 16px; }
+            .cap-grid { grid-template-columns: repeat(2, 1fr); }
+            .logo-grid { grid-template-columns: repeat(3, 1fr); }
+            .ai-grid { grid-template-columns: 1fr; }
+            .ai-visual { min-height: 260px; }
+            .header-clock { display: none; }
+        }
+
+        @media (max-width: 760px) {
+            .site-nav { display: none; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .stat:nth-child(3) { border-left: none; padding-left: 0; }
+            .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+            .stack-row { grid-template-columns: 1fr; gap: 12px; }
+            .value-grid { grid-template-columns: 1fr; }
+            .style-grid { grid-template-columns: 1fr 1fr; }
+            .timeline {
+                grid-template-columns: 1fr;
+                border-top: none;
+                border-left: 1px solid var(--ink);
+                margin-left: 4px;
+            }
+            .timeline-step { padding: 0 0 26px 24px; }
+            .timeline-step::before { top: 4px; left: -5px; }
+            .timeline-step .code { margin-bottom: 4px; }
+            .site-footer-inner { grid-template-columns: 1fr; gap: 28px; }
+            .visual-band { aspect-ratio: 4 / 3; }
+            .visual-caption { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 600px) {
+            .cap-grid { grid-template-columns: 1fr; }
+            .logo-grid { grid-template-columns: repeat(2, 1fr); }
+            .logo-cell img { max-height: 36px; }
+            .style-grid { grid-template-columns: 1fr; }
+            .site-footer-bottom { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
     <header class="site-header">
-        <div class="site-header-inner">
-            <a class="brand" href="#top">Yoshimura</a>
+        <div class="wrap site-header-inner">
+            <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>Yoshimura</a>
             <nav class="site-nav">
                 <a href="#capabilities">Capabilities</a>
                 <a href="#techstack">Tech Stack</a>
                 <a href="#ai">AI Initiatives</a>
-                <a href="#contact">Contact</a>
+                <a href="#process">Process</a>
+                <a href="#value">Value</a>
+                <a href="#works">Clients</a>
             </nav>
         </div>
     </header>
 
     <main>
         <section class="hero" id="top">
-            <div class="hero-inner">
-                <h1 class="hero-headline">曖昧な要件を、<br>動くシステムに変える。</h1>
-                <p class="hero-lead"><strong>Yoshimura</strong> — Webシステム開発から大規模データ処理、AI活用・プロダクト開発まで。要件整理から設計・実装・運用まで一気通貫で対応するフリーランスソフトウェアエンジニアです。</p>
-            </div>
-            <div class="hero-index">
-                <p class="hero-index-label">Profile</p>
-                <ol class="hero-index-list">
-                    <li><span class="cap-code">01</span><span>要件整理から本番運用まで一気通貫で対応</span></li>
-                    <li><span class="cap-code">02</span><span>Webシステム開発・大規模データ処理の実務経験</span></li>
-                    <li><span class="cap-code">03</span><span>RAG・AIエージェントなど生成AI活用の実装力</span></li>
-                    <li><span class="cap-code">04</span><span>保守性・拡張性を重視した設計と継続改善</span></li>
-                </ol>
-                <a class="hero-index-more" href="#contact">お問い合わせはこちら</a>
+            <div class="wrap">
+                <div class="hero-grid">
+                    <div class="hero-inner">
+                        <span class="hero-eyebrow mono-label"><span class="dot"></span>Freelance Software Engineer</span>
+                        <h1 class="hero-headline">曖昧な要件を、<br><span class="muted">動くシステムに</span>変える。</h1>
+                        <p class="hero-lead"><strong>Yoshimura</strong> — Webシステム開発から大規模データ処理、AI活用・プロダクト開発まで。要件整理から設計・実装・運用まで一気通貫で対応するフリーランスソフトウェアエンジニアです。</p>
+                    </div>
+
+                    <aside class="panel" aria-label="プロフィール概要">
+                        <div class="panel-head">
+                            <span class="mono-label">Profile</span>
+                            <span class="panel-status"><span class="dot"></span>OPEN FOR PROJECTS</span>
+                        </div>
+                        <div class="panel-chart" aria-hidden="true">
+                            <div class="panel-chart-top">
+                                <span class="panel-chart-title">Idea → Production</span>
+                                <span class="mono-label">End-to-end</span>
+                            </div>
+                            <svg viewBox="0 0 300 72" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#ff5a1f" stop-opacity=".18"/>
+                                        <stop offset="100%" stop-color="#ff5a1f" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path class="area" d="M0 60 L25 56 L50 58 L75 48 L100 50 L125 40 L150 43 L175 32 L200 34 L225 22 L250 25 L275 14 L300 8 L300 72 L0 72 Z"/>
+                                <path class="line" d="M0 60 L25 56 L50 58 L75 48 L100 50 L125 40 L150 43 L175 32 L200 34 L225 22 L250 25 L275 14 L300 8"/>
+                            </svg>
+                        </div>
+                        <ol class="panel-list">
+                            <li><span class="code">01</span><span>要件整理から本番運用まで一気通貫で対応</span></li>
+                            <li><span class="code">02</span><span>Webシステム開発・大規模データ処理の実務経験</span></li>
+                            <li><span class="code">03</span><span>RAG・AIエージェントなど生成AI活用の実装力</span></li>
+                            <li><span class="code">04</span><span>保守性・拡張性を重視した設計と継続改善</span></li>
+                        </ol>
+                    </aside>
+                </div>
+
+                <figure class="visual-band" style="margin-left:0;margin-right:0;margin-bottom:0">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=70" alt="ノートPCでコードを書く明るいデスク" loading="eager">
+                    <figcaption class="visual-caption">
+                        <div>
+                            <span class="mono-label">Web / Data / AI</span>
+                            <p>業務を理解し、設計し、動かし続ける。</p>
+                        </div>
+                        <span class="mono-label">Photo: Unsplash</span>
+                    </figcaption>
+                </figure>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="mono-label">Capabilities</span>
+                        <span class="stat-value">21</span>
+                        <span class="stat-note">実務で対応してきた領域</span>
+                    </div>
+                    <div class="stat">
+                        <span class="mono-label">Cloud</span>
+                        <span class="stat-value">AWS · GCP · Azure</span>
+                        <span class="stat-note">主要3クラウドに対応</span>
+                    </div>
+                    <div class="stat">
+                        <span class="mono-label">Scope</span>
+                        <span class="stat-value">要件 → 運用</span>
+                        <span class="stat-note">上流から保守まで一貫</span>
+                    </div>
+                    <div class="stat">
+                        <span class="mono-label">Focus</span>
+                        <span class="stat-value">LLM · RAG</span>
+                        <span class="stat-note">AIエージェント開発</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="profile-sheet" aria-label="プロフィール・提供価値">
-          <div class="profile-sheet-inner">
-
-            <div class="corp-row" id="capabilities">
-                <div class="corp-row-label">
-                    <h3>Capabilities</h3>
-                    <p class="corp-row-desc">要件整理から本番運用まで、実務で積み重ねてきた対応領域の目録です。</p>
-                </div>
-                <div class="corp-row-content">
-                    <div class="cap-entries">
-                        <article class="cap-entry" id="cap-01">
-                            <div class="cap-entry-head"><span class="cap-code">C01</span><h4>ユーザー・権限・ロールを管理できる</h4></div>
-                            <ul class="dash-list">
-                                <li>管理者、一般ユーザー、閲覧者などのロール設定</li>
-                                <li>ログイン・認証・認可</li>
-                                <li>Google / Microsoft / GitHubなどのSSO連携</li>
-                                <li>組織・部署・チーム単位のアクセス制御</li>
-                                <li>「誰がどのデータを見られるか」を安全に制御する</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-02">
-                            <div class="cap-entry-head"><span class="cap-code">C02</span><h4>バラバラに存在するデータを集められる</h4></div>
-                            <ul class="dash-list">
-                                <li>Excel、CSV、Google Sheetsから取得</li>
-                                <li>DBから取得</li>
-                                <li>REST APIから取得</li>
-                                <li>SaaSから取得</li>
-                                <li>Slack、Notion、Google Drive、SharePointなどから取得</li>
-                                <li>PDFやWordなどの非構造化データを取り込む</li>
-                                <li>複数システムのデータを一つに統合する</li>
-                                <li>定期的に自動同期する</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-03">
-                            <div class="cap-entry-head"><span class="cap-code">C03</span><h4>集めたデータを整理・加工できる</h4></div>
-                            <ul class="dash-list">
-                                <li>データ形式を統一する</li>
-                                <li>重複データを削除する</li>
-                                <li>名前やIDを紐付ける</li>
-                                <li>異なるシステム間のデータをJOINする</li>
-                                <li>日付、金額、単位などを正規化する</li>
-                                <li>AIで文章から必要情報を抽出する</li>
-                                <li>ETL / ELTパイプラインを作る</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-04">
-                            <div class="cap-entry-head"><span class="cap-code">C04</span><h4>データを保存・検索できる</h4></div>
-                            <ul class="dash-list">
-                                <li>PostgreSQLなどに保存する</li>
-                                <li>Redisでキャッシュする</li>
-                                <li>Vector DBにEmbeddingを保存する</li>
-                                <li>大量データを効率的に検索できるようにする</li>
-                                <li>DB設計、テーブル設計、インデックス設計をする</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-05">
-                            <div class="cap-entry-head"><span class="cap-code">C05</span><h4>社内データを自然言語で検索できるようにする</h4></div>
-                            <ul class="dash-list">
-                                <li>「○○についての資料を探して」で検索</li>
-                                <li>PDF、議事録、マニュアルを横断検索</li>
-                                <li>RAGを構築する</li>
-                                <li>Semantic Searchを実装する</li>
-                                <li>キーワード検索＋ベクトル検索を組み合わせる</li>
-                                <li>検索結果をRerankingする</li>
-                                <li>回答と一緒に引用元を表示する</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-06">
-                            <div class="cap-entry-head"><span class="cap-code">C06</span><h4>AIチャットを作れる</h4></div>
-                            <ul class="dash-list">
-                                <li>ChatGPTのようなUIを作る</li>
-                                <li>社内専用AIチャットを作る</li>
-                                <li>社内でAIを使える人材を育成。</li>
-                                <li>ユーザーごとに会話履歴を管理する</li>
-                                <li>システムプロンプトを設定する</li>
-                                <li>ユーザーや部署によってAIの振る舞いを変える</li>
-                                <li>Structured Outputで決まった形式を返す</li>
-                                <li>AIの回答をストリーミング表示する</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-07">
-                            <div class="cap-entry-head"><span class="cap-code">C07</span><h4>外部サービスとの連携</h4></div>
-                            <ul class="dash-list">
-                                <li>Webhookを利用したリアルタイム連携</li>
-                                <li>データ同期</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-08">
-                            <div class="cap-entry-head"><span class="cap-code">C08</span><h4>通知システムを作れる</h4></div>
-                            <ul class="dash-list">
-                                <li>Slack通知</li>
-                                <li>メール通知</li>
-                                <li>Teams通知</li>
-                                <li>Push通知</li>
-                                <li>「条件を満たしたら通知」</li>
-                                <li>AIが重要と判断した場合だけ通知</li>
-                                <li>エラーや異常を自動通知する</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-09">
-                            <div class="cap-entry-head"><span class="cap-code">C09</span><h4>バックグラウンド処理を作れる</h4></div>
-                            <ul class="dash-list">
-                                <li>大量データを順番に処理する</li>
-                                <li>Queueを使う</li>
-                                <li>非同期処理</li>
-                                <li>バッチ処理</li>
-                                <li>Cron</li>
-                                <li>リトライ</li>
-                                <li>処理失敗時の復旧</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-10">
-                            <div class="cap-entry-head"><span class="cap-code">C10</span><h4>クラウドにシステムを構築できる</h4></div>
-                            <ul class="dash-list">
-                                <li>AWS / GCP / Azure</li>
-                                <li>サーバー構築</li>
-                                <li>Serverless</li>
-                                <li>Storage</li>
-                                <li>Database</li>
-                                <li>CDN</li>
-                                <li>IAM</li>
-                                <li>Secret管理</li>
-                                <li>Infrastructure as Code</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-11">
-                            <div class="cap-entry-head"><span class="cap-code">C11</span><h4>Dockerで環境を統一できる</h4></div>
-                            <ul class="dash-list">
-                                <li>開発環境構築</li>
-                                <li>Dockerfile作成</li>
-                                <li>Docker Compose</li>
-                                <li>本番環境へのデプロイ</li>
-                                <li>GPU環境構築</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-12">
-                            <div class="cap-entry-head"><span class="cap-code">C12</span><h4>本番環境へ自動デプロイできる</h4></div>
-                            <ul class="dash-list">
-                                <li>GitHub Actions</li>
-                                <li>CI/CD</li>
-                                <li>テスト自動化</li>
-                                <li>Build</li>
-                                <li>Deploy</li>
-                                <li>Rollback</li>
-                                <li>staging / productionの分離</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-13">
-                            <div class="cap-entry-head"><span class="cap-code">C13</span><h4>システムの障害を調査できる</h4></div>
-                            <ul class="dash-list">
-                                <li>ログを見る</li>
-                                <li>エラーを追跡する</li>
-                                <li>Stack Traceを読む</li>
-                                <li>DBの負荷を調査する</li>
-                                <li>APIの遅延を調査する</li>
-                                <li>CPU / Memoryを見る</li>
-                                <li>AI APIの失敗原因を調査する</li>
-                                <li>ボトルネックを特定する</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-14">
-                            <div class="cap-entry-head"><span class="cap-code">C14</span><h4>AIの品質を評価できる</h4></div>
-                            <ul class="dash-list">
-                                <li>正しい回答率を測る</li>
-                                <li>Hallucinationを検出する</li>
-                                <li>RAGの検索精度を評価する</li>
-                                <li>Promptを比較する</li>
-                                <li>モデルを比較する</li>
-                                <li>LLM-as-a-Judge</li>
-                                <li>人間による評価</li>
-                                <li>Evaluation Datasetを作る</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-15">
-                            <div class="cap-entry-head"><span class="cap-code">C15</span><h4>AIの精度を改善できる</h4></div>
-                            <ul class="dash-list">
-                                <li>Prompt改善</li>
-                                <li>Context改善</li>
-                                <li>RAG改善</li>
-                                <li>Chunking改善</li>
-                                <li>Retrieval改善</li>
-                                <li>Reranking</li>
-                                <li>モデル変更</li>
-                                <li>評価結果をもとに継続改善する</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-16">
-                            <div class="cap-entry-head"><span class="cap-code">C16</span><h4>AIのコストを削減できる</h4></div>
-                            <ul class="dash-list">
-                                <li>モデルを使い分ける</li>
-                                <li>小さいモデルに処理を振る</li>
-                                <li>Promptを短くする</li>
-                                <li>Contextを減らす</li>
-                                <li>Cacheを使う</li>
-                                <li>Batch APIを使う</li>
-                                <li>不要なLLM呼び出しを減らす</li>
-                                <li>Token使用量を監視する</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-17">
-                            <div class="cap-entry-head"><span class="cap-code">C17</span><h4>AIシステムの速度を改善できる</h4></div>
-                            <ul class="dash-list">
-                                <li>Streaming</li>
-                                <li>Cache</li>
-                                <li>非同期処理</li>
-                                <li>モデル選択</li>
-                                <li>Context削減</li>
-                                <li>Vector Search高速化</li>
-                                <li>DBクエリ最適化</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-18">
-                            <div class="cap-entry-head"><span class="cap-code">C18</span><h4>セキュリティを考慮したAIシステムを作れる</h4></div>
-                            <ul class="dash-list">
-                                <li>Prompt Injection対策</li>
-                                <li>機密情報の漏洩防止</li>
-                                <li>個人情報をマスキングする</li>
-                                <li>入力・出力を検証する</li>
-                                <li>Tool Callingの権限を制限する</li>
-                                <li>ユーザー単位で参照可能データを分ける</li>
-                                <li>Secretを安全に管理する</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-19">
-                            <div class="cap-entry-head"><span class="cap-code">C19</span><h4>AIに任せてよい処理／人間が確認すべき処理を設計できる</h4></div>
-                            <ul class="dash-list">
-                                <li>自動実行してよい処理</li>
-                                <li>承認が必要な処理</li>
-                                <li>金額や重要度による分岐</li>
-                                <li>Human-in-the-loop</li>
-                                <li>Confidence Scoreによる分岐</li>
-                                <li>AIが分からない場合のEscalation</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-20">
-                            <div class="cap-entry-head"><span class="cap-code">C20</span><h4>曖昧な業務要件をシステムに落とし込める</h4></div>
-                            <ul class="dash-list">
-                                <li>現場へのヒアリング</li>
-                                <li>現在の業務フローを整理</li>
-                                <li>ボトルネックを発見</li>
-                                <li>AIで解決すべき部分を特定</li>
-                                <li>AIを使わない方がよい部分も判断</li>
-                                <li>要件定義</li>
-                                <li>DB/API/UI設計</li>
-                                <li>MVPに必要な機能を絞る</li>
-                            </ul>
-                        </article>
-                        <article class="cap-entry" id="cap-21">
-                            <div class="cap-entry-head"><span class="cap-code">C21</span><h4>PoCで終わらず、本番運用まで持っていける</h4></div>
-                            <ul class="dash-list">
-                                <li>認証</li>
-                                <li>権限</li>
-                                <li>ログ</li>
-                                <li>エラー処理</li>
-                                <li>評価</li>
-                                <li>セキュリティ</li>
-                                <li>コスト</li>
-                                <li>監視</li>
-                                <li>デプロイ</li>
-                                <li>運用フローまで設計する</li>
-                            </ul>
-                        </article>
+        <section class="section" id="capabilities">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="mono-label">[01] Capabilities</span>
+                        <h2 class="section-title">対応領域</h2>
                     </div>
+                    <p class="section-desc">要件整理から本番運用まで、実務で積み重ねてきた対応領域の目録です。</p>
+                </div>
+
+                <div class="cap-grid">
+                    <article class="cap-cell" id="cap-01">
+                        <div class="cap-cell-head"><span class="code">C01</span></div>
+                        <h4>ユーザー・権限・ロールを管理できる</h4>
+                        <ul class="dash-list">
+                            <li>管理者、一般ユーザー、閲覧者などのロール設定</li>
+                            <li>ログイン・認証・認可</li>
+                            <li>Google / Microsoft / GitHubなどのSSO連携</li>
+                            <li>組織・部署・チーム単位のアクセス制御</li>
+                            <li>「誰がどのデータを見られるか」を安全に制御する</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-02">
+                        <div class="cap-cell-head"><span class="code">C02</span></div>
+                        <h4>バラバラに存在するデータを集められる</h4>
+                        <ul class="dash-list">
+                            <li>Excel、CSV、Google Sheetsから取得</li>
+                            <li>DBから取得</li>
+                            <li>REST APIから取得</li>
+                            <li>SaaSから取得</li>
+                            <li>Slack、Notion、Google Drive、SharePointなどから取得</li>
+                            <li>PDFやWordなどの非構造化データを取り込む</li>
+                            <li>複数システムのデータを一つに統合する</li>
+                            <li>定期的に自動同期する</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-03">
+                        <div class="cap-cell-head"><span class="code">C03</span></div>
+                        <h4>集めたデータを整理・加工できる</h4>
+                        <ul class="dash-list">
+                            <li>データ形式を統一する</li>
+                            <li>重複データを削除する</li>
+                            <li>名前やIDを紐付ける</li>
+                            <li>異なるシステム間のデータをJOINする</li>
+                            <li>日付、金額、単位などを正規化する</li>
+                            <li>AIで文章から必要情報を抽出する</li>
+                            <li>ETL / ELTパイプラインを作る</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-04">
+                        <div class="cap-cell-head"><span class="code">C04</span></div>
+                        <h4>データを保存・検索できる</h4>
+                        <ul class="dash-list">
+                            <li>PostgreSQLなどに保存する</li>
+                            <li>Redisでキャッシュする</li>
+                            <li>Vector DBにEmbeddingを保存する</li>
+                            <li>大量データを効率的に検索できるようにする</li>
+                            <li>DB設計、テーブル設計、インデックス設計をする</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-05">
+                        <div class="cap-cell-head"><span class="code">C05</span></div>
+                        <h4>社内データを自然言語で検索できるようにする</h4>
+                        <ul class="dash-list">
+                            <li>「○○についての資料を探して」で検索</li>
+                            <li>PDF、議事録、マニュアルを横断検索</li>
+                            <li>RAGを構築する</li>
+                            <li>Semantic Searchを実装する</li>
+                            <li>キーワード検索＋ベクトル検索を組み合わせる</li>
+                            <li>検索結果をRerankingする</li>
+                            <li>回答と一緒に引用元を表示する</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-06">
+                        <div class="cap-cell-head"><span class="code">C06</span></div>
+                        <h4>AIチャットを作れる</h4>
+                        <ul class="dash-list">
+                            <li>ChatGPTのようなUIを作る</li>
+                            <li>社内専用AIチャットを作る</li>
+                            <li>社内でAIを使える人材を育成。</li>
+                            <li>ユーザーごとに会話履歴を管理する</li>
+                            <li>システムプロンプトを設定する</li>
+                            <li>ユーザーや部署によってAIの振る舞いを変える</li>
+                            <li>Structured Outputで決まった形式を返す</li>
+                            <li>AIの回答をストリーミング表示する</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-07">
+                        <div class="cap-cell-head"><span class="code">C07</span></div>
+                        <h4>外部サービスとの連携</h4>
+                        <ul class="dash-list">
+                            <li>Webhookを利用したリアルタイム連携</li>
+                            <li>データ同期</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-08">
+                        <div class="cap-cell-head"><span class="code">C08</span></div>
+                        <h4>通知システムを作れる</h4>
+                        <ul class="dash-list">
+                            <li>Slack通知</li>
+                            <li>メール通知</li>
+                            <li>Teams通知</li>
+                            <li>Push通知</li>
+                            <li>「条件を満たしたら通知」</li>
+                            <li>AIが重要と判断した場合だけ通知</li>
+                            <li>エラーや異常を自動通知する</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-09">
+                        <div class="cap-cell-head"><span class="code">C09</span></div>
+                        <h4>バックグラウンド処理を作れる</h4>
+                        <ul class="dash-list">
+                            <li>大量データを順番に処理する</li>
+                            <li>Queueを使う</li>
+                            <li>非同期処理</li>
+                            <li>バッチ処理</li>
+                            <li>Cron</li>
+                            <li>リトライ</li>
+                            <li>処理失敗時の復旧</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-10">
+                        <div class="cap-cell-head"><span class="code">C10</span></div>
+                        <h4>クラウドにシステムを構築できる</h4>
+                        <ul class="dash-list">
+                            <li>AWS / GCP / Azure</li>
+                            <li>サーバー構築</li>
+                            <li>Serverless</li>
+                            <li>Storage</li>
+                            <li>Database</li>
+                            <li>CDN</li>
+                            <li>IAM</li>
+                            <li>Secret管理</li>
+                            <li>Infrastructure as Code</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-11">
+                        <div class="cap-cell-head"><span class="code">C11</span></div>
+                        <h4>Dockerで環境を統一できる</h4>
+                        <ul class="dash-list">
+                            <li>開発環境構築</li>
+                            <li>Dockerfile作成</li>
+                            <li>Docker Compose</li>
+                            <li>本番環境へのデプロイ</li>
+                            <li>GPU環境構築</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-12">
+                        <div class="cap-cell-head"><span class="code">C12</span></div>
+                        <h4>本番環境へ自動デプロイできる</h4>
+                        <ul class="dash-list">
+                            <li>GitHub Actions</li>
+                            <li>CI/CD</li>
+                            <li>テスト自動化</li>
+                            <li>Build</li>
+                            <li>Deploy</li>
+                            <li>Rollback</li>
+                            <li>staging / productionの分離</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-13">
+                        <div class="cap-cell-head"><span class="code">C13</span></div>
+                        <h4>システムの障害を調査できる</h4>
+                        <ul class="dash-list">
+                            <li>ログを見る</li>
+                            <li>エラーを追跡する</li>
+                            <li>Stack Traceを読む</li>
+                            <li>DBの負荷を調査する</li>
+                            <li>APIの遅延を調査する</li>
+                            <li>CPU / Memoryを見る</li>
+                            <li>AI APIの失敗原因を調査する</li>
+                            <li>ボトルネックを特定する</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-14">
+                        <div class="cap-cell-head"><span class="code">C14</span></div>
+                        <h4>AIの品質を評価できる</h4>
+                        <ul class="dash-list">
+                            <li>正しい回答率を測る</li>
+                            <li>Hallucinationを検出する</li>
+                            <li>RAGの検索精度を評価する</li>
+                            <li>Promptを比較する</li>
+                            <li>モデルを比較する</li>
+                            <li>LLM-as-a-Judge</li>
+                            <li>人間による評価</li>
+                            <li>Evaluation Datasetを作る</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-15">
+                        <div class="cap-cell-head"><span class="code">C15</span></div>
+                        <h4>AIの精度を改善できる</h4>
+                        <ul class="dash-list">
+                            <li>Prompt改善</li>
+                            <li>Context改善</li>
+                            <li>RAG改善</li>
+                            <li>Chunking改善</li>
+                            <li>Retrieval改善</li>
+                            <li>Reranking</li>
+                            <li>モデル変更</li>
+                            <li>評価結果をもとに継続改善する</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-16">
+                        <div class="cap-cell-head"><span class="code">C16</span></div>
+                        <h4>AIのコストを削減できる</h4>
+                        <ul class="dash-list">
+                            <li>モデルを使い分ける</li>
+                            <li>小さいモデルに処理を振る</li>
+                            <li>Promptを短くする</li>
+                            <li>Contextを減らす</li>
+                            <li>Cacheを使う</li>
+                            <li>Batch APIを使う</li>
+                            <li>不要なLLM呼び出しを減らす</li>
+                            <li>Token使用量を監視する</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-17">
+                        <div class="cap-cell-head"><span class="code">C17</span></div>
+                        <h4>AIシステムの速度を改善できる</h4>
+                        <ul class="dash-list">
+                            <li>Streaming</li>
+                            <li>Cache</li>
+                            <li>非同期処理</li>
+                            <li>モデル選択</li>
+                            <li>Context削減</li>
+                            <li>Vector Search高速化</li>
+                            <li>DBクエリ最適化</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-18">
+                        <div class="cap-cell-head"><span class="code">C18</span></div>
+                        <h4>セキュリティを考慮したAIシステムを作れる</h4>
+                        <ul class="dash-list">
+                            <li>Prompt Injection対策</li>
+                            <li>機密情報の漏洩防止</li>
+                            <li>個人情報をマスキングする</li>
+                            <li>入力・出力を検証する</li>
+                            <li>Tool Callingの権限を制限する</li>
+                            <li>ユーザー単位で参照可能データを分ける</li>
+                            <li>Secretを安全に管理する</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-19">
+                        <div class="cap-cell-head"><span class="code">C19</span></div>
+                        <h4>AIに任せてよい処理／人間が確認すべき処理を設計できる</h4>
+                        <ul class="dash-list">
+                            <li>自動実行してよい処理</li>
+                            <li>承認が必要な処理</li>
+                            <li>金額や重要度による分岐</li>
+                            <li>Human-in-the-loop</li>
+                            <li>Confidence Scoreによる分岐</li>
+                            <li>AIが分からない場合のEscalation</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-20">
+                        <div class="cap-cell-head"><span class="code">C20</span></div>
+                        <h4>曖昧な業務要件をシステムに落とし込める</h4>
+                        <ul class="dash-list">
+                            <li>現場へのヒアリング</li>
+                            <li>現在の業務フローを整理</li>
+                            <li>ボトルネックを発見</li>
+                            <li>AIで解決すべき部分を特定</li>
+                            <li>AIを使わない方がよい部分も判断</li>
+                            <li>要件定義</li>
+                            <li>DB/API/UI設計</li>
+                            <li>MVPに必要な機能を絞る</li>
+                        </ul>
+                    </article>
+                    <article class="cap-cell" id="cap-21">
+                        <div class="cap-cell-head"><span class="code">C21</span></div>
+                        <h4>PoCで終わらず、本番運用まで持っていける</h4>
+                        <ul class="dash-list">
+                            <li>認証</li>
+                            <li>権限</li>
+                            <li>ログ</li>
+                            <li>エラー処理</li>
+                            <li>評価</li>
+                            <li>セキュリティ</li>
+                            <li>コスト</li>
+                            <li>監視</li>
+                            <li>デプロイ</li>
+                            <li>運用フローまで設計する</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <div class="corp-row" id="techstack">
-                <div class="corp-row-label">
-                    <h3>Tech Stack</h3>
-                    <p class="corp-row-desc">案件で実際に使用してきた言語・基盤・ツールです。</p>
+        <section class="section" id="techstack">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="mono-label">[02] Tech Stack</span>
+                        <h2 class="section-title">技術スタック</h2>
+                    </div>
+                    <p class="section-desc">案件で実際に使用してきた言語・基盤・ツールです。</p>
                 </div>
-                <div class="corp-row-content">
-                    <div class="skill-groups">
-                        <div class="skill-group">
-                            <span class="skill-group-label">言語</span>
-                            <div class="tag-row">
-                                <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/python.svg');--icon-color:#3776AB"></i>Python</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/php.svg');--icon-color:#777BB4"></i>PHP</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/typescript.svg');--icon-color:#3178C6"></i>TypeScript</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <span class="skill-group-label">フレームワーク</span>
-                            <div class="tag-row">
-                                <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/apacheairflow.svg');--icon-color:#017CEE"></i>Airflow</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/laravel.svg');--icon-color:#FF2D20"></i>Laravel</span><span class="tag">Slim</span><span class="tag">独自FW</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <span class="skill-group-label">データベース</span>
-                            <div class="tag-row">
-                                <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlebigquery.svg');--icon-color:#669DF6"></i>BigQuery</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/mysql.svg');--icon-color:#4479A1"></i>MySQL</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/postgresql.svg');--icon-color:#4169E1"></i>PostgreSQL</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <span class="skill-group-label">クラウド環境</span>
-                            <div class="tag-row">
-                                <span class="tag"><i class="fab fa-microsoft" style="color:#0078D4;margin-right:6px;font-size:.85em"></i>Azure</span><span class="tag"><i class="fab fa-aws" style="color:#FF9900;margin-right:6px;font-size:.85em"></i>AWS</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlecloud.svg');--icon-color:#4285F4"></i>GCP</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <span class="skill-group-label">開発ツール・その他</span>
-                            <div class="tag-row">
-                                <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/github.svg');--icon-color:#334155"></i>GitHub</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/git.svg');--icon-color:#F03C2E"></i>Git</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/bitbucket.svg');--icon-color:#0052CC"></i>Bitbucket</span><span class="tag"><i class="fab fa-microsoft" style="color:#0078D7;margin-right:6px;font-size:.85em"></i>Azure DevOps</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jenkins.svg');--icon-color:#D24939"></i>Jenkins</span><span class="tag">VS Code</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/cursor.svg');--icon-color:#334155"></i>Cursor</span>
-                                <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/docker.svg');--icon-color:#2496ED"></i>Docker</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/ollama.svg');--icon-color:#334155"></i>Ollama</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/lmstudio.svg');--icon-color:#334155"></i>LM Studio</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/redmine.svg');--icon-color:#B32024"></i>Redmine</span><span class="tag">Backlog</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jira.svg');--icon-color:#0052CC"></i>JIRA</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/testrail.svg');--icon-color:#65C179"></i>TestRail</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <span class="skill-group-label">AI・LLM関連</span>
-                            <div class="tag-row">
-                                <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langchain.svg');--icon-color:#1C3C3C"></i>LangChain</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langgraph.svg');--icon-color:#1C3C3C"></i>LangGraph</span><span class="tag">LangSmith</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/modelcontextprotocol.svg');--icon-color:#334155"></i>MCP</span>
-                                <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/agentskills.svg');--icon-color:#334155"></i>Agent Skills</span><span class="tag">RAG</span><span class="tag">Embedding</span><span class="tag">Vector DB</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <span class="skill-group-label">AIツール</span>
-                            <div class="tag-row">
-                                <span class="tag">ChatGPT</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/claude.svg');--icon-color:#D97757"></i>Claude</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlegemini.svg');--icon-color:#8E75B2"></i>Gemini</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/notebooklm.svg');--icon-color:#334155"></i>NotebookLM</span><span class="tag">Genspark</span><span class="tag">Manus</span>
-                            </div>
+
+                <div class="stack-table">
+                    <div class="stack-row">
+                        <span class="mono-label">言語</span>
+                        <div class="tag-row">
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/python.svg');--icon-color:#3776AB"></i>Python</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/php.svg');--icon-color:#777BB4"></i>PHP</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/typescript.svg');--icon-color:#3178C6"></i>TypeScript</span>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="corp-row" id="ai">
-                <div class="corp-row-label">
-                    <h3>AI Initiatives</h3>
-                    <p class="corp-row-desc">LLM・RAG・AIエージェントなど、最新動向のキャッチアップと実装検証を継続しています。</p>
-                </div>
-                <div class="corp-row-content">
-                    <div class="ai-block">
-                        <p class="lead lead-wide">LLM、RAG、AIエージェント、MCPなどの最新技術をキャッチアップし、業務に活かすプロダクト開発まで一貫して取り組んでいます。</p>
-                        <div class="ai-columns">
-                            <div>
-                                <h4>取り組み内容</h4>
-                                <ul class="check-list">
-                                    <li>機械学習・大規模言語モデル・推論プロセスの学習</li>
-                                    <li>Embedding・Vector DB・RAG構成・評価検証</li>
-                                    <li>プロンプト/コンテキスト設計・ローカルLLM実行</li>
-                                    <li>AIエージェント・ワークフロー・ガードレール検証</li>
-                                    <li>LangChain / LangGraph / LangSmith / MCP 検証</li>
-                                    <li>Sandbox環境を含むセキュアな実行環境の構築</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4>AIツール</h4>
-                                <div class="tag-row">
-                                    <span class="tag">ChatGPT</span><span class="tag">Claude</span><span class="tag">Gemini</span>
-                                    <span class="tag">NotebookLM</span><span class="tag">Genspark</span><span class="tag">Manus</span>
-                                </div>
-                            </div>
+                    <div class="stack-row">
+                        <span class="mono-label">フレームワーク</span>
+                        <div class="tag-row">
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/apacheairflow.svg');--icon-color:#017CEE"></i>Airflow</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/laravel.svg');--icon-color:#FF2D20"></i>Laravel</span><span class="tag">Slim</span><span class="tag">独自FW</span>
+                        </div>
+                    </div>
+                    <div class="stack-row">
+                        <span class="mono-label">データベース</span>
+                        <div class="tag-row">
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlebigquery.svg');--icon-color:#669DF6"></i>BigQuery</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/mysql.svg');--icon-color:#4479A1"></i>MySQL</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/postgresql.svg');--icon-color:#4169E1"></i>PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="stack-row">
+                        <span class="mono-label">クラウド環境</span>
+                        <div class="tag-row">
+                            <span class="tag"><i class="fab fa-microsoft" style="color:#0078D4;margin-right:6px;font-size:.85em"></i>Azure</span><span class="tag"><i class="fab fa-aws" style="color:#FF9900;margin-right:6px;font-size:.85em"></i>AWS</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlecloud.svg');--icon-color:#4285F4"></i>GCP</span>
+                        </div>
+                    </div>
+                    <div class="stack-row">
+                        <span class="mono-label">開発ツール・その他</span>
+                        <div class="tag-row">
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/github.svg');--icon-color:#334155"></i>GitHub</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/git.svg');--icon-color:#F03C2E"></i>Git</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/bitbucket.svg');--icon-color:#0052CC"></i>Bitbucket</span><span class="tag"><i class="fab fa-microsoft" style="color:#0078D7;margin-right:6px;font-size:.85em"></i>Azure DevOps</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jenkins.svg');--icon-color:#D24939"></i>Jenkins</span><span class="tag">VS Code</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/cursor.svg');--icon-color:#334155"></i>Cursor</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/docker.svg');--icon-color:#2496ED"></i>Docker</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/ollama.svg');--icon-color:#334155"></i>Ollama</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/lmstudio.svg');--icon-color:#334155"></i>LM Studio</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/redmine.svg');--icon-color:#B32024"></i>Redmine</span><span class="tag">Backlog</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/jira.svg');--icon-color:#0052CC"></i>JIRA</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/testrail.svg');--icon-color:#65C179"></i>TestRail</span>
+                        </div>
+                    </div>
+                    <div class="stack-row">
+                        <span class="mono-label">AI・LLM関連</span>
+                        <div class="tag-row">
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langchain.svg');--icon-color:#1C3C3C"></i>LangChain</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/langgraph.svg');--icon-color:#1C3C3C"></i>LangGraph</span><span class="tag">LangSmith</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/modelcontextprotocol.svg');--icon-color:#334155"></i>MCP</span>
+                            <span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/agentskills.svg');--icon-color:#334155"></i>Agent Skills</span><span class="tag">RAG</span><span class="tag">Embedding</span><span class="tag">Vector DB</span>
+                        </div>
+                    </div>
+                    <div class="stack-row">
+                        <span class="mono-label">AIツール</span>
+                        <div class="tag-row">
+                            <span class="tag">ChatGPT</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/claude.svg');--icon-color:#D97757"></i>Claude</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/googlegemini.svg');--icon-color:#8E75B2"></i>Gemini</span><span class="tag"><i class="tech-icon" style="--icon-src:url('https://cdn.jsdelivr.net/npm/simple-icons@16.28.0/icons/notebooklm.svg');--icon-color:#334155"></i>NotebookLM</span><span class="tag">Genspark</span><span class="tag">Manus</span>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="corp-row">
-                <div class="corp-row-label">
-                    <h3>AI Agent Development Flow</h3>
+        <section class="section" id="ai">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="mono-label">[03] AI Initiatives</span>
+                        <h2 class="section-title">AI・先端技術<br>への取り組み</h2>
+                    </div>
+                    <p class="section-desc">LLM、RAG、AIエージェント、MCPなどの最新技術をキャッチアップし、業務に活かすプロダクト開発まで一貫して取り組んでいます。</p>
                 </div>
-                <div class="corp-row-content">
-                    <div class="ai-block">
-                        <p class="lead lead-wide">顧客業務理解からAgent設計、実装、データ/API接続、本番運用まで一気通貫で対応します。<br>非エンジニアの方にも分かりやすいドキュメントを整備し、導入後も安心して使い続けられる体制を構築します。</p>
-                        <div class="process-flow">
-                            <div class="process-flow-step">
-                                <span class="process-flow-dot">01</span>
-                                <h4>顧客業務理解</h4>
-                            </div>
-                            <div class="process-flow-step">
-                                <span class="process-flow-dot">02</span>
-                                <h4>Agent設計</h4>
-                            </div>
-                            <div class="process-flow-step">
-                                <span class="process-flow-dot">03</span>
-                                <h4>実装</h4>
-                            </div>
-                            <div class="process-flow-step">
-                                <span class="process-flow-dot">04</span>
-                                <h4>データ/API接続</h4>
-                            </div>
-                            <div class="process-flow-step">
-                                <span class="process-flow-dot">05</span>
-                                <h4>本番運用</h4>
+
+                <div class="ai-grid">
+                    <div class="ai-visual">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=70" alt="Pythonコードが表示されたエディタ" loading="lazy">
+                        <span class="ai-visual-tag">LLM · RAG · Agents · MCP</span>
+                    </div>
+                    <div class="ai-body">
+                        <div class="ai-box">
+                            <span class="mono-label">取り組み内容</span>
+                            <ul class="check-list">
+                                <li>機械学習・大規模言語モデル・推論プロセスの学習</li>
+                                <li>Embedding・Vector DB・RAG構成・評価検証</li>
+                                <li>プロンプト/コンテキスト設計・ローカルLLM実行</li>
+                                <li>AIエージェント・ワークフロー・ガードレール検証</li>
+                                <li>LangChain / LangGraph / LangSmith / MCP 検証</li>
+                                <li>Sandbox環境を含むセキュアな実行環境の構築</li>
+                            </ul>
+                        </div>
+                        <div class="ai-box">
+                            <span class="mono-label">AIツール</span>
+                            <div class="tag-row">
+                                <span class="tag">ChatGPT</span><span class="tag">Claude</span><span class="tag">Gemini</span>
+                                <span class="tag">NotebookLM</span><span class="tag">Genspark</span><span class="tag">Manus</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="corp-row">
-                <div class="corp-row-label">
-                    <h3>Working Style</h3>
-                    <p class="corp-row-desc">開発に取り組むときに大切にしている5つの姿勢です。</p>
+        <section class="section" id="process">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="mono-label">[04] Process</span>
+                        <h2 class="section-title">進め方</h2>
+                    </div>
+                    <p class="section-desc">要件整理からリリース後の改善まで、一貫して対応します。</p>
                 </div>
-                <div class="corp-row-content">
-                    <ol class="process-list">
-                        <li>
-                            <span class="process-list-num">01</span>
+
+                <div class="sub-block">
+                    <div class="sub-head">
+                        <h3>AI Agent Development Flow</h3>
+                        <span class="mono-label">5 steps</span>
+                    </div>
+                    <p class="sub-lead">顧客業務理解からAgent設計、実装、データ/API接続、本番運用まで一気通貫で対応します。<br>非エンジニアの方にも分かりやすいドキュメントを整備し、導入後も安心して使い続けられる体制を構築します。</p>
+                    <div class="timeline" style="--steps:5">
+                        <div class="timeline-step"><span class="code">01</span><h4>顧客業務理解</h4></div>
+                        <div class="timeline-step"><span class="code">02</span><h4>Agent設計</h4></div>
+                        <div class="timeline-step"><span class="code">03</span><h4>実装</h4></div>
+                        <div class="timeline-step"><span class="code">04</span><h4>データ/API接続</h4></div>
+                        <div class="timeline-step"><span class="code">05</span><h4>本番運用</h4></div>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <div class="sub-head">
+                        <h3>System Development Process</h3>
+                        <span class="mono-label">6 steps</span>
+                    </div>
+                    <div class="timeline" style="--steps:6">
+                        <div class="timeline-step"><span class="code">01</span><h4>要件整理</h4></div>
+                        <div class="timeline-step"><span class="code">02</span><h4>基本設計</h4></div>
+                        <div class="timeline-step"><span class="code">03</span><h4>実装</h4></div>
+                        <div class="timeline-step"><span class="code">04</span><h4>テスト<br>（単体・結合）</h4></div>
+                        <div class="timeline-step"><span class="code">05</span><h4>リリース</h4></div>
+                        <div class="timeline-step"><span class="code">06</span><h4>保守運用・改善</h4></div>
+                    </div>
+                </div>
+
+                <div class="sub-block">
+                    <div class="sub-head">
+                        <h3>Working Style</h3>
+                        <span class="mono-label">開発に取り組むときに大切にしている5つの姿勢</span>
+                    </div>
+                    <div class="style-grid">
+                        <div class="style-card">
+                            <span class="code">01</span>
                             <div>
                                 <h4>全体最適で考える</h4>
                                 <p>画面・API・バッチ・DB・外部連携まで含め、影響範囲を把握して着手。</p>
                             </div>
-                        </li>
-                        <li>
-                            <span class="process-list-num">02</span>
+                        </div>
+                        <div class="style-card">
+                            <span class="code">02</span>
                             <div>
                                 <h4>設計意図を理解する</h4>
                                 <p>既存コードやドキュメントから設計意図や業務を整理し、最適な実装方針を判断。</p>
                             </div>
-                        </li>
-                        <li>
-                            <span class="process-list-num">03</span>
+                        </div>
+                        <div class="style-card">
+                            <span class="code">03</span>
                             <div>
                                 <h4>品質と保守性を重視</h4>
                                 <p>テスト・CI/CD・ドキュメント整備により、保守性と拡張性の高い開発を実現。</p>
                             </div>
-                        </li>
-                        <li>
-                            <span class="process-list-num">04</span>
+                        </div>
+                        <div class="style-card">
+                            <span class="code">04</span>
                             <div>
                                 <h4>課題を構造化して解決</h4>
                                 <p>現状・原因・影響・対応策を整理し、関係者と認識を合わせながら推進。</p>
                             </div>
-                        </li>
-                        <li>
-                            <span class="process-list-num">05</span>
+                        </div>
+                        <div class="style-card">
+                            <span class="code">05</span>
                             <div>
                                 <h4>運用まで見据えて改善</h4>
                                 <p>精度・速度・セキュリティ・運用負荷を考慮し、継続利用できる仕組みを構築。</p>
                             </div>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="corp-row">
-                <div class="corp-row-label">
-                    <h3>Process</h3>
-                    <p class="corp-row-desc">要件整理からリリース後の改善まで、一貫して対応します。</p>
-                </div>
-                <div class="corp-row-content">
-                    <div class="process-flow">
-                        <div class="process-flow-step">
-                            <span class="process-flow-dot">01</span>
-                            <h4>要件整理</h4>
-                        </div>
-                        <div class="process-flow-step">
-                            <span class="process-flow-dot">02</span>
-                            <h4>基本設計</h4>
-                        </div>
-                        <div class="process-flow-step">
-                            <span class="process-flow-dot">03</span>
-                            <h4>実装</h4>
-                        </div>
-                        <div class="process-flow-step">
-                            <span class="process-flow-dot">04</span>
-                            <h4>テスト<br>（単体・結合）</h4>
-                        </div>
-                        <div class="process-flow-step">
-                            <span class="process-flow-dot">05</span>
-                            <h4>リリース</h4>
-                        </div>
-                        <div class="process-flow-step">
-                            <span class="process-flow-dot">06</span>
-                            <h4>保守運用・改善</h4>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="corp-row" id="value">
-                <div class="corp-row-label">
-                    <h3>Value</h3>
-                    <p class="corp-row-desc">業務のどんな場面で力になれるかをまとめました。</p>
-                </div>
-                <div class="corp-row-content">
-                    <div class="value-grid">
-                        <div class="value-block">
-                            <h4>提供できる価値</h4>
-                            <ul class="check-list">
-                                <li>安定稼働するシステム</li>
-                                <li>高品質で保守しやすい設計</li>
-                                <li>業務にフィットする改善提案</li>
-                                <li>チームの生産性向上</li>
-                            </ul>
-                        </div>
-                        <div class="value-block">
-                            <h4>こんな課題解決に貢献できます</h4>
-                            <ul class="check-list">
-                                <li>AIを活用した業務効率化・新機能開発を進める</li>
-                                <li>大規模データ処理や配信基盤を安定運用</li>
-                                <li>開発品質やテスト自動化で生産性を向上</li>
-                                <li>保守性の高いシステムにリファクタリング</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-          </div>
         </section>
 
-        <div class="achievements-section" hidden>
-            <h2 class="achievements-title">実績</h2>
-            <div class="achievements-logos" hidden>
-                <span class="logo-badge"><img src="assets/logos/ntt-data.svg" alt="NTTデータ"></span>
-                <span class="logo-badge"><img src="assets/logos/uniqlo.svg" alt="ユニクロ"></span>
-                <span class="logo-badge"><img src="assets/logos/gu.svg" alt="GU"></span>
-                <span class="logo-badge"><img src="assets/logos/kawaijuku.svg" alt="河合塾"></span>
-                <span class="logo-badge"><img src="assets/logos/nishimatsuya.svg" alt="西松屋"></span>
-                <span class="logo-badge"><img src="assets/logos/ecoring.png" alt="EcoRing"></span>
+        <section class="section" id="value">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="mono-label">[05] Value</span>
+                        <h2 class="section-title">提供できる価値</h2>
+                    </div>
+                    <p class="section-desc">業務のどんな場面で力になれるかをまとめました。</p>
+                </div>
+
+                <div class="value-grid">
+                    <div class="value-block">
+                        <span class="mono-label">Value</span>
+                        <h4>提供できる価値</h4>
+                        <ul class="check-list">
+                            <li>安定稼働するシステム</li>
+                            <li>高品質で保守しやすい設計</li>
+                            <li>業務にフィットする改善提案</li>
+                            <li>チームの生産性向上</li>
+                        </ul>
+                    </div>
+                    <div class="value-block inverse">
+                        <span class="mono-label">Problems we solve</span>
+                        <h4>こんな課題解決に貢献できます</h4>
+                        <ul class="check-list">
+                            <li>AIを活用した業務効率化・新機能開発を進める</li>
+                            <li>大規模データ処理や配信基盤を安定運用</li>
+                            <li>開発品質やテスト自動化で生産性を向上</li>
+                            <li>保守性の高いシステムにリファクタリング</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="section" id="works">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="mono-label">[06] Clients</span>
+                        <h2 class="section-title">実績</h2>
+                    </div>
+                    <p class="section-desc">これまでに携わったプロジェクトの主なクライアントです。</p>
+                </div>
+
+                <div class="logo-grid">
+                    <span class="logo-cell"><img src="../assets/logos/ntt-data.svg" alt="NTTデータ" loading="lazy"></span>
+                    <span class="logo-cell"><img src="../assets/logos/uniqlo.svg" alt="ユニクロ" loading="lazy"></span>
+                    <span class="logo-cell"><img src="../assets/logos/gu.svg" alt="GU" loading="lazy"></span>
+                    <span class="logo-cell"><img src="../assets/logos/kawaijuku.svg" alt="河合塾" loading="lazy"></span>
+                    <span class="logo-cell"><img src="../assets/logos/nishimatsuya.svg" alt="西松屋" loading="lazy"></span>
+                    <span class="logo-cell"><img src="../assets/logos/ecoring.png" alt="EcoRing" loading="lazy"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="wrap">
+                <span class="mono-label"><span class="dot"></span>&nbsp; Let's talk</span>
+                <h2>その「曖昧な要件」から、<br>一緒に始めましょう。</h2>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer" id="contact">
-        <div class="site-footer-inner">
-            <div class="footer-brand">
-                <h2>Yoshimura</h2>
-                <p>Webシステム開発・大規模データ処理・AI活用まで一気通貫で対応するフリーランスソフトウェアエンジニアです。</p>
+        <div class="wrap">
+            <div class="site-footer-inner">
+                <div class="footer-brand">
+                    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>Yoshimura</a>
+                    <p>Webシステム開発・大規模データ処理・AI活用まで一気通貫で対応するフリーランスソフトウェアエンジニアです。</p>
+                </div>
+                <div class="footer-col">
+                    <span class="mono-label">Menu</span>
+                    <ul>
+                        <li><a href="#capabilities">Capabilities</a></li>
+                        <li><a href="#techstack">Tech Stack</a></li>
+                        <li><a href="#ai">AI Initiatives</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#works">Clients</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <span class="mono-label">Contact</span>
+                    <ul>
+                        <li>
+                            <a class="footer-mail" href="mailto:ryo.aiengineer@gmail.com">
+                                <i class="fas fa-envelope"></i> ryo.aiengineer@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Menu</h4>
-                <ul>
-                    <li><a href="#capabilities">Capabilities</a></li>
-                    <li><a href="#techstack">Tech Stack</a></li>
-                    <li><a href="#ai">AI Initiatives</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul>
-                    <li>
-                        <a class="footer-mail" href="mailto:ryo.aiengineer@gmail.com">
-                            <i class="fas fa-envelope"></i> ryo.aiengineer@gmail.com
-                        </a>
-                    </li>
-                </ul>
+            <div class="site-footer-bottom">
+                <span>&copy; 2026 Yoshimura. All rights reserved.</span>
+                <span>Photos: Unsplash</span>
             </div>
         </div>
-        <p class="site-footer-bottom">&copy; 2026 Yoshimura. All rights reserved.</p>
     </footer>
+
+    <script>
+        (function () {
+            var el = document.getElementById('clock');
+            if (!el) return;
+            function tick() {
+                var t = new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Tokyo' });
+                el.textContent = 'TOKYO ' + t + ' JST';
+            }
+            tick();
+            setInterval(tick, 30000);
+        })();
+    </script>
 </body>
 </html>
